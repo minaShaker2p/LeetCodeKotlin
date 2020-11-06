@@ -1,6 +1,7 @@
 package trees
 
 import utils.BinaryTreeNode
+import kotlin.math.max
 
 fun <T> BinaryTreeNode<T>?.getHeight():Int
 {
@@ -13,5 +14,8 @@ fun <T> BinaryTreeNode<T>?.getHeight():Int
         return if(leftHeight > rightHeight)  leftHeight else rightHeight
     }
 }
-
+fun <T> BinaryTreeNode<T>?.getHeight(node :BinaryTreeNode<T>?):Int
+{
+   return  node?.let { 1+ max(getHeight(node.left),getHeight(node.right)) } ?:-1
+}
 

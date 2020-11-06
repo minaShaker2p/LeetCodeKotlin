@@ -4,7 +4,7 @@ import utils.BinaryTreeNode
 
 fun main(args:Array<String>) {
     val tree=makeBinaryTree()
-    print(tree.getHeight())
+    print(tree.getHeight(tree))
 }
 
 
@@ -61,7 +61,10 @@ fun makeBinaryTree(): BinaryTreeNode<Int> {
     one.left=one2
     one.right=five
     seventeen.left=zero
+    val eleven = BinaryTreeNode(11)
+    zero.left=eleven
 
-
+    val ten = BinaryTreeNode(10)
+    eleven.left=ten
     return tree
 }
