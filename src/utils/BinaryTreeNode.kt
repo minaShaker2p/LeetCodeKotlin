@@ -1,6 +1,6 @@
 package utils
 
-class BinaryTreeNode(var `val`: Int) {
-    var left: BinaryTreeNode? = null
-    var right: BinaryTreeNode? = null
+class BinaryTreeNode<T>(var `val`: T) {
+    var left: BinaryTreeNode<T>? = null
+    var right: BinaryTreeNode<T>? = null
 }
