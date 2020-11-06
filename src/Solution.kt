@@ -1,8 +1,10 @@
+import trees.getHeight
 import trees.printEachLevel
+import utils.BinaryTreeNode
 
 fun main(args:Array<String>) {
-    val tree=makeTree()
-    tree.printEachLevel()
+    val tree=makeBinaryTree()
+    print(tree.getHeight())
 }
 
 
@@ -36,6 +38,30 @@ fun makeTree(): TreeNode<Int> {
     val seven = TreeNode(7)
     twenty.add(five2)
     twenty.add(seven)
+
+    return tree
+}
+
+fun makeBinaryTree(): BinaryTreeNode<Int> {
+    // Build the sample tree shown in the diagram
+    // Root of the tree
+    val tree = BinaryTreeNode(15)
+
+    // Second level
+    val one = BinaryTreeNode(1)
+    tree.left=one
+
+    val seventeen = BinaryTreeNode(17)
+    tree.right=seventeen
+
+    // Third level
+    val one2 = BinaryTreeNode(1)
+    val five = BinaryTreeNode(5)
+    val zero = BinaryTreeNode(0)
+    one.left=one2
+    one.right=five
+    seventeen.left=zero
+
 
     return tree
 }
