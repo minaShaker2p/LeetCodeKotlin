@@ -4,23 +4,28 @@ import kotlin.math.pow
 
 fun countPrimes(n: Int): Int {
 
-    var count = 0
-    val list = mutableListOf(2, 3, 5, 7)
-
-        for (i in 2 until n) {
-            if (i.isPrime(list))
-                count++
-        }
-    return count
-}
-
-fun Int.isPrime(list: MutableList<Int>): Boolean {
-    list.forEach {
-        if (this == it)
-            return true
-        if (this % it == 0)
-            return false
+    // assume all number is prime from 0 until n
+    val primes = BooleanArray(n)
+    for (i in 0 until n) {
+        primes[i] = true
     }
-    list.add(this)
-    return true
+    var i = 2
+    while ((i * i) < primes.size) {
+        if (primes[i]) {
+         var j = i
+            while (i *j < primes.size)
+            {
+                primes[i*j]=false
+                j++
+            }
+        }
+        i++
+    }
+    var count = 0
+    for(i in 2 until primes.size)
+    {
+        if(primes[i])
+            count++
+    }
+    return count
 }

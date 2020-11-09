@@ -4,7 +4,7 @@ import trees.serialize
 import utils.BinaryTreeNode
 
 fun main(args:Array<String>) {
-    println(countPrimes(999983))
+    println(countPrimes(10))
 }
 
 
