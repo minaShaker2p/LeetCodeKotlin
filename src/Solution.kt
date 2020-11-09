@@ -1,10 +1,12 @@
 import easy.countPrimes
+import easy.missingNumber
 import trees.deserialize
 import trees.serialize
 import utils.BinaryTreeNode
 
 fun main(args:Array<String>) {
-    println(countPrimes(10))
+    println(missingNumber(intArrayOf(1)))
+    println(missingNumber(intArrayOf(0,1)))
 }
 
 
