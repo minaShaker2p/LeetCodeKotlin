@@ -8,7 +8,7 @@ fun isBalanced(root: BinaryTreeNode<Int>?): Boolean {
 
 fun getHeight(node: BinaryTreeNode<Int>?): Int {
     var sum = 0
-    if (node?.left != null && node?.right != null)
+    if (node?.leftChild != null && node?.rightChild != null)
         return sum
     else
         return 1;
