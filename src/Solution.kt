@@ -1,12 +1,10 @@
+import easy.countPrimes
 import trees.deserialize
 import trees.serialize
 import utils.BinaryTreeNode
 
 fun main(args:Array<String>) {
-    val tree=makeTree()
-    val list=tree.serialize()
-    println(list)
-    println(tree.deserialize(list))
+    println(countPrimes(999983))
 }
 
 
