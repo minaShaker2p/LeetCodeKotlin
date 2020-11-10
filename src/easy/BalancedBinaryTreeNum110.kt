@@ -1,6 +1,6 @@
 package easy
 
-import utils.BinaryTreeNode
+import data_structure.BinaryTreeNode
 
 fun isBalanced(root: BinaryTreeNode<Int>?): Boolean {
     return true

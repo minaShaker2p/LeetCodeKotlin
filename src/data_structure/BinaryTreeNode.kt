@@ -1,4 +1,4 @@
-package utils
+package data_structure
 
 class BinaryTreeNode<T>(var value: T) {
     var leftChild: BinaryTreeNode<T>? = null

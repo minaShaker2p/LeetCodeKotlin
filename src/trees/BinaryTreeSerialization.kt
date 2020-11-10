@@ -1,6 +1,6 @@
 package trees
 
-import utils.BinaryTreeNode
+import data_structure.BinaryTreeNode
 
 fun <T> BinaryTreeNode<T>.traversePreOrderWithNull(visit: (T?) -> Unit) {
     visit(value)

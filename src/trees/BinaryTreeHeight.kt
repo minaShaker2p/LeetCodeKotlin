@@ -1,6 +1,6 @@
 package trees
 
-import utils.BinaryTreeNode
+import data_structure.BinaryTreeNode
 import kotlin.math.max
 
 fun <T> BinaryTreeNode<T>?.getHeight():Int

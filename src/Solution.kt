@@ -1,8 +1,5 @@
-import easy.countPrimes
 import easy.missingNumber
-import trees.deserialize
-import trees.serialize
-import utils.BinaryTreeNode
+import data_structure.BinaryTreeNode
 
 fun main(args:Array<String>) {
     println(missingNumber(intArrayOf(1)))
