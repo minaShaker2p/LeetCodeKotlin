@@ -5,7 +5,7 @@ import easy.isPalindrome
 import java.util.*
 
 fun main(args: Array<String>) {
- isPalindrome(makeSingleLinkedList())
+    print(isPalindrome(makeSingleLinkedList()))
 }
 
 fun makeSingleLinkedList(): ListNode<Int> {
