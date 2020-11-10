@@ -1,11 +1,23 @@
 import easy.missingNumber
 import data_structure.BinaryTreeNode
+import data_structure.ListNode
+import easy.isPalindrome
+import java.util.*
 
-fun main(args:Array<String>) {
-    println(missingNumber(intArrayOf(1)))
-    println(missingNumber(intArrayOf(0,1)))
+fun main(args: Array<String>) {
+ isPalindrome(makeSingleLinkedList())
 }
 
+fun makeSingleLinkedList(): ListNode<Int> {
+    val head = ListNode(1)
+    val t1 = ListNode(1)
+    val t2 = ListNode(2)
+    val t3 = ListNode(1)
+    head.next = t1
+    t1.next = t2
+    t2.next = t3
+    return head
+}
 
 fun makeTree(): BinaryTreeNode<Int> {
     val zero = BinaryTreeNode(0)
