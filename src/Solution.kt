@@ -1,21 +1,27 @@
-import easy.missingNumber
 import data_structure.BinaryTreeNode
 import data_structure.ListNode
-import easy.isPalindrome
-import java.util.*
+import easy.removeElements
 
 fun main(args: Array<String>) {
-    print(isPalindrome(makeSingleLinkedList()))
+    print(removeElements(makeSingleLinkedList(), 6))
 }
 
 fun makeSingleLinkedList(): ListNode<Int> {
     val head = ListNode(1)
     val t1 = ListNode(1)
     val t2 = ListNode(2)
-    val t3 = ListNode(1)
+    val t3 = ListNode(6)
+    val t4 = ListNode(3)
+    val t5 = ListNode(4)
+    val t6 = ListNode(5)
+    val t7 = ListNode(6)
     head.next = t1
     t1.next = t2
     t2.next = t3
+    t3.next = t4
+    t4.next = t5
+    t5.next = t6
+    t6.next = t7
     return head
 }
 
