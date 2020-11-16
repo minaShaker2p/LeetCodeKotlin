@@ -12,21 +12,25 @@ Output: 1->2->3->4->5
  **/
 
 fun removeElements(head: ListNode<Int>?, `val`: Int): ListNode<Int>? {
+    var prev: ListNode<Int>? = null
 
-    var prev: ListNode<Int>? = head
+    var newHead = head
 
-    var current = head
+    while (newHead != null && newHead.value == `val`) {
+        newHead = newHead?.next
+    }
+    var current = newHead
 
     while (current != null) {
         if (current.value == `val`) {
             prev?.next = current.next
-            current = null
-            break
+            current = prev?.next
+            continue
         }
         // update previous element
-        prev = prev?.next
+        prev = current
         current = current.next
     }
 
-    return head
+    return newHead
 }

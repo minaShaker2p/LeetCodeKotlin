@@ -3,7 +3,8 @@ import data_structure.ListNode
 import easy.removeElements
 
 fun main(args: Array<String>) {
-    print(removeElements(makeSingleLinkedList(), 6))
+  //  print(removeElements(makeSingleLinkedList(), 6))
+    print(removeElements(ListNode(1), 1))
 }
 
 fun makeSingleLinkedList(): ListNode<Int> {
