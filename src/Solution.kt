@@ -1,10 +1,32 @@
 import data_structure.BinaryTreeNode
 import data_structure.ListNode
+import easy.countCharacters
 import easy.removeElements
 
 fun main(args: Array<String>) {
-  //  print(removeElements(makeSingleLinkedList(), 6))
-    print(removeElements(ListNode(1), 1))
+    val test = arrayOf<String>("dyiclysmffuhibgfvapygkorkqllqlvokosagyelotobicwcmebnpznjbirzrzsrtzjxhsfpiwyfhzyonmuabtlwin",
+        "ndqeyhhcquplmznwslewjzuyfgklssvkqxmqjpwhrshycmvrb",
+        "ulrrbpspyudncdlbkxkrqpivfftrggemkpyjl",
+        "boygirdlggnh",
+        "xmqohbyqwagkjzpyawsydmdaattthmuvjbzwpyopyafphx",
+        "nulvimegcsiwvhwuiyednoxpugfeimnnyeoczuzxgxbqjvegcxeqnjbwnbvowastqhojepisusvsidhqmszbrnynkyop",
+        "hiefuovybkpgzygprmndrkyspoiyapdwkxebgsmodhzpx",
+        "juldqdzeskpffaoqcyyxiqqowsalqumddcufhouhrskozhlmobiwzxnhdkidr",
+        "lnnvsdcrvzfmrvurucrzlfyigcycffpiuoo",
+        "oxgaskztzroxuntiwlfyufddl",
+        "tfspedteabxatkaypitjfkhkkigdwdkctqbczcugripkgcyfezpuklfqfcsccboarbfbjfrkxp",
+        "qnagrpfzlyrouolqquytwnwnsqnmuzphne",
+        "eeilfdaookieawrrbvtnqfzcricvhpiv",
+        "sisvsjzyrbdsjcwwygdnxcjhzhsxhpceqz",
+        "yhouqhjevqxtecomahbwoptzlkyvjexhzcbccusbjjdgcfzlkoqwiwue",
+        "hwxxighzvceaplsycajkhynkhzkwkouszwaiuzqcleyflqrxgjsvlegvupzqijbornbfwpefhxekgpuvgiyeudhncv",
+        "cpwcjwgbcquirnsazumgjjcltitmeyfaudbnbqhflvecjsupjmgwfbjo",
+        "teyygdmmyadppuopvqdodaczob",
+        "qaeowuwqsqffvibrtxnjnzvzuuonrkwpysyxvkijemmpdmtnqxwekbpfzs",
+        "qqxpxpmemkldghbmbyxpkwgkaykaerhmwwjonrhcsubchs")
+
+    println(countCharacters(arrayOf("cat","bt","hat","tree"),"atach"))
+
 }
 
 fun makeSingleLinkedList(): ListNode<Int> {
