@@ -16,9 +16,12 @@ Input: queries = ["bbb","cc"], words = ["a","aa","aaa","aaaa"]
 Output: [1,2]
 Explanation: On the first query only f("bbb") < f("aaaa"). On the second query both f("aaa") and f("aaaa") are both > f("cc").
  */
+/**
+ * this solution take O(N) and O(1)
+ */
 fun numSmallerByFrequency(queries: Array<String>, words: Array<String>): IntArray {
     val results = mutableListOf<Int>()
-    queries.forEachIndexed { index, query ->
+    queries.forEach { query ->
         var freq = 0
         for (element in words) {
             if (query.getFrequency() < element.getFrequency()) {
