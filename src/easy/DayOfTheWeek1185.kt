@@ -1,5 +1,8 @@
 package easy
 
+import java.time.LocalDate
+import java.util.*
+
 /**
  * Given a date, return the corresponding day of the week for that date.
 
@@ -23,6 +26,16 @@ Output: "Sunday"
 **/
 
 fun dayOfTheWeek(day: Int, month: Int, year: Int): String {
-return ""
+   val date = LocalDate.of(2016, month, 15)
+    return  when(date.dayOfWeek.value)
+    {
+        0 ->"Sunday"
+        1 -> "Monday"
+        2->"Tuesday"
+        3->"Wednesday"
+        4->"Thursday"
+        5->"Friday"
+        else ->"Saturday"
+    }
 }
 
