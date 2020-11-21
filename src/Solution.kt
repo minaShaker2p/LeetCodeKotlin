@@ -1,34 +1,16 @@
 import data_structure.BinaryTreeNode
 import data_structure.ListNode
 import easy.countCharacters
+import easy.dayOfTheWeek
 import easy.numSmallerByFrequency
 import easy.removeElements
 
 fun main(args: Array<String>) {
-    val test = arrayOf<String>("dyiclysmffuhibgfvapygkorkqllqlvokosagyelotobicwcmebnpznjbirzrzsrtzjxhsfpiwyfhzyonmuabtlwin",
-        "ndqeyhhcquplmznwslewjzuyfgklssvkqxmqjpwhrshycmvrb",
-        "ulrrbpspyudncdlbkxkrqpivfftrggemkpyjl",
-        "boygirdlggnh",
-        "xmqohbyqwagkjzpyawsydmdaattthmuvjbzwpyopyafphx",
-        "nulvimegcsiwvhwuiyednoxpugfeimnnyeoczuzxgxbqjvegcxeqnjbwnbvowastqhojepisusvsidhqmszbrnynkyop",
-        "hiefuovybkpgzygprmndrkyspoiyapdwkxebgsmodhzpx",
-        "juldqdzeskpffaoqcyyxiqqowsalqumddcufhouhrskozhlmobiwzxnhdkidr",
-        "lnnvsdcrvzfmrvurucrzlfyigcycffpiuoo",
-        "oxgaskztzroxuntiwlfyufddl",
-        "tfspedteabxatkaypitjfkhkkigdwdkctqbczcugripkgcyfezpuklfqfcsccboarbfbjfrkxp",
-        "qnagrpfzlyrouolqquytwnwnsqnmuzphne",
-        "eeilfdaookieawrrbvtnqfzcricvhpiv",
-        "sisvsjzyrbdsjcwwygdnxcjhzhsxhpceqz",
-        "yhouqhjevqxtecomahbwoptzlkyvjexhzcbccusbjjdgcfzlkoqwiwue",
-        "hwxxighzvceaplsycajkhynkhzkwkouszwaiuzqcleyflqrxgjsvlegvupzqijbornbfwpefhxekgpuvgiyeudhncv",
-        "cpwcjwgbcquirnsazumgjjcltitmeyfaudbnbqhflvecjsupjmgwfbjo",
-        "teyygdmmyadppuopvqdodaczob",
-        "qaeowuwqsqffvibrtxnjnzvzuuonrkwpysyxvkijemmpdmtnqxwekbpfzs",
-        "qqxpxpmemkldghbmbyxpkwgkaykaerhmwwjonrhcsubchs")
 
-    //println(countCharacters(arrayOf("cat","bt","hat","tree"),"atach"))
-
-    println(numSmallerByFrequency(arrayOf("cbd"), arrayOf("zaaaz")))
+    31
+    8
+    2019
+    println(dayOfTheWeek(31,8,2019))
 
 }
 

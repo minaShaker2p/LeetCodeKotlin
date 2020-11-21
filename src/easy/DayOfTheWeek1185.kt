@@ -26,16 +26,16 @@ Output: "Sunday"
 **/
 
 fun dayOfTheWeek(day: Int, month: Int, year: Int): String {
-   val date = LocalDate.of(2016, month, 15)
+   val date = LocalDate.of(year, month, day)
     return  when(date.dayOfWeek.value)
     {
-        0 ->"Sunday"
-        1 -> "Monday"
-        2->"Tuesday"
+        1 ->"Monday"
+        2 -> "Tuesday"
         3->"Wednesday"
         4->"Thursday"
         5->"Friday"
-        else ->"Saturday"
+        6->"Saturday"
+        else ->"Sunday"
     }
 }
 
