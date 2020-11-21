@@ -17,5 +17,29 @@ Output: [1,2]
 Explanation: On the first query only f("bbb") < f("aaaa"). On the second query both f("aaa") and f("aaaa") are both > f("cc").
  */
 fun numSmallerByFrequency(queries: Array<String>, words: Array<String>): IntArray {
-    return IntArray(1)
+    val results = mutableListOf<Int>()
+    queries.forEachIndexed { index, query ->
+        var freq = 0
+        for (element in words) {
+            if (query.getFrequency() < element.getFrequency()) {
+                freq++
+            }
+        }
+        results.add(freq)
+    }
+    return results.toIntArray()
+}
+
+fun String.getFrequency(): Int {
+    var frequency = 0
+    var smallest = this[0]
+    this.forEach {
+        if (it < smallest) {
+            smallest = it
+            frequency = 0
+        }
+        if (smallest == it)
+            frequency++
+    }
+    return frequency
 }

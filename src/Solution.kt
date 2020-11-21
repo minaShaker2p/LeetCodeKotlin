@@ -1,6 +1,7 @@
 import data_structure.BinaryTreeNode
 import data_structure.ListNode
 import easy.countCharacters
+import easy.numSmallerByFrequency
 import easy.removeElements
 
 fun main(args: Array<String>) {
@@ -25,7 +26,9 @@ fun main(args: Array<String>) {
         "qaeowuwqsqffvibrtxnjnzvzuuonrkwpysyxvkijemmpdmtnqxwekbpfzs",
         "qqxpxpmemkldghbmbyxpkwgkaykaerhmwwjonrhcsubchs")
 
-    println(countCharacters(arrayOf("cat","bt","hat","tree"),"atach"))
+    //println(countCharacters(arrayOf("cat","bt","hat","tree"),"atach"))
+
+    println(numSmallerByFrequency(arrayOf("cbd"), arrayOf("zaaaz")))
 
 }
 
