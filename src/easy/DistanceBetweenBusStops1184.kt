@@ -1,5 +1,7 @@
 package easy
 
+import kotlin.math.min
+
 /**
  * A bus has n stops numbered from 0 to n - 1 that form a circle. We know the distance between all pairs of neighboring stops where distance[i] is the distance between the stops number i and (i + 1) % n.
 
@@ -22,5 +24,18 @@ Explanation: Distance between 0 and 2 is 3 or 7, minimum is 3.
 
 
 fun distanceBetweenBusStops(distance: IntArray, start: Int, destination: Int): Int {
-    return 0
+
+    var clockWise = 0
+    var counterClockWise = 0
+
+    for (i in start until destination) {
+        clockWise += distance[i]
+    }
+
+    for (i in destination downTo  start) {
+        counterClockWise += distance[i]
+    }
+
+
+    return min(clockWise, counterClockWise)
 }
