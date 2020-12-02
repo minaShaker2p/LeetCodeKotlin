@@ -1,16 +1,10 @@
 import data_structure.BinaryTreeNode
 import data_structure.ListNode
-import easy.countCharacters
-import easy.dayOfTheWeek
-import easy.numSmallerByFrequency
-import easy.removeElements
+import easy.*
 
 fun main(args: Array<String>) {
 
-    31
-    8
-    2019
-    println(dayOfTheWeek(31,8,2019))
+   println(distanceBetweenBusStops(intArrayOf(1,2,3,4),0,3))
 
 }
 

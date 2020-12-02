@@ -26,16 +26,19 @@ Explanation: Distance between 0 and 2 is 3 or 7, minimum is 3.
 fun distanceBetweenBusStops(distance: IntArray, start: Int, destination: Int): Int {
 
     var clockWise = 0
-    var counterClockWise = 0
+    var totalDistance = 0
 
-    for (i in start until destination) {
-        clockWise += distance[i]
+    for (i in distance.indices) {
+        if (start < destination && (i in start until destination)) {
+            clockWise += distance[i]
+        }
+        if (start > destination && (i >= start || i < destination)) {
+            clockWise += distance[i]
+        }
+        totalDistance += distance[i]
     }
 
-    for (i in destination downTo  start) {
-        counterClockWise += distance[i]
-    }
 
 
-    return min(clockWise, counterClockWise)
+    return min(clockWise, (totalDistance - clockWise))
 }
