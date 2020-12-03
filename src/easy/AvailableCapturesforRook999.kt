@@ -17,5 +17,66 @@ In this example the rook is able to capture all the pawns.
  */
 fun numRookCaptures(board: Array<CharArray>): Int {
 
-    return 0
+    var iRockIndex =0
+    var jRockIndex=0
+    var pawns=0
+
+    for ( i in board.indices)
+    {
+        for(j in board[i].indices)
+        {
+            if(board[i][j]=='R')
+            {
+                iRockIndex=i
+                jRockIndex=j
+                break
+            }
+        }
+    }
+    //move east
+    for (i in jRockIndex until board[iRockIndex].size)
+    {
+        if(board[iRockIndex][i]=='B')
+            break
+        if(board[iRockIndex][i]=='p') {
+            pawns++
+            break
+        }
+
+    }
+
+    //move west
+    for (i in jRockIndex downTo  0)
+    {
+        if(board[iRockIndex][i]=='B')
+            break
+        if(board[iRockIndex][i]=='p') {
+            pawns++
+            break
+        }
+    }
+
+    //move South
+    for (i in iRockIndex until board.size)
+    {
+        if(board[i][jRockIndex]=='B')
+            break
+        if(board[i][jRockIndex]=='p') {
+            pawns++
+            break
+        }
+    }
+
+    //move north
+    for (i in iRockIndex downTo  0)
+    {
+        if(board[i][jRockIndex]=='B')
+            break
+        if(board[i][jRockIndex]=='p') {
+            pawns++
+            break
+        }
+    }
+
+    return pawns
 }
