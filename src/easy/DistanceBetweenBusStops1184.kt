@@ -22,12 +22,14 @@ Output: 3
 Explanation: Distance between 0 and 2 is 3 or 7, minimum is 3.
  */
 
-
 fun distanceBetweenBusStops(distance: IntArray, start: Int, destination: Int): Int {
 
     var clockWise = 0
     var totalDistance = 0
-
+    /**
+     * calculate total distance and clockwise distance
+     * then get minimum between clockwise distance and [totalDistance- clockwiseDistance]
+     */
     for (i in distance.indices) {
         if (start < destination && (i in start until destination)) {
             clockWise += distance[i]
@@ -37,8 +39,5 @@ fun distanceBetweenBusStops(distance: IntArray, start: Int, destination: Int): I
         }
         totalDistance += distance[i]
     }
-
-
-
     return min(clockWise, (totalDistance - clockWise))
 }
