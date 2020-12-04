@@ -28,5 +28,22 @@ Output: [[-14,-10],[19,23],[23,27]]
  * **/
 
 fun minimumAbsDifference(arr: IntArray): List<List<Int>> {
-    return emptyList()
+    val sortedArr = arr.sortedArray()
+    var diff = Int.MAX_VALUE
+    val result = mutableListOf<List<Int>>()
+    for (i in 0 until sortedArr.size - 1) {
+        val a = sortedArr[i]
+        val b = sortedArr[i + 1]
+        if ((b - a) < diff)
+            diff = b - a
+    }
+    for (i in 0 until sortedArr.size - 1) {
+        val a = sortedArr[i]
+        val b = sortedArr[i + 1]
+        if ((b - a) == diff)
+            result.add(listOf(a, b))
+
+    }
+
+    return result
 }
