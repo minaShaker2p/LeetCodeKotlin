@@ -1,5 +1,7 @@
 package easy
 
+import kotlin.math.min
+
 /**
 We have n chips, where the position of the ith chip is position[i].
 
@@ -20,5 +22,15 @@ Total cost is 1.
 
 fun minCostToMoveChips(position: IntArray): Int {
 
-    return 0
+    var even = 0
+    var odd=0
+
+    position.forEach{
+        if(it%2==0)
+            even++
+        else
+            odd++
+    }
+
+    return min(even,odd)
 }
