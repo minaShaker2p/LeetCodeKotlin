@@ -17,5 +17,34 @@ The final matrix will be [[1,3,1],[1,3,1]] which contains 6 odd numbers.
  */
 
 fun oddCells(n: Int, m: Int, indices: Array<IntArray>): Int {
-return 0
+
+    val array = Array(n) { IntArray(m) }
+    for (i in 0 until n)
+    {
+        for (j in 0 until m)
+        {
+            array[i][j]=0
+        }
+    }
+    indices.forEach {cell->
+        array.forEachIndexed { i,row->
+            row.forEachIndexed { j, column ->
+                if(cell[0]==i)
+                    array[i][j]++
+                if(cell[1]==j)
+                    array[i][j]++
+            }
+        }
+    }
+    var result=0
+
+    for (i in array.indices)
+    {
+        for (j in array[i].indices)
+        {
+           if(array[i][j]%2!=0)
+               result++
+        }
+    }
+return result
 }
