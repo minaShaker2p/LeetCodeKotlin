@@ -4,8 +4,7 @@ import easy.*
 
 fun main(args: Array<String>) {
 
-   println(distanceBetweenBusStops(intArrayOf(1,2,3,4),0,3))
-
+println(canPlaceFlowers(mutableListOf(1,0,0,0,0,1),2))
 }
 
 fun makeSingleLinkedList(): ListNode<Int> {
