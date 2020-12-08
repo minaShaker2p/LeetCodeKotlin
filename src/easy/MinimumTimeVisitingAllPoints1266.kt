@@ -1,5 +1,7 @@
 package easy
 
+import java.lang.Math.max
+import kotlin.math.abs
 import kotlin.math.min
 
 /*
@@ -23,84 +25,16 @@ Total time = 7 seconds
  */
 
 fun minTimeToVisitAllPoints(points: Array<IntArray>): Int {
-    var timeForward = 0
-    var timeBackward=0
+    var minTime=0
     for (i in 0 until points.size-1)
     {
-        var A =points[i]
-        val B =points[i+1]
-        while (!A.contentEquals(B))
-        {
-            if(A[0]<B[0])
-            {
-                // go Diagonal vertical up
-                A = intArrayOf(A[0]+1,A[1]+1)
-                timeForward++
-
-            }else if(A[0]>B[0])
-            {
-                // go Diagonal vertical down
-                A = intArrayOf(A[0]-1,A[1]-1)
-                timeForward++
-            }else
-            {
-                // in case of x value are equal
-                if(A[1]<B[1])
-                {
-                    //go straight horizontal to right
-                    A = intArrayOf(A[0],A[1]+1)
-                    timeForward++
-
-                }else if(A[1]>B[1])
-                {
-                    //go straight horizontal to left
-                    A = intArrayOf(A[0],A[1]-1)
-                    timeForward++
-                }
-
-            }
-        }
-
+        minTime+= distance(point1 = points[i],point2 = points[i+1])
     }
 
-    for (i in points.size-1 downTo 1)
-    {
-        var A =points[i]
-        val B =points[i-1]
-        while (!A.contentEquals(B))
-        {
-            if(A[0]<B[0])
-            {
-                // go Diagonal vertical up
-                A = intArrayOf(A[0]+1,A[1]+1)
-                timeBackward++
+    return minTime
+}
 
-            }else if(A[0]>B[0])
-            {
-                // go Diagonal vertical down
-                A = intArrayOf(A[0]-1,A[1]-1)
-                timeBackward++
-            }else
-            {
-                // in case of x value are equal
-                if(A[1]<B[1])
-                {
-                    //go straight horizontal to right
-                    A = intArrayOf(A[0],A[1]+1)
-                    timeBackward++
-
-                }else if(A[1]>B[1])
-                {
-                    //go straight horizontal to left
-                    A = intArrayOf(A[0],A[1]-1)
-                    timeBackward++
-                }
-
-            }
-        }
-
-    }
-
-
-    return min(timeBackward,timeForward)
+private fun distance(point1:IntArray,point2: IntArray):Int
+{
+    return max(abs(point1[0]-point2[0]), abs(point1[1]-point2[1]))
 }
