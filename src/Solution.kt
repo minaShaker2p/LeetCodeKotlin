@@ -3,7 +3,7 @@ import data_structure.ListNode
 import easy.*
 
 fun main(args: Array<String>) {
-println(shiftGrid(arrayOf(intArrayOf(1,2,3),intArrayOf(4,5,6),intArrayOf(7,8,9)),1))
+println(minTimeToVisitAllPoints(arrayOf(intArrayOf(1,1),intArrayOf(3,4),intArrayOf(-1,0))))
 }
 
 fun makeSingleLinkedList(): ListNode<Int> {

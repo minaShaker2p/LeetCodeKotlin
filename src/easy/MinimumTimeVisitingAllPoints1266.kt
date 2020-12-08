@@ -1,5 +1,7 @@
 package easy
 
+import kotlin.math.min
+
 /*
 On a plane there are n points with integer coordinates points[i] = [xi, yi]. Your task is to find the minimum time in seconds to visit all points.
 
@@ -21,7 +23,84 @@ Total time = 7 seconds
  */
 
 fun minTimeToVisitAllPoints(points: Array<IntArray>): Int {
+    var timeForward = 0
+    var timeBackward=0
+    for (i in 0 until points.size-1)
+    {
+        var A =points[i]
+        val B =points[i+1]
+        while (!A.contentEquals(B))
+        {
+            if(A[0]<B[0])
+            {
+                // go Diagonal vertical up
+                A = intArrayOf(A[0]+1,A[1]+1)
+                timeForward++
+
+            }else if(A[0]>B[0])
+            {
+                // go Diagonal vertical down
+                A = intArrayOf(A[0]-1,A[1]-1)
+                timeForward++
+            }else
+            {
+                // in case of x value are equal
+                if(A[1]<B[1])
+                {
+                    //go straight horizontal to right
+                    A = intArrayOf(A[0],A[1]+1)
+                    timeForward++
+
+                }else if(A[1]>B[1])
+                {
+                    //go straight horizontal to left
+                    A = intArrayOf(A[0],A[1]-1)
+                    timeForward++
+                }
+
+            }
+        }
+
+    }
+
+    for (i in points.size-1 downTo 1)
+    {
+        var A =points[i]
+        val B =points[i-1]
+        while (!A.contentEquals(B))
+        {
+            if(A[0]<B[0])
+            {
+                // go Diagonal vertical up
+                A = intArrayOf(A[0]+1,A[1]+1)
+                timeBackward++
+
+            }else if(A[0]>B[0])
+            {
+                // go Diagonal vertical down
+                A = intArrayOf(A[0]-1,A[1]-1)
+                timeBackward++
+            }else
+            {
+                // in case of x value are equal
+                if(A[1]<B[1])
+                {
+                    //go straight horizontal to right
+                    A = intArrayOf(A[0],A[1]+1)
+                    timeBackward++
+
+                }else if(A[1]>B[1])
+                {
+                    //go straight horizontal to left
+                    A = intArrayOf(A[0],A[1]-1)
+                    timeBackward++
+                }
+
+            }
+        }
+
+    }
 
 
-return 0
+    return min(timeBackward,timeForward)
 }
