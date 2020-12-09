@@ -46,5 +46,41 @@ Explanation: The game ends in a draw since there are no moves to make.
  */
 
 fun tictactoe(moves: Array<IntArray>): String {
-return ""
+    val board = Array(3) { CharArray(3) {' '} }
+
+    moves.forEachIndexed { i, move ->
+        var player = 'O'
+        if (i % 2 == 0)
+            player = 'X'
+        board[move[0]][move[1]] = player
+    }
+    // check rows
+    board.forEachIndexed { i, row ->
+        if (row[0] == 'X' && row[1] == 'X' && row[2] == 'X')
+            return "A"
+        else if (row[0] == 'O' && row[1] == 'O' && row[2] == 'O')
+            return "B"
+    }
+
+    // check columns
+    for (i in 0 until 3) {
+        if (board[0][i] == 'X' && board[1][i] == 'X' && board[2][i] == 'X')
+            return "A"
+        else if (board[0][i] == 'O' && board[1][i] == 'O' && board[2][i] == 'O')
+            return "B"
+    }
+
+    // check diagonals
+
+    for (i in 0 until 3) {
+        if ((board[0][0] == 'X' && board[1][1] == 'X' && board[2][2] == 'X')||
+            (board[0][2] == 'X' && board[1][1] == 'X' && board[2][0] == 'X')  )
+            return "A"
+        else  if ((board[0][0] == 'O' && board[1][1] == 'O' && board[2][2] == 'O')||
+            (board[0][2] == 'O' && board[1][1] == 'O' && board[2][0] == 'O')  )
+            return "B"
+    }
+    if (moves.size<9)
+        return "Pending"
+    return "Draw"
 }

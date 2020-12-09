@@ -3,7 +3,7 @@ import data_structure.ListNode
 import easy.*
 
 fun main(args: Array<String>) {
-println(minTimeToVisitAllPoints(arrayOf(intArrayOf(1,1),intArrayOf(3,4),intArrayOf(-1,0))))
+println(tictactoe(arrayOf(intArrayOf(0,0),intArrayOf(2,0),intArrayOf(1,1), intArrayOf(2,1), intArrayOf(2,2))))
 }
 
 fun makeSingleLinkedList(): ListNode<Int> {
