@@ -26,6 +26,17 @@ Only 1771 contains an even number of digits.
 fun findNumbers(nums: IntArray): Int {
 
     var result = 0
+    nums.forEach {
+        var i =0
+        var num=it
+        while (num!=0)
+        {
+            num/=10
+            i++
+        }
+        if(i%2==0)
+            result++
+    }
     return result
 
 }
