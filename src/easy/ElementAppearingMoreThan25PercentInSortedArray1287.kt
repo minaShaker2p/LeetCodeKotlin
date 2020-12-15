@@ -12,5 +12,16 @@ Output: 6
  */
 
 fun findSpecialInteger(arr: IntArray): Int {
-return 0
+    val map = HashMap<Int, Int>()
+    arr.forEach {
+        val value = map[it] ?: 0
+        map[it] = value.plus(1)
+    }
+    var result =-1
+    map.forEach { (k, v) ->
+        if(v > (arr.size/4))
+            result=k
+    }
+    return result
+
 }
