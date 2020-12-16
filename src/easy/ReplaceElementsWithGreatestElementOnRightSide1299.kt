@@ -30,3 +30,22 @@ fun IntArray.getMaxElement(): Int {
     }
     return -1
 }
+/*
+this solution enhance problem performance from O(N^2) to O(N)
+Hint 1:
+Loop through the array starting from the end.
+Hint 2:
+Keep the maximum value seen so far.
+ */
+fun replaceElementsSolution2(arr: IntArray): IntArray {
+    var max=-1
+    for ( i in arr.size-1 downTo 0)
+    {
+        val  temp=max
+        if(arr[i]>max)
+            max=arr[i]
+        arr[i]=temp
+
+    }
+    return arr
+}
