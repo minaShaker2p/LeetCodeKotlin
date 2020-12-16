@@ -11,5 +11,22 @@ Output: [18,6,6,6,1,-1]
  */
 
 fun replaceElements(arr: IntArray): IntArray {
+    arr.forEachIndexed { i, _ ->
+        arr[i] = arr.copyOfRange(i + 1, arr.size).getMaxElement()
+    }
+    return arr
 
+}
+
+fun IntArray.getMaxElement(): Int {
+    if(this.isNotEmpty())
+    {
+        var max = this[0]
+        for (i in 1 until this.size) {
+            if (this[i] > max)
+                max = this[i]
+        }
+        return max
+    }
+    return -1
 }
