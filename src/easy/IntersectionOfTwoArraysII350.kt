@@ -23,20 +23,27 @@ What if elements of nums2 are stored on disk,
 and the memory is limited such that you cannot load all elements into the memory at once?
  */
 fun intersect(nums1: IntArray, nums2: IntArray): IntArray {
-    if (nums1.size < nums2.size) {
-       return nums1.intersectWith(nums2)
-    } else {
-        return nums2.intersectWith(nums1)
-
-    }
-}
-
-fun IntArray.intersectWith(array: IntArray): IntArray {
     val result = arrayListOf<Int>()
-    this.forEach {
-        if (array.contains(it))
-            result.add(it)
+    val map1 = nums1.toHashTable()
+
+    nums2.forEachIndexed{i, num ->
+        if(map1.containsKey(num)&& (map1[num]!!>= 1))
+        {
+            result.add(num)
+            val value=map1[num]?:0
+            map1[num]=value-1
+        }
     }
-    result.sort()
+
     return result.toIntArray()
 }
+
+fun IntArray.toHashTable(): HashMap<Int, Int> {
+    val map = HashMap<Int, Int>()
+    this.forEach {
+        val value = map[it] ?: 0
+        map[it] = value + 1
+    }
+    return map
+}
+
