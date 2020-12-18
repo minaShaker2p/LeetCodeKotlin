@@ -17,5 +17,22 @@ Input: n = 1
 Output: [0]
  */
 fun sumZero(n: Int): IntArray {
-    return intArrayOf()
+    val result = arrayListOf<Int>()
+    if(n==1)
+        return intArrayOf(0)
+    else
+    {
+
+        for(i in 1..n/2)
+        {
+            result.add(i)
+            result.add(i*-1)
+        }
+        if(n%2==1)
+        {
+            // in case it is negative number
+            result.add(0)
+        }
+    }
+    return result.toIntArray()
 }
