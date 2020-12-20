@@ -22,5 +22,16 @@ Input: nums = [1,1,2,3]
 Output: [1,3,3]
  */
 fun decompressRLElist(nums: IntArray): IntArray {
-    return intArrayOf()
+    val array=arrayListOf<Int>()
+
+    for(i in nums.indices step 2)
+    {
+        val freq =nums[i]
+        val value =nums[i+1]
+        for(j in 0 until freq)
+        {
+            array.add(value)
+        }
+    }
+    return array.toIntArray()
 }
