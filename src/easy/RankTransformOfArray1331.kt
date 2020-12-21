@@ -26,22 +26,19 @@ Output: [5,3,4,2,8,6,7,1,3]
  */
 
 fun arrayRankTransform(arr: IntArray): IntArray {
-    arr.sort()
-    val rankArray=arrayListOf<Int>()
-    val smallest=arr[0]
-    rankArray.add(1)
-    for (i in 1 until arr.size)
-    {
-        if(arr[i]==smallest)
-        { rankArray.add(rankArray[i-1])}
+    val sortedArr = arr.sortedArray()
+    //map contain value as key and Rank
+    val map = HashMap<Int, Int>()
+    val rankedArray=IntArray(arr.size)
 
-        else
-        {
-            val value=rankArray[i-1]+1
-            rankArray.add(value)
-        }
-
+    sortedArr.forEach {
+        if (!map.containsKey(it))
+            map[it] = map.size + 1
     }
-    return rankArray.toIntArray()
+    arr.forEachIndexed { i,v->
+        rankedArray[i]= map[v]?:0
+    }
+
+    return rankedArray
 
 }

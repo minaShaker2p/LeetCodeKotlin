@@ -3,7 +3,9 @@ import data_structure.ListNode
 import easy.*
 
 fun main(args: Array<String>) {
-println(tictactoe(arrayOf(intArrayOf(0,0),intArrayOf(2,0),intArrayOf(1,1), intArrayOf(2,1), intArrayOf(2,2))))
+   arrayRankTransform(intArrayOf(40,10,30,20)).forEach {
+       print( "$it " )
+   }
 }
 
 fun makeSingleLinkedList(): ListNode<Int> {
