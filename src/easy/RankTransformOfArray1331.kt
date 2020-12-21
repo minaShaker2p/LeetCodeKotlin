@@ -29,16 +29,13 @@ fun arrayRankTransform(arr: IntArray): IntArray {
     val sortedArr = arr.sortedArray()
     //map contain value as key and Rank
     val map = HashMap<Int, Int>()
-    val rankedArray=IntArray(arr.size)
-
     sortedArr.forEach {
         if (!map.containsKey(it))
             map[it] = map.size + 1
     }
     arr.forEachIndexed { i,v->
-        rankedArray[i]= map[v]?:0
+        arr[i]= map[v]?:0
     }
-
-    return rankedArray
+    return arr
 
 }
