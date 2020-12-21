@@ -26,6 +26,22 @@ Output: [5,3,4,2,8,6,7,1,3]
  */
 
 fun arrayRankTransform(arr: IntArray): IntArray {
+    arr.sort()
+    val rankArray=arrayListOf<Int>()
+    val smallest=arr[0]
+    rankArray.add(1)
+    for (i in 1 until arr.size)
+    {
+        if(arr[i]==smallest)
+        { rankArray.add(rankArray[i-1])}
 
-    return intArrayOf()
+        else
+        {
+            val value=rankArray[i-1]+1
+            rankArray.add(value)
+        }
+
+    }
+    return rankArray.toIntArray()
+
 }
