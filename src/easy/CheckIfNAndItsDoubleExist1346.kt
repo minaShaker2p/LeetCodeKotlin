@@ -28,12 +28,15 @@ Explanation: In this case does not exist N and M, such that N = 2 * M.
  */
 fun checkIfExist(arr: IntArray): Boolean {
     if (arr.isNotEmpty()) {
-        val domainin: Double = arr[0].toDouble()
-        arr.forEach {
-            if ((it / domainin == 2.0) || (it / domainin == 0.5))
-                return true
+        for(i in arr.indices)
+        {
+            val domainin: Double = arr[i].toDouble()
+            for(j in i+1 until arr.size)
+            {
+                if ((arr[j] / domainin == 2.0) || (arr[j] / domainin == 0.5))
+                    return true
+            }
         }
-
     }
 
     return false

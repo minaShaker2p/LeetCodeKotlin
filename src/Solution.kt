@@ -3,9 +3,7 @@ import data_structure.ListNode
 import easy.*
 
 fun main(args: Array<String>) {
-   arrayRankTransform(intArrayOf(40,10,30,20)).forEach {
-       print( "$it " )
-   }
+   checkIfExist(intArrayOf(-20,8,-6,-14,0,-19,14,4))
 }
 
 fun makeSingleLinkedList(): ListNode<Int> {
