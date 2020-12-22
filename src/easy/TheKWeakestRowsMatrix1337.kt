@@ -43,17 +43,24 @@ Rows ordered from the weakest to the strongest are [0,2,3,1]
  */
 
 fun kWeakestRows(mat: Array<IntArray>, k: Int): IntArray {
-    val weaknessMatrix=IntArray(mat.size)
 
-    mat.forEachIndexed{i, row->
-        var soldiers=0
-        row.forEach{
-            if(it==1)
+    val weaknessMatrix = HashMap<Int, Int>()
+
+    mat.forEachIndexed { i, row ->
+        var soldiers = 0
+        row.forEach {
+            if (it == 1)
                 soldiers++
         }
-        weaknessMatrix[i]=soldiers
+        weaknessMatrix[i] = soldiers
     }
-    // sort  weakness matrix
-    weaknessMatrix.sort()
-    return weaknessMatrix.copyOfRange(0, k)
+
+    val result= IntArray(k)
+    weaknessMatrix.entries.sortedBy { it.value }
+        .forEachIndexed { index, entry ->
+            if(index<k)
+                result[index]=entry.key
+        }
+    return result
+
 }
