@@ -3,7 +3,7 @@ import data_structure.ListNode
 import easy.*
 
 fun main(args: Array<String>) {
-   checkIfExist(intArrayOf(-20,8,-6,-14,0,-19,14,4))
+    countNegatives(arrayOf(intArrayOf(1,-1),intArrayOf(-1,-1)))
 }
 
 fun makeSingleLinkedList(): ListNode<Int> {

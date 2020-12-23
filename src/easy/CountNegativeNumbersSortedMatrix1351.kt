@@ -24,5 +24,12 @@ Output: 1
  */
 
 fun countNegatives(grid: Array<IntArray>): Int {
-return 0
+    var count=0
+    for(i in grid.indices)
+    {
+        count+=grid[i].filter {
+            it<0
+        }.count()
+    }
+    return count
 }
