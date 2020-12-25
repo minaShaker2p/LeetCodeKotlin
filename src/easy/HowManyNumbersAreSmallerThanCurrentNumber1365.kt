@@ -25,5 +25,14 @@ Output: [0,0,0,0]
  */
 
 fun smallerNumbersThanCurrent(nums: IntArray): IntArray {
-return intArrayOf()
+    val result=IntArray(nums.size)
+    for(i in nums.indices)
+    {
+        for(j in nums.indices)
+        {
+            if(i !=j && nums[j] < nums[i])
+                result[i]=result[i]+1
+        }
+    }
+    return result
 }
