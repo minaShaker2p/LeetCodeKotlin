@@ -38,5 +38,16 @@ Output: 1
  */
 fun findTheDistanceValue(arr1: IntArray, arr2: IntArray, d: Int): Int {
 
-    return 0
+
+    var value=0
+    for( i in arr1.indices)
+    {
+        for( j in arr2.indices)
+        {
+            if(Math.abs(arr1[i]-arr2[j]) <= 2 && !arr1.contains(arr2[j]))
+                value++
+        }
+    }
+
+    return value
 }
