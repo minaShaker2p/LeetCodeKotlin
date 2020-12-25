@@ -21,5 +21,27 @@ Input: matrix = [[7,8],[1,2]]
 Output: [7]
  */
 fun luckyNumbers (matrix: Array<IntArray>): List<Int> {
- return emptyList()
+ val result= arrayListOf<Int>()
+ matrix.forEach {row->
+  var minimum=Int.MAX_VALUE
+  var minimumIndex=-1
+  row.forEachIndexed{i,v->
+   if(v < minimum) {
+    minimum = v
+    minimumIndex=i
+   }
+  }
+  var max=Int.MIN_VALUE
+  for(i in matrix.indices)
+  {
+   if(matrix[i][minimumIndex] > max)
+   {
+    max=matrix[i][minimumIndex]
+   }
+  }
+  if(minimum==max)
+   result.add(minimum)
+ }
+ return result
+
 }

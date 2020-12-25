@@ -4,7 +4,8 @@ import data_structure.ListNode
 import easy.*
 
 fun main(args: Array<String>) {
-    print(nextGreaterElement(21))
+    luckyNumbers(arrayOf(intArrayOf(3,7,8),intArrayOf(9,11,13),intArrayOf(15,16,17)))
+
 }
 
 fun makeSingleLinkedList(): ListNode<Int> {
