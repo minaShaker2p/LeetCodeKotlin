@@ -1,5 +1,7 @@
 package easy
 
+import kotlin.math.abs
+
 /*
 Given two integer arrays arr1 and arr2, and the integer d, return the distance value between the two arrays.
 
@@ -38,16 +40,17 @@ Output: 1
  */
 fun findTheDistanceValue(arr1: IntArray, arr2: IntArray, d: Int): Int {
 
-
-    var value=0
+    var value=arr1.size
     for( i in arr1.indices)
     {
         for( j in arr2.indices)
         {
-            if(Math.abs(arr1[i]-arr2[j]) <= 2 && !arr1.contains(arr2[j]))
-                value++
+            if(abs(arr1[i]-arr2[j]) <= d )
+            {
+                value--
+                break
+            }
         }
     }
-
     return value
 }
