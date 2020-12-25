@@ -39,5 +39,9 @@ Output: [1]
  */
 
 fun createTargetArray(nums: IntArray, index: IntArray): IntArray {
-return intArrayOf()
+    val target = arrayListOf<Int>()
+    index.forEachIndexed { i, index ->
+        target.add(index,nums[i])
+    }
+    return target.toIntArray()
 }
