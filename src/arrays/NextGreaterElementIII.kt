@@ -1,5 +1,7 @@
 package arrays
 
+import kotlin.math.pow
+
 /*
 Given a positive integer n, find the smallest integer which has exactly the same digits existing in the integer n and is greater in value than n. If no such positive integer exists, return -1.
 
@@ -18,9 +20,9 @@ Output: -1
  */
 fun nextGreaterElement(n: Int): Int {
     val arr= arrayListOf<Int>()
-    var previous=-1
     var number=n
     var index=0
+    var result=0
     if(number >0)
     {
         arr.add(index,number%10)
@@ -30,13 +32,17 @@ fun nextGreaterElement(n: Int): Int {
         while(number!=0)
         {
             val temp=number%10
+            number/=10
+
             if(temp<arr[index-1])
             {
                 val t= arr[index-1]
-                arr[index-1]=temp
-                arr[index]=t
+                arr.removeAt(index-1)
+                arr.add(index-1,temp)
+                arr.add(index,t)
                 break
             }
+
         }
         while(number!=0)
         {
@@ -45,16 +51,16 @@ fun nextGreaterElement(n: Int): Int {
             number/=10
 
         }
-        var result=0
+
 
         arr.forEachIndexed {i,v ->
-            result= result+(v)
+            result+=(v*10.0.pow(i)).toInt()
         }
     }
 
-
-
-
-    return -1
+    return if (result < n)
+        -1
+    else
+        result
 
 }

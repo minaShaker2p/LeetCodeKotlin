@@ -1,9 +1,10 @@
+import arrays.nextGreaterElement
 import data_structure.BinaryTreeNode
 import data_structure.ListNode
 import easy.*
 
 fun main(args: Array<String>) {
-    countNegatives(arrayOf(intArrayOf(1,-1),intArrayOf(-1,-1)))
+    print(nextGreaterElement(21))
 }
 
 fun makeSingleLinkedList(): ListNode<Int> {
