@@ -30,5 +30,22 @@ Input: arr = [7,7,7,7,7,7,7]
 Output: 7
  */
 fun findLucky(arr: IntArray): Int {
-return -1
+    val map=HashMap<Int,Int>()
+
+    // map unique item array with occurrences˚
+    arr.forEach{
+        map[it]=(map[it]?:0) +1
+    }
+    var max=Int.MIN_VALUE
+
+    map.forEach{
+     if(it.key==it.value&& it.key>max)
+     {
+         max=it.key
+     }
+    }
+    return if(max!= Int.MIN_VALUE)
+        max
+    else
+        -1
 }
