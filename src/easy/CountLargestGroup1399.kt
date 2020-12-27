@@ -25,5 +25,36 @@ Input: n = 24
 Output: 5
  */
 fun countLargestGroup(n: Int): Int {
-return 0
+    val map =HashMap<Int,Int>()
+    for(i in 1..n)
+    {
+        if(i in 1..9)
+            map[i]=1
+        else
+        {
+            var result=0
+            var num=i
+            while(num!=0)
+            {
+                result+=num%10
+                num/=10
+            }
+            map[result]=(map[result]?:0).plus(1)
+        }
+    }
+    var max=Int.MIN_VALUE
+    var count=0
+    map.entries.forEach {entry->
+        if(entry.value>max)
+        {
+            max=entry.value
+        }
+    }
+    map.entries.forEach {entry->
+        if(entry.value==max)
+        {
+            count++
+        }
+    }
+    return count
 }
