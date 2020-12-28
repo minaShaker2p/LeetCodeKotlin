@@ -20,5 +20,13 @@ Input: nums = [3,1,2,10,1]
 Output: [3,4,6,16,17]
  */
 fun runningSum(nums: IntArray): IntArray {
-    return intArrayOf()
+    val result=IntArray(nums.size)
+    for(i in nums.indices)
+    {
+        for(j in 0..i)
+        {
+            result[i]+=nums[j]
+        }
+    }
+    return result
 }
