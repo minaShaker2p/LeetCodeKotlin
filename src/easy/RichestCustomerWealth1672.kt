@@ -31,6 +31,14 @@ Output: 17
  */
 fun maximumWealth(accounts: Array<IntArray>): Int {
     var max = Int.MIN_VALUE
+    accounts.forEach {row->
+        var rowWealth=0
+        row.forEach {
+            rowWealth+=it
+        }
+        if(rowWealth>max)
+            max=rowWealth
+    }
 
     return max
 }
