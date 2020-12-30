@@ -19,5 +19,13 @@ Input: nums = [1,1,2,2], n = 2
 Output: [1,2,1,2]
  */
 fun shuffle(nums: IntArray, n: Int): IntArray {
-return intArrayOf()
+    val shuffleArray=IntArray(nums.size)
+    var j=0
+    for(i in 0 until n )
+    {
+        shuffleArray[j++]=nums[i]
+        shuffleArray[j++]=nums[n+i]
+
+    }
+return shuffleArray
 }
