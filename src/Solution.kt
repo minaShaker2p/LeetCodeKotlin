@@ -4,7 +4,7 @@ import data_structure.ListNode
 import easy.*
 
 fun main(args: Array<String>) {
-countLargestGroup(13)
+commonChars(arrayOf("bella","label","roller"))
 }
 
 fun makeSingleLinkedList(): ListNode<Int> {
