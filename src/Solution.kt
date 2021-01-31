@@ -4,8 +4,7 @@ import data_structure.ListNode
 import easy.*
 
 fun main(args: Array<String>) {
-    println("hello")
-commonChars(arrayOf("bella","label","roller"))
+    println(getRow(4))
 }
 
 fun makeSingleLinkedList(): ListNode<Int> {

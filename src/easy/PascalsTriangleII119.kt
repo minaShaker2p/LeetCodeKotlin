@@ -25,6 +25,21 @@ Input: rowIndex = 1
 Output: [1,1]
  */
 fun getRow(rowIndex: Int): List<Int> {
+    val result= mutableListOf<MutableList<Int>>()
+    for(i in 0 .. rowIndex)
+    {
+        result.add(i, mutableListOf())
+        for(j in 0 .. i)
+        {
+            if(j==0 || j==i)
+                result[i].add(j,1)
+            else
+            {
+                val temp= result[i-1][j-1]+result[i-1][j]
+                result[i].add(j,temp)
 
-    return listOf(1)
+            }
+        }
+    }
+    return result[rowIndex]
 }
