@@ -26,5 +26,5 @@ Output: [1,1]
  */
 fun getRow(rowIndex: Int): List<Int> {
 
-    return emptyList()
+    return listOf(1)
 }
