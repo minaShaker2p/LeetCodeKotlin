@@ -22,6 +22,16 @@ Input: numbers = [-1,0], target = -1
 Output: [1,2]
  */
 fun twoSum(numbers: IntArray, target: Int): IntArray {
+    val result = IntArray(2)
 
-    return IntArray(0)
+    for (i in numbers.indices) {
+        for (j in i + 1 until numbers.size) {
+            if (numbers[i] + numbers[j] == target) {
+                result[0] = i + 1
+                result[1] = j + 1
+            }
+        }
+    }
+
+    return result
 }
