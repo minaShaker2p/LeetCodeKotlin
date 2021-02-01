@@ -35,3 +35,22 @@ fun twoSum(numbers: IntArray, target: Int): IntArray {
 
     return result
 }
+/*
+another solution with 2 pointers
+enhanced solution with better performance
+ */
+
+fun twoSumSolution2(numbers: IntArray, target: Int): IntArray {
+    var first=0
+    var last = numbers.size-1
+    while (first<last)
+    {
+        if(numbers[first]+numbers[last]==target)
+            break
+        else if(numbers[first]+numbers[last]>target)
+            last--
+        else
+            first++
+    }
+    return intArrayOf(first+1,last+1)
+}
