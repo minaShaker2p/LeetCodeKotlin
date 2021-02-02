@@ -16,6 +16,14 @@ Input: nums = [1,2,3,1,2,3], k = 2
 Output: false
  */
 fun containsNearbyDuplicate(nums: IntArray, k: Int): Boolean {
+    for(i in nums.indices)
+    {
+        for(j in i+1 until nums.size)
+        {
+            if(nums[i]==nums[j] && (j-i)<=k)
+                return true
+        }
+    }
 
     return false
 }
