@@ -27,4 +27,23 @@ fun containsNearbyDuplicate(nums: IntArray, k: Int): Boolean {
 
     return false
 }
+/*
+Another solution with better performance
+decrease time form O(N^2) TO O(N)
+ */
+fun containsNearbyDuplicateSolutionII(nums: IntArray, k: Int): Boolean {
+    val map=HashMap<Int,Int>()
+    nums.forEachIndexed {i,current->
+        if(map.containsKey(current) && (i- map[current]!! ) <=k )
+        {
+            return true
+        }else
+        {
+            map[current]=i
+        }
+    }
+    return false
+}
+
+
 
