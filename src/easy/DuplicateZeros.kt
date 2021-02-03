@@ -20,5 +20,17 @@ Output: null
 Explanation: After calling your function, the input array is modified to: [1,2,3]
  */
 fun duplicateZeros(arr: IntArray): Unit {
-
+    val list= mutableListOf<Int>()
+    for(i in arr.indices)
+    {
+        if(arr[i]==0) {
+            list.add(0)
+            list.add(0)
+        }else
+            list.add(arr[i])
+    }
+    for(i in arr.indices)
+    {
+        arr[i]=list[i]
+    }
 }
