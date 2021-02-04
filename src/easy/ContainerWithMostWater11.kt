@@ -37,3 +37,18 @@ fun maxArea(height: IntArray): Int {
     }
 return maxArea
 }
+fun maxAreaSolution2(height: IntArray):Int{
+    var maxArea=Int.MIN_VALUE
+    var i =0
+    var j=height.size-1
+    while (i<j)
+    {
+        val min =Math.min(height[i],height[j])
+        maxArea=Math.max(maxArea,(j-i)*min)
+        if(height[i]<height[j])
+            i++
+        else
+            j--
+    }
+    return maxArea
+}
