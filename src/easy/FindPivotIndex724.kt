@@ -48,3 +48,21 @@ fun pivotIndex(nums: IntArray): Int {
 
     return -1
 }
+/*
+solution with O(N) Time Complexity
+ */
+fun pivotIndexSolution2(nums: IntArray): Int {
+  var sum=0
+    var leftSum=0
+    nums.forEach {
+        sum+=it
+    }
+    for(i in nums.indices)
+    {
+        if(leftSum==(sum-leftSum-nums[i]))
+            return i
+        else
+            leftSum+=nums[i]
+    }
+    return -1
+}
