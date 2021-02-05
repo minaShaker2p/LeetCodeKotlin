@@ -32,6 +32,19 @@ Left sum = 0 (no elements to the left of index 0)
 Right sum = nums[1] + nums[2] = 1 + -1 = 0
  */
 fun pivotIndex(nums: IntArray): Int {
+    var left=0
+    for(i  in nums.indices)
+    {
+        var right=0
+        for (j in i+1 until nums.size)
+        {
+            right+=nums[j]
+        }
+        if(left==right)
+            return i
+        else
+            left+=nums[i]
+    }
 
     return -1
 }
