@@ -1,5 +1,7 @@
 package easy
 
+import kotlin.math.abs
+
 /*
 You are given a sorted unique integer array nums.
 
@@ -37,6 +39,31 @@ Input: nums = [-1]
 Output: ["-1"]
  */
 fun summaryRanges(nums: IntArray): List<String> {
+    if(nums.isEmpty())
+        return emptyList()
+    val result= mutableListOf<String>()
+    var begin=nums[0]
+    var end=nums[0]
+    for(i in 1 until nums.size)
+    {
 
-    return emptyList()
+        if(Math.abs(nums[i] - nums[i-1]) >1)
+        {
+            end=nums[i-1]
+            if(begin<end)
+                result.add("$begin->$end")
+            else
+                result.add("$begin")
+            begin=nums[i]
+        }else
+        {
+            end=nums[i]
+        }
+    }
+    if(begin<end)
+        result.add("$begin->$end")
+    else
+        result.add("$begin")
+
+    return result
 }

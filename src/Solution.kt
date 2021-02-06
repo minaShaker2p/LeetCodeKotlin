@@ -4,7 +4,7 @@ import data_structure.ListNode
 import easy.*
 
 fun main(args: Array<String>) {
-    duplicateZeros(intArrayOf(1,0,2,3,0,4,5,0))
+    summaryRanges(intArrayOf(-2147483648,-2147483647,2147483647))
 }
 
 fun makeSingleLinkedList(): ListNode<Int> {
