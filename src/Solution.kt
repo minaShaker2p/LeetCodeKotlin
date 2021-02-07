@@ -4,7 +4,7 @@ import data_structure.ListNode
 import easy.*
 
 fun main(args: Array<String>) {
-    summaryRanges(intArrayOf(-2147483648,-2147483647,2147483647))
+maximumProduct(intArrayOf(1,4,3,2))
 }
 
 fun makeSingleLinkedList(): ListNode<Int> {
