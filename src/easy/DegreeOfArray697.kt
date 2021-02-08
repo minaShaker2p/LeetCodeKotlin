@@ -24,6 +24,36 @@ So [2,2,3,1,4,2] is the shortest subarray, therefore returning 6.
 
  */
 fun findShortestSubArray(nums: IntArray): Int {
+    val map=HashMap<Int,Int>()
+    nums.forEach{
+        val temp=map[it]?:0
+        map[it]=temp+1
+    }
+    var max=Int.MIN_VALUE
+    map.forEach {entry ->
+        if(entry.value>max)
+            max=entry.value
+    }
+    val degreeArray=ArrayList<Int>()
+    map.forEach { entry ->
+        if (entry.value == max)
+            degreeArray.add(entry.key)
+    }
 
-    return 0
+    var shortest=Int.MAX_VALUE
+    degreeArray.forEach {degree->
+        var i=0
+        var j=nums.size-1
+        while (nums[i]!=degree||nums[j]!=degree)
+        {
+            if(nums[i]!=degree)
+                i++
+            if(nums[j]!=degree)
+                j--
+        }
+        shortest=Math.min(shortest,(j-i+1))
+
+    }
+
+    return shortest
 }
