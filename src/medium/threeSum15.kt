@@ -28,5 +28,14 @@ Constraints:
  */
 
 fun threeSum(nums: IntArray): List<List<Int>> {
-return emptyList()
+    val result= mutableListOf<List<Int>>()
+    for(i in 0 until  nums.size-2)
+    {
+        if(nums[i]+nums[i+1]+nums[i+2]==0)
+        {
+            result.add(listOf<Int>(nums[i],nums[i+1],nums[i+2]))
+        }
+
+    }
+return result
 }
