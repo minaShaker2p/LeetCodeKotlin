@@ -16,6 +16,12 @@ class Node(var `val`: Int) {
 class Solution {
     val list = mutableListOf<Int>()
     fun preorder(root: Node?): List<Int> {
+        if(root==null)
+            return list
+        list.add(root.`val`)
+        root.children.forEach {
+            preorder(it)
+        }
 
         return list
     }
