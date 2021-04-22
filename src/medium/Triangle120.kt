@@ -23,6 +23,31 @@ Input: triangle = [[-10]]
 Output: -10
  **/
 
-fun minimumTotal(triangle: List<List<Int>>): Int {
-return 0
+fun minimumTotal(triangle: List<MutableList<Int>>): Int {
+    val trianglel  = triangle
+    var sum =0
+    for(i in 1 until trianglel.size)
+    {
+        sum=0
+        for(j in trianglel[i].indices)
+        {
+            when (j) {
+                0 -> {
+                    sum = trianglel[i][j]+trianglel[i-1][j]
+
+                }
+                trianglel[i].size-1 -> {
+                    sum = trianglel[i][j]+trianglel[i-1][j-1]
+
+                }
+                else -> {
+                   val min=Math.min( trianglel[i-1][j], trianglel[i-1][j-1])
+                    sum = trianglel[i][j]+min
+                }
+
+            }
+            trianglel[i][j]=sum
+        }
+    }
+return triangle[triangle.size-1].min()?:0
 }
