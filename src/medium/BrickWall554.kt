@@ -27,7 +27,19 @@ Output: 2
  **/
 
 fun leastBricks(wall: List<List<Int>>): Int {
+    var untouchedEnds =0
+    val map =HashMap<Int,Int>()
+
+    wall.forEach { row->
+        var end=0
+        for(i in 0  until  row.size-1)
+        {
+            end+=row[i]
+            map[end]= (map[end]?:0) + 1
+            untouchedEnds = Math.max(untouchedEnds, map[end]?:0)
+        }
+    }
 
 
-    return 0
+    return wall.size-untouchedEnds
 }
