@@ -1,5 +1,7 @@
 package medium
 
+import java.util.*
+
 /**
  * You are given an integer array heights representing the heights of buildings, some bricks, and some ladders.
 
@@ -33,6 +35,34 @@ Output: 3
    **/
 
 fun furthestBuilding(heights: IntArray, bricks: Int, ladders: Int): Int {
+    var n = heights.size
+    var b =bricks
+    val priorityQueue=PriorityQueue<Int>()
 
-    return 0
+    for(i in 1 until n)
+    {
+        val diff= heights[i]-heights[i-1]
+        if(diff>0)
+        {
+
+            if( priorityQueue.size< ladders )
+            {
+                priorityQueue.add(diff)
+            }else
+            {
+                var br =diff
+                if( priorityQueue.isNotEmpty() && priorityQueue.peek() < diff)
+                {
+                    br = priorityQueue.remove()
+                    priorityQueue.add(diff)
+                }
+                if(b-br>=0)
+                    b-=br
+                else
+                    return i-1
+            }
+        }
+    }
+
+    return n-1
 }
