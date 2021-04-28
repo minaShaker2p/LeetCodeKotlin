@@ -24,7 +24,13 @@ Output: false
  */
 
 fun isPowerOfThree(n: Int): Boolean {
-
-    return false
-
+    var N =n
+    while (N > 0)
+    {
+        if(N % 3==0)
+            N /= 3
+        else
+            break
+    }
+    return N == 1
 }
