@@ -25,8 +25,25 @@ Output: 1
  */
 
 class Solution {
+   lateinit var  dp: Array<IntArray>
     fun uniquePathsWithObstacles(grid: Array<IntArray>): Int {
+          dp = Array(grid.size) { IntArray(grid[0].size){-1} }
 
-        return 0
+        return dfs(grid,0,0)
+    }
+    fun dfs(grid: Array<IntArray>,i :Int,j:Int) :Int
+    {
+        if(i <0 || j<0 || i == grid.size || j == grid[0].size || grid[i][j]==1)
+            return 0
+
+        if(i==grid.size-1&& j == grid[0].size-1)
+            return 1
+
+        if(dp[i][j] >-1)
+            return dp[i][j]
+
+        dp[i][j]= dfs(grid,i+1,j) + dfs(grid,i,j+1)
+        return dp[i][j]
+
     }
 }
