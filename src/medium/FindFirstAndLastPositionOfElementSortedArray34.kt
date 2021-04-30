@@ -27,5 +27,7 @@ Output: [-1,-1]
 
 fun searchRange(nums: IntArray, target: Int): IntArray {
     val result =IntArray(2){-1}
+    result[0]= nums.indexOf(target)
+    result[1] =nums.lastIndexOf(target)
 return result
 }
