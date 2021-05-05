@@ -19,6 +19,16 @@ Explanation: You can't get a non-decreasing array by modify at most one element.
  **/
 
 fun checkPossibility(nums: IntArray): Boolean {
+    var pos =-1
+    for( i in 0 until nums.size-1)
+    {
+        if(nums[i] > nums[i+1])
+        {
+            if(pos!=-1)
+                return false
+            pos = i
+        }
+    }
 
-    return false
+    return pos == -1 || pos ==0 || pos == nums.size-2 || nums[pos-1] <= nums[pos+1] || nums[pos] <= nums[pos+2]
 }
