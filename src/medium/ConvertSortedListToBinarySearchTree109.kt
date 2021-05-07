@@ -25,8 +25,37 @@ Output: [3,1]
  **/
 
 fun sortedListToBST(head: ListNode?): TreeNode? {
+    if(head ==null)
+        return null
 
-    return null
+    var middle = getMiddleNode(head)
+    var  root =TreeNode(middle!!.`val`)
+
+    if(head == middle)
+        return root
+
+    root.left = sortedListToBST(head)
+    root.right = sortedListToBST(middle.next)
+    return root
+}
+
+fun getMiddleNode(head: ListNode?) : ListNode?
+{
+    var slow = head
+    var fast =head
+    var prev : ListNode? = null
+
+    while (fast!=null && fast.next!=null)
+    {
+        prev = slow
+        slow =slow?.next
+        fast= fast.next?.next
+    }
+    if(prev !=null)
+        prev.next=null
+
+    return  slow
+
 }
  class TreeNode(var `val`: Int) {
          var left: TreeNode? = null
