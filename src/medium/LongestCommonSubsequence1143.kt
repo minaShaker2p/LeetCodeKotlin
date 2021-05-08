@@ -33,5 +33,15 @@ text1 and text2 consist of only lowercase English characters.
 
 fun longestCommonSubsequence(text1: String, text2: String): Int {
 
-return 0
+return helper(text1,text2,0 ,0)
+}
+fun helper(text1: String, text2: String, index1:Int ,index2:Int) :Int
+{
+    if(index1 == text1.length || index2 == text2.length)
+       return 0
+
+    if(text1[index1] == text2[index2])
+         return  1+ helper(text1,text2,index1+1,index2+1)
+    else
+        return Math.max( helper(text1,text2,index1+1,index2), helper(text1,text2,index1,index2+1))
 }
