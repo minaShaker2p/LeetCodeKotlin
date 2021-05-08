@@ -27,5 +27,6 @@ word1 and word2 consist of only lowercase English letters.
 
 fun minDistance(word1: String, word2: String): Int {
 
-    return 0
+    return (word1.length + word2.length ) - 2* longestCommonSubsequence(word1,word2)
 }
+
