@@ -30,8 +30,9 @@ Constraints:
 text1 and text2 consist of only lowercase English characters.
 
  **/
-
+lateinit var dp :Array<IntArray>
 fun longestCommonSubsequence(text1: String, text2: String): Int {
+    dp = Array(text1.length){ IntArray(text2.length){-1} }
 
 return helper(text1,text2,0 ,0)
 }
@@ -39,9 +40,13 @@ fun helper(text1: String, text2: String, index1:Int ,index2:Int) :Int
 {
     if(index1 == text1.length || index2 == text2.length)
        return 0
+    if(dp[index1][index2] >= 0)
+        return dp[index1][index2]
 
     if(text1[index1] == text2[index2])
-         return  1+ helper(text1,text2,index1+1,index2+1)
+         dp[index1][index2]=  1+ helper(text1,text2,index1+1,index2+1)
     else
-        return Math.max( helper(text1,text2,index1+1,index2), helper(text1,text2,index1,index2+1))
+        dp[index1][index2] = Math.max( helper(text1,text2,index1+1,index2), helper(text1,text2,index1,index2+1))
+
+    return dp[index1][index2]
 }
