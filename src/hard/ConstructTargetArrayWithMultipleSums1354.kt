@@ -38,5 +38,21 @@ N == target.length
  */
 
 fun isPossible(target: IntArray): Boolean {
-return false
+    var total = 0
+    var maxIndex=0
+    target.forEachIndexed { index, num ->
+        total += num
+        if (target[maxIndex] > num)
+            maxIndex = index
+    }
+        var diff =total - target[maxIndex]
+        if(target[maxIndex]==1)
+            return true
+        if(diff >target[maxIndex])
+            return false
+
+        target[maxIndex] -= diff
+        return isPossible(target)
+
+    }
 }
