@@ -45,5 +45,27 @@ Constraints:
  */
 
 fun maxScore(cardPoints: IntArray, k: Int): Int {
-    return 0
+    // calculate the total sum
+    var  sum =0
+    cardPoints.forEach { sum+=it }
+
+    var ans=0
+    var window = 0
+    val n =cardPoints.size
+    if(n==k)
+        return sum
+
+    for(i in 0 until n-k-1)
+    {
+        window+=cardPoints[i]
+    }
+
+    for(i in n-k-1 until n)
+    {
+        window+=cardPoints[i]
+        ans =Math.max(ans,sum-window)
+        window -= cardPoints[i-(n-k-1)]
+    }
+
+    return ans
 }
