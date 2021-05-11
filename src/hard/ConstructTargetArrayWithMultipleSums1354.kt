@@ -55,4 +55,3 @@ fun isPossible(target: IntArray): Boolean {
         return isPossible(target)
 
     }
-}
