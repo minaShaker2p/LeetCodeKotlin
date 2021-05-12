@@ -28,10 +28,16 @@ numMatrix.sumRegion(1, 2, 2, 4); // return 12 (i.e sum of the blue rectangle)
  */
 
 class NumMatrix(matrix: Array<IntArray>) {
+   private val newMatrix = matrix
 
     fun sumRegion(row1: Int, col1: Int, row2: Int, col2: Int): Int {
+        var sum =0
 
-        return 0
+        for( i in row1 .. row2)
+            for(j in col1 .. col2)
+                sum +=newMatrix[i][j]
+
+        return sum
     }
 
 }
