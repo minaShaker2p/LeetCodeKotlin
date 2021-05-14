@@ -30,7 +30,59 @@ Note:
 4 <= s.length <= 12.
 s[0] = "(", s[s.length - 1] = ")", and the other elements in s are digits.
  */
+val result= mutableListOf<String>()
+fun ambiguousCoordinates(string: String): List<String> {
+    val s =string.substring(1,string.length-1)
+    for(i in 1 until s.length)
+    {
+        helper(s.substring(0,i),s.substring(i,s.length))
+    }
 
-fun ambiguousCoordinates(s: String): List<String> {
-return emptyList()
+return result
+}
+
+fun helper(s1:String,s2:String)
+{
+    val listX =putDot(s1)
+    val listY = putDot(s2)
+    listX.forEach {x->
+        if(isValid(x))
+        {
+            listY.forEach { y->
+                if(isValid(y))
+                    result.add("($x, $y)")
+            }
+        }
+    }
+}
+
+fun putDot(s:String):List<String>
+{
+    val result = mutableListOf<String>()
+    result.add(s)
+    for(i in 1 until s.length)
+    {
+        result.add(s.substring(0,i)+"."+s.substring(i,s.length))
+    }
+
+    return result
+}
+fun isValid(s:String):Boolean
+{
+    if(s.contains("."))
+    {
+        val parts=s.split(".")
+        return if(parts[0]!="0" && parts[0].startsWith("0"))
+            false
+        else
+            !parts[1].endsWith("0")
+
+    }else
+    {
+        return if(s == "0")
+            true
+        else
+            !s.startsWith("0")
+
+    }
 }
