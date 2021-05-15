@@ -1,5 +1,7 @@
 package medium
 
+import java.util.*
+
 /**
  * Given the root of a binary tree, flatten the tree into a "linked list":
 
@@ -31,5 +33,23 @@ The number of nodes in the tree is in the range [0, 2000].
 Follow up: Can you flatten the tree in-place (with O(1) extra space)?
  */
 fun flatten(root: TreeNode?): Unit {
+    if(root==null)
+        return
+    val stack = Stack<TreeNode>()
+
+    stack.push(root)
+
+    while (stack.isNotEmpty())
+    {
+        val current= stack.pop()
+        if(current.right!=null)
+            stack.push(current!!.right)
+
+        if(current.left!=null)
+            stack.push(current!!.left)
+        if(stack.isNotEmpty())
+            current.right=stack.peek()
+        current.left=null
+    }
 
 }
