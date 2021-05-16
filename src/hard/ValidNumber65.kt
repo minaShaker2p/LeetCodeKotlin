@@ -39,6 +39,53 @@ Output: true
  */
 
 fun isNumber(s: String): Boolean {
+    var digitSeen =false
+    var eSeen = false
+    var dotSeen =false
+    var countPlusMinus =0
+    for( i in s.indices)
+    {
+        // digit
+        if(s[i].isDigit())
+        {
+            digitSeen=true
+        }
 
-    return false
+        //plus and minus
+       else if(s[i] =='+' || s[i] =='-')
+        {
+            if(countPlusMinus==2)
+                return false
+
+            if(i>0 && (s[i-1] !='e' || s[i-1] !='E'))
+                return false
+            if(i== s.length-1)
+                return false
+
+            countPlusMinus++
+        }
+        // dot
+       else if(s[i]=='.')
+        {
+            if(eSeen || dotSeen)
+                return false
+
+            if(i == s.length-1  && !digitSeen)
+                return false
+
+            dotSeen =true
+        }
+
+        //e/E
+
+        else  if(s[i] =='e' || s[i] =='E')
+        {
+            if(eSeen || !digitSeen ||i== s.length-1)
+                return false
+            eSeen=true
+        }else
+            return false
+    }
+
+    return true
 }
