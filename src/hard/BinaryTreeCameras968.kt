@@ -1,5 +1,7 @@
 package hard
 
+import java.util.HashSet
+
 /**
  * Given a binary tree, we install cameras on the nodes of the tree.
 
@@ -29,7 +31,31 @@ class TreeNode(var `val`: Int) {
          var left: TreeNode? = null
          var right: TreeNode? = null
      }
+var cam =0
+val covered = HashSet<TreeNode?>()
 fun minCameraCover(root: TreeNode?): Int {
+    if(root==null)
+        return 0
+ covered.add(null) // add leaves
+    dfs(root,null)
 
-return  0
+return  cam
+}
+
+fun dfs(node: TreeNode?,parent:TreeNode?)
+{
+    if(node!=null)
+    {
+        dfs(node.left,node)
+        dfs(node.right,node)
+
+        if(parent ==null&& ! covered.contains(node) || !covered.contains(node.left) || !covered.contains(node.right))
+        {
+            covered.add(node)
+            covered.add(parent)
+            covered.add(node.left)
+            covered.add(node.right)
+            cam++
+        }
+    }
 }
