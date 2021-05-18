@@ -2,9 +2,10 @@ import arrays.nextGreaterElement
 import data_structure.BinaryTreeNode
 import data_structure.ListNode
 import easy.*
+import medium.longestStrChain
 
 fun main(args: Array<String>) {
-    fibDP(3)
+   longestStrChain(arrayOf("a","b","ba","bca","bda","bdca"))
 }
 
 fun makeSingleLinkedList(): ListNode<Int> {

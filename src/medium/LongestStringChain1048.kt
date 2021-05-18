@@ -1,5 +1,7 @@
 package medium
 
+import java.lang.StringBuilder
+
 /**
  * Given a list of words, each word consists of English lowercase letters.
 
@@ -27,6 +29,24 @@ words[i] only consists of English lowercase letters.
  */
 
 fun longestStrChain(words: Array<String>): Int {
+    words.sortWith(Comparator { s1:String, s2:String -> s1.length - s2.length })
+    val memo = HashMap<String,Int>()
+    var result = 0
+     for(i in words.indices)
+    {
+        memo[words[i]] = 1
+        for(j in words[i].indices) {
+            val builder = StringBuilder(words[i])
+           val current= builder.deleteCharAt(j).toString()
+            if(memo[current]!=null)
+            {
+                val temp = memo[current]!!
+                memo[words[i]] =Math.max(memo[words[i]]?:0,temp+1)
+            }
+        }
+        result =Math.max(result,memo[words[i]]!!)
 
-    return 0
+    }
+
+    return result
 }
