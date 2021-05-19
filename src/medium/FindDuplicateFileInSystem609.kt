@@ -36,5 +36,24 @@ You may assume each given directory info represents a unique directory. A single
 
 fun findDuplicate(paths: Array<String>): List<List<String>> {
 
+    val map = HashMap<String,MutableList<String>>()
+    paths.forEach {
+        val parts = it.split(" ")
+        for( i in parts.indices)
+        {
+            val path = parts[i].substring(0,parts[i].indexOf("("))
+            val content =  parts[i].substring(parts[i].indexOf("("),parts[i].length-1)
+            val list = map[content]?: mutableListOf()
+            list.add(path)
+            map[content] =list
+        }
+    }
+    map.entries.removeIf { entry->
+        entry.value.size <2
+    }
+
+    return map.values.toList()
+
+
     return emptyList()
 }

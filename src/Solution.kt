@@ -2,10 +2,12 @@ import arrays.nextGreaterElement
 import data_structure.BinaryTreeNode
 import data_structure.ListNode
 import easy.*
+import medium.findDuplicate
 import medium.longestStrChain
 
 fun main(args: Array<String>) {
-   longestStrChain(arrayOf("a","b","ba","bca","bda","bdca"))
+    findDuplicate(arrayOf("root/a 1.txt(abcd) 2.txt(efgh)","root/c 3.txt(abcd)","root/c/d 4.txt(efgh)","root 4.txt(efgh)"))
+   //longestStrChain(arrayOf("a","b","ba","bca","bda","bdca"))
 }
 
 fun makeSingleLinkedList(): ListNode<Int> {
