@@ -24,5 +24,19 @@ n == nums.length
 -109 <= nums[i] <= 109
  */
 fun minMoves2(nums: IntArray): Int {
-return 0
+    var moves = 0
+    // sort O(NLogN)
+    nums.sort()
+
+    val pivot = nums.size / 2
+
+    for( i in nums.indices)
+    {
+        if(i<pivot)
+            moves += nums[pivot] - nums[i]
+        else
+            moves += nums[i] - nums[pivot]
+    }
+
+return moves
 }
