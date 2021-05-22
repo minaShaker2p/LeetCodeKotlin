@@ -47,3 +47,23 @@ fun levelOrder(root: TreeNode?): List<List<Int>> {
     }
  return  result
 }
+
+lateinit var  list :MutableList<MutableList<Int>>
+// Recursive solution Time complexity O(N) // Space Complexity O(N)
+fun levelOrderRecursive(root: TreeNode?): List<List<Int>> {
+    list = mutableListOf()
+    if(root ==  null)
+        return  list
+    traverse(root,0)
+    return list
+}
+fun traverse(root: TreeNode?,level:Int)
+{
+    if(root == null) return
+    if(level == list.size)
+        list.add(level, mutableListOf())
+
+        list[level].add(root.`val`)
+    traverse(root?.left,level+1)
+    traverse(root.right,level+1)
+}
