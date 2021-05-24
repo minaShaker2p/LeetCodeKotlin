@@ -26,5 +26,26 @@ words[i].length == pattern.length
 pattern and words[i] are lowercase English letters.
  */
 fun findAndReplacePattern(words: Array<String>, pattern: String): List<String> {
-return emptyList()
+    val map = HashMap<Char, Char>()
+    val result = mutableListOf<String>()
+
+    words.forEach {word->
+        if(word.length == pattern.length) {
+            map.clear()
+            var canAdd= true
+            for (i in word.indices)
+            {
+               val temp =map[pattern[i]]?:""
+                if(temp=="")
+                {
+                    map[pattern[i]] = word[i]
+                }else if(word[i]!=temp)
+                    canAdd= false
+            }
+            if(canAdd)
+                result.add(word)
+        }
+    }
+
+return result
 }
