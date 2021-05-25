@@ -1,5 +1,7 @@
 package medium
 
+import java.util.*
+
 /**
  * Evaluate the value of an arithmetic expression in Reverse Polish Notation.
 
@@ -40,6 +42,32 @@ tokens[i] is either an operator: "+", "-", "*", or "/", or an integer in the ran
  */
 
 fun evalRPN(tokens: Array<String>): Int {
+    val stack = Stack<String>()
+    tokens.forEach { token ->
+        if(token.isOperator())
+        {
+            // in case if the toke is operator [+ - * /]
+            // then pop last two element in the stack and calculate the result
+            // then push the result in the stack
+            val op2 = stack.pop().toInt()
+            val op1 = stack.pop().toInt()
+            val result = calculate(op1,op2,token)
+            stack.push("$result")
+        }else
+            stack.push(token)
+    }
 
-    return 0
+    return stack.peek().toInt()
+}
+
+fun String.isOperator() = this == "+" || this  == "-" || this == "*" || this == "/"
+
+fun calculate(op1:Int,op2: Int,token :String) :Int {
+    return when(token)
+    {
+        "+" -> op1 +op2
+        "-" -> op1 - op2
+        "*" -> op1 * op2
+        else -> op1 /op2
+    }
 }
