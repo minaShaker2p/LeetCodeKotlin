@@ -28,7 +28,12 @@ Constraints:
 n consists of only digits.
 n does not contain any leading zeros and represents a positive integer.
  */
-
+// [Hint 1]: Think about if the input was only one digit. Then you need to add up as many ones as the value of this digit.
+// [Hint 2]: Thus the answer is equal to the max digit.
 fun minPartitions(n: String): Int {
-return 0
+    var result =0
+    n.forEach { char->
+        result =Math.max(result,char -'0')
+    }
+return result
 }
