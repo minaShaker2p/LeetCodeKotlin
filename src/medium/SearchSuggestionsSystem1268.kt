@@ -46,5 +46,16 @@ All characters of searchWord are lower-case English letters.
 
 fun suggestedProducts(products: Array<String>, searchWord: String): List<List<String>> {
 val result = mutableListOf<MutableList<String>>()
+    products.sort()
+    for(i in searchWord.indices)
+    {
+        val queryResult = mutableListOf<String>()
+        for (j in products.indices)
+        {
+            if (queryResult.size < 3 &&  products[j].startsWith(searchWord.substring(0,i+1)))
+                queryResult.add(products[j])
+        }
+        result.add(queryResult)
+    }
     return result
 }
