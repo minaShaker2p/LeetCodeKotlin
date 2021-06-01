@@ -20,5 +20,27 @@ Output: 0
  */
 
 fun maxAreaOfIsland(grid: Array<IntArray>): Int {
-return 0
+    var max = 0
+
+    for( i in grid.indices)
+    {
+        for(j in grid[i].indices)
+        {
+            max = Math.max(max,dfs(grid,i,j))
+        }
+    }
+return max
+}
+
+fun dfs(grid: Array<IntArray>,i :Int , j :Int):Int
+{
+    if(i < 0 ||  i>= grid.size || j < 0 || j>= grid[i].size || grid[i][j]==0)
+        return 0
+    grid[i][j] = 0
+    var count  = 1
+    count+= dfs(grid,i+1,j)
+    count+= dfs(grid,i-1,j)
+    count+= dfs(grid,i,j+1)
+    count+= dfs(grid,i,j-1)
+    return count
 }
