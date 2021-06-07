@@ -25,6 +25,7 @@ Constraints:
 0 <= cost[i] <= 999
  */
 fun minCostClimbingStairs(cost: IntArray): Int {
-
-    return 0
+    for( i in 2 until cost.size)
+        cost[i] += Math.min(cost[i-1],cost[i-2])
+    return Math.min(cost[cost.size-1],cost[cost.size-2])
 }
