@@ -2,12 +2,17 @@ import arrays.nextGreaterElement
 import data_structure.BinaryTreeNode
 import data_structure.ListNode
 import easy.*
+import medium.MyCalendar
 import medium.findDuplicate
 import medium.longestStrChain
 
 fun main(args: Array<String>) {
-    findDuplicate(arrayOf("root/a 1.txt(abcd) 2.txt(efgh)","root/c 3.txt(abcd)","root/c/d 4.txt(efgh)","root 4.txt(efgh)"))
+    //findDuplicate(arrayOf("root/a 1.txt(abcd) 2.txt(efgh)","root/c 3.txt(abcd)","root/c/d 4.txt(efgh)","root 4.txt(efgh)"))
    //longestStrChain(arrayOf("a","b","ba","bca","bda","bdca"))
+     var obj = MyCalendar()
+     var param_1 = obj.book(10,20)
+    obj.book(15,25)
+    obj.book(20,30)
 }
 
 fun makeSingleLinkedList(): ListNode<Int> {

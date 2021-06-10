@@ -26,11 +26,35 @@ Note:
 The number of calls to MyCalendar.book per test case will be at most 1000.
 In calls to MyCalendar.book(start, end), start and end are integers in the range [0, 10^9].
  */
+data class Node(val start:Int = 0 , val end :Int=0 )
+{
+    var next : Node ?= null
+}
 
 class MyCalendar() {
+    var head : Node ?  = null
 
     fun book(start: Int, end: Int): Boolean {
-       return false
+        if(head == null)
+        {
+            head = Node(start,end)
+            return true
+        }
+
+        var curr :Node?= head
+        var last : Node?= head
+
+        while (curr !=null && curr.start < start)
+        {
+            last = curr
+            curr = curr.next
+        }
+        if(last!=null && ( last.end > start || end < last.end ))
+            return false
+
+        last?.next = Node(start,end)
+
+       return true
     }
 
 }
