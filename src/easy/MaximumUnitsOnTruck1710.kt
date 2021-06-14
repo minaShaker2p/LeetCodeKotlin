@@ -25,5 +25,24 @@ Output: 91
  */
 fun maximumUnits(boxTypes: Array<IntArray>, truckSize: Int): Int {
     var result = 0
+    var trucks = 0
+    boxTypes.sortWith(Comparator { arr1, arr2 -> arr2[1] - arr1[1] })
+    for (i in boxTypes.indices)
+    {
+        if(trucks == truckSize)
+            break
+
+        val remaining = truckSize - trucks
+        if(boxTypes[i][0] < remaining)
+        {
+            trucks +=boxTypes[i][0]
+            result += (boxTypes[i][0] * boxTypes[i][1])
+
+        }else
+        {
+            trucks +=remaining
+            result += (remaining * boxTypes[i][1])
+        }
+    }
     return result
 }
