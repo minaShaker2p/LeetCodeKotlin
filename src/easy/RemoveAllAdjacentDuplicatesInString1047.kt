@@ -1,5 +1,8 @@
 package easy
 
+import java.lang.StringBuilder
+import java.util.*
+
 /**
 You are given a string s consisting of lowercase English letters. A duplicate removal consists of choosing two adjacent and equal letters and removing them.
 
@@ -21,5 +24,22 @@ Output: "ay"
  **/
 
 fun removeDuplicates(s: String): String {
-return ""
+    val stack = Stack<Char>()
+    for(i in s.indices) {
+        if (stack.isNotEmpty()) {
+            val peek = stack.peek()
+            if (peek == s[i]) {
+                stack.pop()
+                continue
+            }
+        }
+            stack.push(s[i])
+        }
+
+
+        val builder = StringBuilder()
+        while (stack.isNotEmpty())
+            builder.append(stack.pop())
+    return builder.reversed().toString()
+
 }
