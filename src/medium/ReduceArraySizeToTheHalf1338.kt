@@ -33,5 +33,19 @@ Input: arr = [1,2,3,4,5,6,7,8,9,10]
 Output: 5
  */
 fun minSetSize(arr: IntArray): Int {
-return 0
+    val map = HashMap<Int,Int>()
+    arr.forEach {
+        map[it] = (map[it]?:0)+1
+    }
+    val list = mutableListOf<Int>()
+    var freqList = map.values.toList().sortedDescending()
+    var remain = arr.size/2
+    var i=0
+    while (remain > 0)
+    {
+        remain -= freqList[i]
+        list.add(freqList[i++])
+    }
+
+return list.size
 }
