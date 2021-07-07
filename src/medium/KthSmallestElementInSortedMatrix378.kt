@@ -29,6 +29,16 @@ All the rows and columns of matrix are guaranteed to be sorted in non-decreasing
  */
 
 fun kthSmallest(matrix: Array<IntArray>, k: Int): Int {
-
-    return 0
+    val n = matrix.size * matrix[0].size
+    val c = matrix.size
+    val arr = IntArray(n)
+    for (i in matrix.indices)
+    {
+        for(j in matrix[0].indices)
+        {
+            arr[(c*i)+j] = matrix[i][j]
+        }
+    }
+    arr.sort()
+    return arr[k-1]
 }
