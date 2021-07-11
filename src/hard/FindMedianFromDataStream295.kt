@@ -45,13 +45,23 @@ If 99% of all integer numbers from the stream are in the range [0, 100], how wou
 class MedianFinder() {
 
     /** initialize your data structure here. */
+    val list = mutableListOf<Int>()
 
     fun addNum(num: Int) {
-
+        list.add(num)
+        // just order the list when last input is not order
+        if(list.size > 1 && num < list[list.size-2])
+           list.sort()
     }
 
     fun findMedian(): Double {
-
+        val size = list.size
+        val index = size / 2
+        return if (size % 2 == 0) {
+            ((list[index] + list[index - 1]) / 2.0)
+        } else {
+            list[index].toDouble()
+        }
     }
 
 }
