@@ -29,5 +29,24 @@ s and t consist of any valid ascii character
  */
 
 fun isIsomorphic(s: String, t: String): Boolean {
-return false
+    val mapS = HashMap<Char, Char>()
+    val mapT = HashMap<Char, Char>()
+
+    for (i in s.indices) {
+        val value = mapS[s[i]]
+        if (value == null || value == t[i]) {
+            mapS[s[i]] = t[i]
+        } else
+            return false
+    }
+
+    for (i in s.indices) {
+        val value = mapT[t[i]]
+        if (value == null || value == s[i]) {
+            mapT[t[i]] = s[i]
+        } else
+            return false
+    }
+
+    return mapS.size == mapT.size
 }
