@@ -27,6 +27,10 @@ Constraints:
 nums[i] != nums[i + 1] for all valid i.
  */
 fun findPeakElement(nums: IntArray): Int {
-
-    return 0
+     for(i in 0 until nums.size-1)
+     {
+         if(nums[i] > nums[i+1])
+             return  i
+     }
+    return nums.size-1
 }
