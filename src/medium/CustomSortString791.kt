@@ -1,5 +1,7 @@
 package medium
 
+import java.lang.StringBuilder
+
 /**
  * order and str are strings composed of lowercase letters. In order, no letter occurs more than once.
 
@@ -24,5 +26,22 @@ str has length at most 200.
 order and str consist of lowercase letters only.
  **/
 fun customSortString(order: String, str: String): String {
-return ""
+    val freq =IntArray(26)
+    str.forEach { char->
+        freq[char - 'a']++
+    }
+
+    val builder = StringBuilder()
+
+    order.forEach {char->
+        while (freq[char -'a']-- >0)
+            builder.append(char)
+    }
+
+    freq.forEachIndexed { index, fr ->
+        var value = fr
+        while (value-->0)
+            builder.append(('a'+index).toChar())
+    }
+return builder.toString()
 }
