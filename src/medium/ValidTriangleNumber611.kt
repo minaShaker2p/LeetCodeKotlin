@@ -44,6 +44,7 @@ fun triangleNumberBruteForce(nums: IntArray): Int {
     return count
 }
 
+// O(n^2)
 fun triangleNumber(nums: IntArray): Int {
     var count =0
     nums.sort()
