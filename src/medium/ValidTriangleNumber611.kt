@@ -24,7 +24,21 @@ Constraints:
 1 <= nums.length <= 1000
 0 <= nums[i] <= 1000
  **/
-fun triangleNumber(nums: IntArray): Int {
+// Brute force solution
+fun triangleNumberBruteForce(nums: IntArray): Int {
+     var count = 0
 
-    return 0
+    for(i in 0 until nums.size-2)
+    {
+        for(j in i+1 until nums.size-1)
+        {
+            for( k in j+1 until nums.size)
+            {
+                if(nums[i]+nums[j] > nums[k] && nums[j]+nums[k] > nums[i] && nums[i]+nums[k] > nums[j])
+                    count++
+            }
+        }
+    }
+
+    return count
 }
