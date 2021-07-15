@@ -25,6 +25,7 @@ Constraints:
 0 <= nums[i] <= 1000
  **/
 // Brute force solution
+// O(n^3)
 fun triangleNumberBruteForce(nums: IntArray): Int {
      var count = 0
 
@@ -41,4 +42,25 @@ fun triangleNumberBruteForce(nums: IntArray): Int {
     }
 
     return count
+}
+
+fun triangleNumber(nums: IntArray): Int {
+    var count =0
+    nums.sort()
+    for (i in 2 until nums.size)
+    {
+        var left = 0
+        var right = i-1
+        while (left < right)
+        {
+            if(nums[left]+nums[right] > nums[i])
+            {
+                count+=right-left
+                right--
+            }else
+                left++
+        }
+    }
+    return count
+
 }
