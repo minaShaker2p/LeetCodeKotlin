@@ -28,6 +28,19 @@ Constraints:
 fun fourSum(nums: IntArray, target: Int): List<List<Int>> {
 
     val result = mutableSetOf<List<Int>>()
-
+      nums.sort()
+    for(a in 0 until nums.size-3)
+        for( b in a+1 until nums.size-2)
+        {
+            for(c in b+1 until nums.size-1)
+            {
+                for(d in c+1 until nums.size)
+                {
+                    val sum = nums[a] + nums[b] + nums[c] + nums[d]
+                    if(sum == target)
+                        result.add(listOf(nums[a],nums[b],nums[c],nums[d]))
+                }
+            }
+        }
     return result.toList()
 }
