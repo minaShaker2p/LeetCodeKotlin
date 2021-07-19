@@ -40,5 +40,14 @@ p and q will exist in the BST.
      }
 
 fun lowestCommonAncestor(root: TreeNode?, p: TreeNode?, q: TreeNode?): TreeNode? {
-return null
+    root ?: return null
+    p ?: return null
+    q ?: return null
+
+    return  if(p.`val` > root.`val` && q.`val` > root.`val`)
+        lowestCommonAncestor(root.right ,p,q)
+    else if(p.`val` < root.`val` && q.`val` < root.`val`)
+        lowestCommonAncestor(root.left,p,q)
+    else
+        root
 }
