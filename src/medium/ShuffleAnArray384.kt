@@ -1,5 +1,8 @@
 package medium
 
+import java.util.*
+
+
 /**
  * Given an integer array nums, design an algorithm to randomly shuffle the array. All permutations of the array should be equally likely as a result of the shuffling.
 
@@ -39,7 +42,7 @@ At most 5 * 104 calls in total will be made to reset and shuffle
 class ShuffleSolution(nums: IntArray) {
     val arr = nums.clone()
     val list :MutableList<Int> = arr.toMutableList()
-
+    val random = Random()
 
     /** Resets the array to its original configuration and return it. */
     fun reset(): IntArray {
@@ -51,8 +54,13 @@ class ShuffleSolution(nums: IntArray) {
     fun shuffle(): IntArray {
         for(i in list.size -1 downTo 0)
         {
-
+            val j = random.nextInt(i+1)
+            val temp = list[j]
+            list[j]= list[i]
+            list[i]=temp
         }
+
+        return list.toIntArray()
     }
 
 }
