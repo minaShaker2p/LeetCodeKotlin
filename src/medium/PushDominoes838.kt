@@ -1,5 +1,7 @@
 package medium
 
+import java.lang.StringBuilder
+
 /**
  * There are n dominoes in a line, and we place each domino vertically upright. In the beginning, we simultaneously push some of the dominoes either to the left or to the right.
 
@@ -36,5 +38,45 @@ dominoes[i] is either 'L', 'R', or '.'.
  */
 
 fun pushDominoes(dominoes: String): String {
-return ""
+    val n = dominoes.length
+    val forces = IntArray(n)
+    val builder = StringBuilder()
+
+    var force = 0
+
+    for( i in 0 until dominoes.length)
+    {
+        force = when {
+            dominoes[i] == 'R' -> n
+            dominoes[i] == 'L' -> 0
+            else -> Math.max(force-1,0)
+        }
+        forces[i] += force
+    }
+
+     force = 0
+
+    for( i in dominoes.length-1 downTo 0)
+    {
+        force = when {
+            dominoes[i] == 'L' -> n
+            dominoes[i] == 'R' -> 0
+            else -> Math.max(force-1,0)
+        }
+        forces[i] -= force
+    }
+
+    forces.forEach {force->
+        when {
+            force > 0 -> builder.append('R')
+            force < 0 -> builder.append('L')
+            else -> builder.append('.')
+        }
+    }
+
+
+
+
+
+    return builder.toString()
 }
