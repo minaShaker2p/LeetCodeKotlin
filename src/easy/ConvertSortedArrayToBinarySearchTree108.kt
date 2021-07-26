@@ -30,5 +30,15 @@ nums is sorted in a strictly increasing order.
  */
 
 fun sortedArrayToBST(nums: IntArray): TreeNode? {
-return null
+    if(nums.isEmpty()) return null
+return constructTreeRecursively(0,nums.size-1,nums)
+}
+
+fun constructTreeRecursively(left:Int,right:Int,nums:IntArray): TreeNode? {
+if(left > right) return null
+    val mid = left + (right - left ) /2
+    val current = TreeNode(nums[mid])
+    current.left = constructTreeRecursively(left,mid-1,nums)
+    current.right = constructTreeRecursively(mid+1,right,nums)
+    return current
 }
