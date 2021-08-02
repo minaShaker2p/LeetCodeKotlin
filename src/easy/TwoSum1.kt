@@ -37,5 +37,14 @@ Follow-up: Can you come up with an algorithm that is less than O(n2) time comple
 
 fun twoSum1(nums: IntArray, target: Int): IntArray {
 var result = IntArray(2){0}
+    for(i in 0 until nums.size-1)
+        for(j in i+1 until nums.size)
+        {
+            if(nums[i]+nums[j]==target)
+            {
+                result[0]=i
+                result[1]=j
+            }
+        }
     return  result
 }
