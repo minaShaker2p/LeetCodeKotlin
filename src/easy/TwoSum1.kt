@@ -35,7 +35,8 @@ Only one valid answer exists.
 Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
  */
 
-fun twoSum1(nums: IntArray, target: Int): IntArray {
+// Brute force O(N^2)
+fun twoSumSol1(nums: IntArray, target: Int): IntArray {
 var result = IntArray(2){0}
     for(i in 0 until nums.size-1)
         for(j in i+1 until nums.size)
@@ -46,5 +47,20 @@ var result = IntArray(2){0}
                 result[1]=j
             }
         }
+    return  result
+}
+fun twoSumSol2(nums: IntArray, target: Int): IntArray {
+    val result = IntArray(2){0}
+    val map = HashMap<Int,Int>()
+    nums.forEachIndexed { i, num ->
+        val diff = target - num
+        val temp = map[num]?:-1
+        if(temp == -1)
+            map[diff] = i
+        else{
+            result[0]=i
+            result[1]=temp
+        }
+    }
     return  result
 }
