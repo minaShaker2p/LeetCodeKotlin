@@ -30,7 +30,36 @@ The number of nodes in the tree is in the range [0, 5000].
 -1000 <= targetSum <= 1000
  */
 class SolutionPathSum {
+    val result = mutableListOf<List<Int>>()
+    val paths = IntArray(1000)
     fun pathSum(root: TreeNode?, targetSum: Int): List<List<Int>> {
+        getTreePathsRecursively(root, targetSum, 0)
+        return result
+    }
+
+    private fun getTreePathsRecursively(root: TreeNode?, targetSum: Int, length: Int) {
+        if (root == null) return
+
+        var len = length
+        paths[len++] = root.`val`
+
+        if (root.left == null && root.right == null)
+            getValidPath(len, targetSum)
+        else
+            getTreePathsRecursively(root.left, targetSum, len)
+        getTreePathsRecursively(root.right, targetSum, len)
+
+    }
+
+    private fun getValidPath(len: Int, targetSum: Int) {
+        var sum = 0
+        val list = mutableListOf<Int>()
+        for (i in 0..len) {
+            sum += paths[i]
+            list.add(paths[i])
+        }
+        if (sum == targetSum)
+            result.add(list)
 
     }
 }
