@@ -54,7 +54,7 @@ class SolutionPathSum {
     private fun getValidPath(len: Int, targetSum: Int) {
         var sum = 0
         val list = mutableListOf<Int>()
-        for (i in 0..len) {
+        for (i in 0 until len) {
             sum += paths[i]
             list.add(paths[i])
         }
