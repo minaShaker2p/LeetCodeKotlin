@@ -1,5 +1,7 @@
 package medium
 
+import java.util.*
+
 /**
  * Given an n-ary tree, return the level order traversal of its nodes' values.
 
@@ -20,7 +22,31 @@ Constraints:
 The height of the n-ary tree is less than or equal to 1000
 The total number of nodes is between [0, 104]
  */
+class levelOrder{
+    class Node(var `val`: Int) {
+        var children: List<Node?> = listOf()
+    }
 
-fun levelOrder(root: Node?): List<List<Int>> {
-    return emptyList()
+    fun levelOrder(root: Node?): List<List<Int>> {
+        val result = mutableListOf<List<Int>>()
+        if(root == null) return result
+        val queue :Queue<Node> = LinkedList<Node>()
+        queue.add(root)
+
+        while (queue.isNotEmpty())
+        {
+            var size = queue.size
+            val level = mutableListOf<Int>()
+            while (size-- > 0)
+            {
+                val peek = queue.remove()
+                level.add(peek.`val`)
+                peek.children.forEach { child->
+                    queue.add(child)
+                }
+            }
+            result.add(level)
+        }
+        return result
+    }
 }
