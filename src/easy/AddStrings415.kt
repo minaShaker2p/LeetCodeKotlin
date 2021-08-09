@@ -1,5 +1,8 @@
 package easy
 
+import java.lang.StringBuilder
+import javax.xml.stream.events.Characters
+
 /**
  * Given two non-negative integers, num1 and num2 represented as string, return the sum of num1 and num2 as a string.
 
@@ -27,5 +30,53 @@ num1 and num2 don't have any leading zeros except for the zero itself.
  */
 
 fun addStrings(num1: String, num2: String): String {
-return ""
+    var i = num1.length - 1
+    var j = num2.length - 1
+
+    val builder = StringBuilder()
+    var remaining = 0
+    while (i >=0 && j >=0)
+    {
+        val sum = Character.getNumericValue(num1[i--]) +  Character.getNumericValue(num2[j--]) + remaining
+        remaining = if( sum > 9)
+        {
+            builder.append(sum - 10)
+            1
+        }else
+        {
+            builder.append(sum)
+            0
+        }
+    }
+    while (i >=0 )
+    {
+        val sum = Character.getNumericValue(num1[i--])  + remaining
+        remaining = if( sum > 9)
+        {
+            builder.append(sum - 10)
+            1
+        }else
+        {
+            builder.append(sum)
+            0
+        }
+    }
+    while ( j >=0)
+    {
+        val sum =   Character.getNumericValue(num2[j--]) + remaining
+        remaining = if( sum > 9)
+        {
+            builder.append(sum - 10)
+            1
+        }else
+        {
+            builder.append(sum)
+            0
+        }
+    }
+
+    if(remaining !=0)
+        builder.append(remaining)
+
+return builder.reverse().toString()
 }
