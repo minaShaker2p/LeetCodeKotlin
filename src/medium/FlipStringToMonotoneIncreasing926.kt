@@ -32,6 +32,17 @@ Constraints:
 s[i] is either '0' or '1'.
  */
 fun minFlipsMonoIncr(s: String): Int {
+    var res = 0
+    var ones = 0
 
-    return 0
+    for(i in s.indices)
+    {
+        if(s[i]=='0')
+            res++
+        else
+            ones++
+        res = Math.min(res,ones)
+    }
+
+    return res
 }
