@@ -34,5 +34,21 @@ A simple improvement uses O(m + n) space, but still not the best solution.
 Could you devise a constant space solution?
  */
 fun setZeroes(matrix: Array<IntArray>): Unit {
+val zeroes = mutableListOf<Pair<Int,Int>>()
+    val m = matrix.size
+    val n = matrix[0].size
+    matrix.forEachIndexed { i, row ->
+        row.forEachIndexed { j, num ->
+            if(num==0)
+                zeroes.add(Pair(i,j))
+        }
+    }
 
+    zeroes.forEach { zero->
+         for (i in 0 until m)
+            matrix[i][zero.second]=0
+
+             for(j in 0 until n)
+                 matrix[zero.first][j]=0
+    }
 }
