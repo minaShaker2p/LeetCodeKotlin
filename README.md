@@ -6,7 +6,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [Easy](src/easy)
 - [Medium](src/medium)
 - [Hard](src/hard) <br />
-<br />
-## Easy Problems :
+
+## Easy Problems:
 
 - [303. Range Sum Query - Immutable](src/easy/RangeSumQueryImmutable303.kt)
