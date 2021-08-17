@@ -35,5 +35,9 @@ https://leetcode.com/problems/build-array-from-permutation/
 */
 
    fun buildArray(nums: IntArray): IntArray {
-        
+        val numbers =IntArray(nums.size){0}
+        nums.forEachIndexed{i,num->
+          numbers[i]= nums[num]
+        }
+        return numbers
     }
