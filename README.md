@@ -13,5 +13,8 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [1920. Build Array from Permutation](src/easy/BuildArrayFromPermutation1920.kt)
 <br />
 
+## Medium Problems :
+- [1448. Count Good Nodes in Binary Tree](CountGoodNodesInBinaryTree1448.kt)
+<br />
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
