@@ -43,5 +43,14 @@ https://leetcode.com/problems/count-good-nodes-in-binary-tree/
  */
 
 fun goodNodes(root: TreeNode?): Int {
-return 0
+return dfs(root,root?.`val`?:0)
+}
+fun  dfs(root: TreeNode?,max:Int):Int{
+    if(root == null) return 0
+    val m = Math.max(max, root.`val`)
+    return if(root.`val` >= m)
+        1+ dfs(root.left,m) + dfs(root.right,m)
+    else
+        dfs(root.left,m) + dfs(root.right,m)
+
 }
