@@ -9,8 +9,9 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 
 ## Easy Problems:
 
-- [303. Range Sum Query - Immutable](src/easy/RangeSumQueryImmutable303.kt).
+- [303. Range Sum Query - Immutable](src/easy/RangeSumQueryImmutable303.kt)
+- [1920. Build Array from Permutation](src/easy/BuildArrayFromPermutation1920.kt)
 <br />
 
 ## Hard Problems:
-- [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt).
+- [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
