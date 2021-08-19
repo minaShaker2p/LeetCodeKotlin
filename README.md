@@ -11,6 +11,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 
 - [303. Range Sum Query - Immutable](src/easy/RangeSumQueryImmutable303.kt)
 - [1920. Build Array from Permutation](src/easy/BuildArrayFromPermutation1920.kt)
+- [1913. Maximum Product Difference Between Two Pairs](src/easy/MaximumProductDifferenceBetweenTwoPairs1913.kt)
 <br />
 
 ## Medium Problems :
