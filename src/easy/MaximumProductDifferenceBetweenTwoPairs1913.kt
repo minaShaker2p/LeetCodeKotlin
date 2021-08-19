@@ -28,6 +28,7 @@ Constraints:
 1 <= nums[i] <= 104
  */
 fun maxProductDifference(nums: IntArray): Int {
-
-return 0
+    val n = nums.size
+    nums.sort()
+return (nums[n-2]*nums[n-1]) - (nums[0]*nums[1])
 }
