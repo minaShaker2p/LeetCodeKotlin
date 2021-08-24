@@ -1,5 +1,8 @@
 package easy
 
+import java.util.*
+import kotlin.collections.HashSet
+
 /**
  * Given the root of a Binary Search Tree and a target number k, return true if there exist two elements in the BST such that their sum is equal to the given target.
 
@@ -38,5 +41,25 @@ root is guaranteed to be a valid binary search tree.
  */
 
 fun findTarget(root: TreeNode?, k: Int): Boolean {
+    val set = HashSet<Int>()
+    val queue :Queue<TreeNode> = LinkedList<TreeNode>()
+    queue.add(root)
+    while (queue.isNotEmpty())
+    {
+        var size = queue.size
+        while (size-- >0)
+        {
+            val current = queue.remove()
+            val currentValue = current.`val`
+            val remaining = k - currentValue
+            if(set.contains(currentValue))
+                return true
+            else
+                set.add(remaining)
+
+            current?.left?.let { queue.add(it) }
+            current?.right?.let { queue.add(it) }
+        }
+    }
 return false
 }
