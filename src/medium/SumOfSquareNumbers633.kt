@@ -33,5 +33,22 @@ Constraints:
 0 <= c <= 231 - 1
  */
 fun judgeSquareSum(c: Int): Boolean {
+
+    var left =0
+    var right = Math.sqrt(c.toDouble()).toInt()
+
+    while (left <= right)
+    {
+        val total = left * left + right * right
+
+        if(total == c)
+             return true
+
+        if(total > c)
+            right--
+        else
+            left++
+    }
+
 return false
 }
