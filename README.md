@@ -18,6 +18,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 ## Medium Problems :
 - [1448. Count Good Nodes in Binary Tree](src/medium/CountGoodNodesInBinaryTree1448.kt)
 - [91. Decode Ways](src/medium/DecodeWays91.kt)
+- [633. Sum of Square Numbers](src/medium/SumOfSquareNumbers633.kt)
 <br />
 
 ## Hard Problems:
