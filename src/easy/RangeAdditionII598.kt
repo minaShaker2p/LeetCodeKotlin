@@ -33,6 +33,14 @@ ops[i].length == 2
  */
 
 fun maxCount(m: Int, n: Int, ops: Array<IntArray>): Int {
+    var minRow = m
+    var minColumn = n
 
-    return 0
+ ops.forEach { op->
+     if(op[0] < minRow)
+         minRow = op[0]
+     if(op[1]<minColumn)
+         minColumn = op[1]
+ }
+    return minRow*minColumn
 }
