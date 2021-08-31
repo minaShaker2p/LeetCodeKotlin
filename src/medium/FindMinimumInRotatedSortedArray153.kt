@@ -38,7 +38,11 @@ n == nums.length
 All the integers of nums are unique.
 nums is sorted and rotated between 1 and n times.
  */
+// this linear solution in O(N)
 fun findMin(nums: IntArray): Int {
-
-    return 0
+    var min  = Int.MAX_VALUE
+    nums.forEach { num->
+        min = Math.min(min,num)
+    }
+    return min
 }
