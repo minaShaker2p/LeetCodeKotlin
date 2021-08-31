@@ -46,3 +46,25 @@ fun findMin(nums: IntArray): Int {
     }
     return min
 }
+
+// this  solution in O(logN)
+fun findMin2(nums: IntArray): Int {
+    if(nums.size==1) return nums[0]
+    var left =0
+    var right = nums.size-1
+    while (left < right)
+    {
+        var midPoint = left +(right-left) / 2
+        if(midPoint>0&&nums[midPoint]<nums[midPoint-1])
+        {
+            return nums[midPoint]
+        }else if( nums[midPoint] >=nums[left] && nums[midPoint] >nums[right])
+        {
+            left = midPoint+1
+        }else
+        {
+            right=midPoint-1
+        }
+    }
+    return nums[left]
+}
