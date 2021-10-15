@@ -14,6 +14,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [1913. Maximum Product Difference Between Two Pairs](src/easy/MaximumProductDifferenceBetweenTwoPairs1913.kt)
 - [653. Two Sum IV - Input is a BST](src/easy/TwoSumIVInputIsBST653.kt)
 - [598. Range Addition II](src/easy/RangeAdditionII598.kt)
+- [598. Range Addition II](src/easy/DiameterOfBinaryTree543.kt)
 <br />
 
 ## Medium Problems :
