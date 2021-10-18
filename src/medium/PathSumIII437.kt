@@ -21,7 +21,23 @@ Output: 3
  */
 var paths = 0
 fun pathSum(root: TreeNode?, targetSum: Int): Int {
-
-
+    if(root==null)
+        return 0
+    helper(root,targetSum)
+    pathSum(root.left,targetSum)
+    pathSum(root.right,targetSum)
     return paths
+}
+
+fun helper(root: TreeNode?, sum: Int){
+    if( root == null)
+        return
+    if(sum == root?.`val`)
+        paths++
+
+     helper(root.left,sum-root.`val`)
+     helper(root.right,sum-root.`val`)
+
+
+
 }
