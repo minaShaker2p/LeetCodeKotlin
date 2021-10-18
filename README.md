@@ -22,6 +22,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [91. Decode Ways](src/medium/DecodeWays91.kt)
 - [633. Sum of Square Numbers](src/medium/SumOfSquareNumbers633.kt)
 - [153. Find Minimum in Rotated Sorted Array](src/medium/FindMinimumInRotatedSortedArray153.kt)
+- [437. Path Sum III](src/medium/PathSumIII437.kt)
 <br />
 
 ## Hard Problems:
