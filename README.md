@@ -15,6 +15,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [653. Two Sum IV - Input is a BST](src/easy/TwoSumIVInputIsBST653.kt)
 - [598. Range Addition II](src/easy/RangeAdditionII598.kt)
 - [543. Diameter of Binary Tree](src/easy/DiameterOfBinaryTree543.kt)
+- [155. Min Stack](src/easy/MinStack155.kt)
 <br />
 
 ## Medium Problems :
