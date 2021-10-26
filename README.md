@@ -25,6 +25,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [633. Sum of Square Numbers](src/medium/SumOfSquareNumbers633.kt)
 - [153. Find Minimum in Rotated Sorted Array](src/medium/FindMinimumInRotatedSortedArray153.kt)
 - [437. Path Sum III](src/medium/PathSumIII437.kt)
+- [151. Reverse Words in a String](src/medium/ReverseWordsInString151.kt)
 <br />
 
 ## Hard Problems:
