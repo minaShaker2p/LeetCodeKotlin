@@ -1,5 +1,8 @@
 package easy
 
+import java.util.*
+import kotlin.math.min
+
 /**
 Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
 
@@ -40,21 +43,27 @@ At most 3 * 104 calls will be made to push, pop, top, and getMin.
  **/
 
 class MinStack() {
+    val stack = Stack<Int>()
+    val minStack = Stack<Int>()
 
     fun push(`val`: Int) {
-
+        if(minStack.isEmpty() || `val` <= minStack.peek() )
+            minStack.push(`val`)
+        stack.push(`val`)
     }
 
     fun pop() {
-
+        if(minStack.peek() == stack.peek())
+            minStack.pop()
+        stack.pop()
     }
 
     fun top(): Int {
-  return 0
+        return stack.peek()
     }
 
     fun getMin(): Int {
-  return 0
+        return minStack.peek()
     }
 
 }
