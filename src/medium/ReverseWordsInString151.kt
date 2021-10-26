@@ -46,5 +46,12 @@ Follow-up: If the string data type is mutable in your language, can you solve it
 
 fun reverseWords(s: String): String {
 
-    return ""
+    val words = s.split(" ").filter {
+        it.isNotEmpty()
+    }
+    val builder = StringBuilder()
+    for(i in words.size-1 downTo 0)
+        builder.append("${words[i]} ")
+
+    return builder.toString().trim()
 }
