@@ -16,6 +16,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [598. Range Addition II](src/easy/RangeAdditionII598.kt)
 - [543. Diameter of Binary Tree](src/easy/DiameterOfBinaryTree543.kt)
 - [155. Min Stack](src/easy/MinStack155.kt)
+- [226. Invert Binary Tree](src/easy/InvertBinaryTree226.kt)
 <br />
 
 ## Medium Problems :
