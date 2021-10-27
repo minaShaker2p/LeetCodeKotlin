@@ -37,4 +37,28 @@ nums[i] is 0, 1, or 2.
 
 fun sortColors(nums: IntArray): Unit {
 
+    var zeros = 0
+    var ones = 0
+    var twos = 0
+
+    nums.forEach { num->
+        if(num == 0)
+            zeros++
+
+        if(num == 1)
+            ones++
+
+        if(num == 2)
+            twos++
+    }
+
+    var counter =0
+
+    for(i in 0 until zeros)
+        nums[counter++]=0
+    for(i in 0 until ones)
+        nums[counter++]=1
+    for(i in 0 until twos)
+        nums[counter++]=2
+
 }
