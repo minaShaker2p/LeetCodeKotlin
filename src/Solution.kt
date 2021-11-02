@@ -5,14 +5,15 @@ import easy.*
 import medium.MyCalendar
 import medium.findDuplicate
 import medium.longestStrChain
+import medium.solve
 
 fun main(args: Array<String>) {
     //findDuplicate(arrayOf("root/a 1.txt(abcd) 2.txt(efgh)","root/c 3.txt(abcd)","root/c/d 4.txt(efgh)","root 4.txt(efgh)"))
    //longestStrChain(arrayOf("a","b","ba","bca","bda","bdca"))
-     var obj = MyCalendar()
-     var param_1 = obj.book(10,20)
-    obj.book(15,25)
-    obj.book(20,30)
+    //[["X","X","X","X"],["X","O","O","X"],["X","X","O","X"],["X","O","X","X"]]
+
+   val  array = arrayOf(charArrayOf('X','X','X','X'),charArrayOf('X','O','O','X'),charArrayOf('X','X','O','X'),charArrayOf('X','O','X','X') )
+   solve(array)
 }
 
 fun makeSingleLinkedList(): ListNode<Int> {
