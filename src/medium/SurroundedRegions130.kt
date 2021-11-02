@@ -27,5 +27,63 @@ n == board[i].length
 board[i][j] is 'X' or 'O'.
  */
 fun solve(board: Array<CharArray>): Unit {
+ if(board.isEmpty() || board[0].isEmpty())
+     return
+
+    val m = board.size
+    val n = board[0].size
+
+    // check 'O' in first column
+    for(i in 0 until m)
+        if(board[i][0]=='O')
+            dfsHelper(board,i,0)
+
+    // check 'O' in last column
+    for(i in 0 until m)
+        if(board[i][n-1]=='O')
+            dfsHelper(board,i,n-1)
+
+    // check 'O' in last column
+    for(i in 0 until n)
+        if(board[i][m-1]=='O')
+            dfsHelper(board,i,m-1)
+
+    // check 'O' in first row
+    for(i in 0 until n)
+        if(board[0][i]=='O')
+            dfsHelper(board,0,i)
+
+    // check 'O' in last row
+    for(i in 0 until n)
+        if(board[n-1][i]=='O')
+            dfsHelper(board,n-1,i)
+
+    for(i in 0 until m)
+        for(j in 0 until n)
+        {
+            if(board[i][j]=='O')
+                board[i][j]='X'
+        }
+
+    for(i in 0 until m)
+        for(j in 0 until n)
+        {
+            if(board[i][j]=='V')
+                board[i][j]='O'
+        }
+}
+
+fun dfsHelper(board: Array<CharArray>,row:Int,column:Int)
+{
+    if(row <= 0 || column <= 0 || row >= board.size-1 || column >= board.size -1 || board[row][column] == 'X' || board[row][column]== 'V' )
+        return
+
+    board[row][column] = 'V'
+
+    dfsHelper(board,row,column+1)
+    dfsHelper(board,row,column-1)
+    dfsHelper(board,row+1,column)
+    dfsHelper(board,row-1,column)
+
 
 }
