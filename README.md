@@ -27,6 +27,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [437. Path Sum III](src/medium/PathSumIII437.kt)
 - [151. Reverse Words in a String](src/medium/ReverseWordsInString151.kt)
 - [75. Sort Colors](src/medium/SortColors75.kt)
+- [130. Surrounded Regions](src/medium/SurroundedRegions130.kt)
 <br />
 
 ## Hard Problems:
