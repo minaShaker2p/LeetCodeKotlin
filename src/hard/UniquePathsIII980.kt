@@ -47,6 +47,48 @@ n == grid[i].length
 -1 <= grid[i][j] <= 2
 There is exactly one starting cell and one ending cell.
  */
- fun uniquePathsIII(grid:Array<IntArray>) :Int{
-return 0
+class UniquePathsIII{
+    fun uniquePathsIII(grid:Array<IntArray>) :Int{
+        var zero =0
+        var sx = 0
+        var sy = 0
+
+        for(i in grid.indices)
+        {
+            for(j in grid[i].indices)
+            {
+                if(grid[i][j]==1)
+                {
+                    sx=i
+                    sy=j
+                }
+            }
+            return dfs(grid,sx,sy,zero)
+        }
+
+        return 0
+    }
+    fun dfs(grid:Array<IntArray>,x:Int,y:Int,zero:Int):Int {
+        var z = zero
+        if (x < 0 || y < 0 || x > grid.size - 1 || y > grid[x].size - 1 || grid[x][y] == 0)
+            return 0
+            if(grid[x][y] == 2){
+            return if (z == -1 )  1 else 0
+            } // Why zero = -1, because in above example we have 9 zero's. So, when we reach the final cell we are covering one cell extra then the zero count.
+        // If that's the case we find the path and return '1' otherwise return '0';
+
+        grid[x][y] = -1; // mark the visited cells as -1;
+        z-- // and reduce the zero by 1
+
+        var totalPaths = dfs(grid, x + 1, y, zero) + // calculating all the paths available in 4 directions
+                dfs(grid, x - 1, y, zero) +
+                dfs(grid, x, y + 1, zero) +
+                dfs(grid, x, y - 1, zero)
+
+        // Let's say if we are not able to count all the paths. Now we use Backtracking over here
+        grid[x][y] = 0;
+        z++;
+
+        return totalPaths;
+    }
 }
