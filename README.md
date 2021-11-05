@@ -18,6 +18,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [155. Min Stack](src/easy/MinStack155.kt)
 - [226. Invert Binary Tree](src/easy/InvertBinaryTree226.kt)
 - [404. Sum of Left Leaves](src/easy/SumOfLeftLeaves404.kt)
+- [441. Arranging Coins](src/easy/ArrangingCoins441.kt)
 <br />
 
 ## Medium Problems :
