@@ -25,11 +25,23 @@ The number of nodes in the tree is in the range [1, 1000].
 class sumOfLeftLeaves{
     var sum = 0
     fun sumOfLeftLeaves(root: TreeNode?): Int {
+        if(root == null) return 0
+        sumOfLeftLeavesHelper(root)
 
         return sum
     }
 
-    fun sumOfLeftLeavesHelper(root: TreeNode?) {
+    private fun sumOfLeftLeavesHelper(root: TreeNode?,isLeft:Boolean=false) {
+      if(root==null) return
+
+        if(isLeft && root.left == null && root.right == null)
+        {
+            sum+=root.`val`
+        }else
+        {
+            sumOfLeftLeavesHelper(root.left,true)
+            sumOfLeftLeavesHelper(root.right)
+        }
 
     }
 }
