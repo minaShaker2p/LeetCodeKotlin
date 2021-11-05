@@ -22,5 +22,5 @@ Explanation: Because the 4th row is incomplete, we return 3.
  */
 
 fun arrangeCoins(n: Int): Int {
-return 0
+    return (Math.sqrt(2 * n.toLong()+ 0.25) - 0.5).toInt()
 }
