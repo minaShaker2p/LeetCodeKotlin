@@ -28,5 +28,16 @@ Constraints:
 Each integer in nums will appear twice, only two integers will appear once.
  */
     fun singleNumber(nums: IntArray): IntArray {
+    val map = HashMap<Int,Int>()
+    nums.forEach { num->
+        map[num]= (map[num]?:0)+1
+    }
 
+    val result = IntArray(2)
+    var i = 0
+    map.forEach { (key, value) ->
+        if(value== 1)
+            result[i++]= key
+    }
+    return result
     }
