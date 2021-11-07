@@ -31,6 +31,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [75. Sort Colors](src/medium/SortColors75.kt)
 - [130. Surrounded Regions](src/medium/SurroundedRegions130.kt)
 - [260. Single Number III](src/medium/SingleNumberIII260.kt)
+- [43. Multiply Strings](src/medium/MultiplyStrings43.kt)
 <br />
 
 ## Hard Problems:
