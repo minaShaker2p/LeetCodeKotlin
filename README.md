@@ -32,6 +32,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [130. Surrounded Regions](src/medium/SurroundedRegions130.kt)
 - [260. Single Number III](src/medium/SingleNumberIII260.kt)
 - [43. Multiply Strings](src/medium/MultiplyStrings43.kt)
+- [96. Unique Binary Search Trees](src/medium/UniqueBinarySearchTrees96.kt)
 <br />
 
 ## Hard Problems:
