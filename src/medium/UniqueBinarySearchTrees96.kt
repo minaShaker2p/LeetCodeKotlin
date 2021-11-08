@@ -21,7 +21,16 @@ Constraints:
 1 <= n <= 19
  */
 
-fun numTrees(n: Int): Int {
+class UniqueBinarySearchTrees{
+    val dp =IntArray(20)
+    fun numTrees(n: Int): Int {
 
-    return 0
+        if(n <= 1) return 1
+        if(dp[n]>0) return dp[n]
+        for(i in 1 ..n)
+        {
+            dp[n]+=numTrees(i-1) * numTrees(n-i)
+        }
+        return dp[n]
+    }
 }
