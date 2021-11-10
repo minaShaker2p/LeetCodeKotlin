@@ -33,6 +33,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [260. Single Number III](src/medium/SingleNumberIII260.kt)
 - [43. Multiply Strings](src/medium/MultiplyStrings43.kt)
 - [96. Unique Binary Search Trees](src/medium/UniqueBinarySearchTrees96.kt)
+- [122. Best Time to Buy and Sell Stock II](src/medium/BestTimeToBuyAndSellStockII122.kt)
 <br />
 
 ## Hard Problems:
