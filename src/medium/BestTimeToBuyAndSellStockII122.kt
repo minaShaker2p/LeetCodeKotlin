@@ -30,5 +30,12 @@ Explanation: There is no way to make a positive profit, so we never buy the stoc
  */
 
 fun maxProfit(prices: IntArray): Int {
-return 0
+    val dp = IntArray(prices.size)
+    for(i in 1 until prices.size)
+    {
+        dp[i]=dp[i-1]
+        if(prices[i]>prices[i-1])
+            dp[i] += prices[i]-prices[i-1]
+    }
+    return dp[prices.size-1]
 }
