@@ -25,5 +25,15 @@ n == nums.length
 Follow up: Could you do it without extra space and in O(n) runtime? You may assume the returned list does not count as extra space.
  */
 fun findDisappearedNumbers(nums: IntArray): List<Int> {
+    val map = HashMap<Int,Int>()
 
+    // initialize the map key from 1 to n with zero
+    (1..nums.size).forEach { map[it]=0 }
+
+    for(i in nums.indices)
+    {
+        map[nums[i]]= (map[nums[i]]?:0)+1
+    }
+
+    return map.filter { entry ->entry.value==0  }.keys.toList()
 }
