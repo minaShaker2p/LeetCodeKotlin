@@ -20,6 +20,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [404. Sum of Left Leaves](src/easy/SumOfLeftLeaves404.kt)
 - [441. Arranging Coins](src/easy/ArrangingCoins441.kt)
 - [448. Find All Numbers Disappeared in an Array](src/easy/FindAllNumbersDisappearedInAnArray448.kt)
+- [461. Hamming Distance](src/easy/HammingDistance461.kt)
 <br />
 
 ## Medium Problems :
