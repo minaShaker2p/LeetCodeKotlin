@@ -39,5 +39,34 @@ root is a valid binary search tree.
  */
 
 fun deleteNode(root: TreeNode?, key: Int): TreeNode? {
-return root
+    if(root==null) return null
+
+    if(key < root.`val`)
+    {
+        root.left = deleteNode(root.left,key)
+        return root
+    }else if( key > root.`val`)
+    {
+        root.right = deleteNode(root.right,key)
+        return root
+    }else
+    {
+        // in case if key equals root value
+        if(root.left == null && root.right ==null)
+            return null
+        if(root.left==null)
+            return root.right
+        else if(root.right==null)
+            return root.left
+        else
+        {
+            var temp = root.right
+            while (temp?.left!=null)
+            {
+                temp = temp.left
+            }
+            temp?.left = root.left
+            return root.right
+        }
+    }
 }
