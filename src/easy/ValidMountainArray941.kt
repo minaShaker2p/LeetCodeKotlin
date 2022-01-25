@@ -30,8 +30,10 @@ Constraints:
 1 <= arr.length <= 104
 0 <= arr[i] <= 104
 
- * @see <a href="https://leetcode.com/problems/valid-mountain-array/">941. Valid Mountain Array</a>
+ Problem link :
+https://leetcode.com/problems/valid-mountain-array/
  */
+
 fun validMountainArray(arr: IntArray): Boolean {
 
     return true
