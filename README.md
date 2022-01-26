@@ -40,6 +40,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [122. Best Time to Buy and Sell Stock II](src/medium/BestTimeToBuyAndSellStockII122.kt)
 - [62. Unique Paths](src/medium/UniquePaths62.kt)
 - [450. Delete Node in a BST](src/medium/DeleteNodeInBST450.kt)
+- [1305. All Elements in Two Binary Search Trees](src/medium/AllElementsInTwoBinarySearchTrees1305.kt)-[Leetcode Link](https://leetcode.com/problems/all-elements-in-two-binary-search-trees/)
 <br />
 
 ## Hard Problems:
