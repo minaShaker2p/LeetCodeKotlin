@@ -41,6 +41,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [62. Unique Paths](src/medium/UniquePaths62.kt)
 - [450. Delete Node in a BST](src/medium/DeleteNodeInBST450.kt)
 - [1305. All Elements in Two Binary Search Trees](src/medium/AllElementsInTwoBinarySearchTrees1305.kt)-[Leetcode Link](https://leetcode.com/problems/all-elements-in-two-binary-search-trees/)
+- [189. Rotate Array](src/medium/RotateArray189.kt)-[Leetcode Link](- [189. Rotate Array](src/medium/RotateArray189.kt)-[Leetcode Link](https://leetcode.com/problems/https://leetcode.com/problems/rotate-array/)
 <br />
 
 ## Hard Problems:
