@@ -29,6 +29,16 @@ Constraints:
 0 <= k <= 105
  */
 fun rotate(numbers: IntArray, k: Int): Unit {
-
+    var i =0
+    val size=numbers.size
+    val c=k%size
+    while(i++<c)
+    {
+        val temp=numbers[size-1]
+        for(j in size-1 downTo 1) {
+            numbers[j]=numbers[j-1]
+        }
+        numbers[0]=temp
+    }
 
 }
