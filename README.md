@@ -23,6 +23,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [461. Hamming Distance](src/easy/HammingDistance461.kt)
 - [35. Search Insert Position](src/easy/SearchInsertPosition35.kt)
 - [941. Valid Mountain Array](src/easy/ValidMountainArray941.kt) -[Leetcode Link](https://leetcode.com/problems/valid-mountain-array/)
+- [1672. Richest Customer Wealth](src/easy/RichestCustomerWealth1672.kt) -[Leetcode Link](https://leetcode.com/problems/richest-customer-wealth/)
 <br />
 
 ## Medium Problems :
