@@ -30,13 +30,11 @@ Input: accounts = [[2,8,7],[7,1,3],[1,9,5]]
 Output: 17
  */
 fun maximumWealth(accounts: Array<IntArray>): Int {
-    var max = Int.MIN_VALUE
+    var max = 0
     accounts.forEach {banks->
-        var wealth=0
-        banks.forEach {bank->
-            wealth+=bank
-        }
-        max = Math.max(max,wealth)
+        val wealth= banks.reduce{sum,bank-> sum+bank}
+        if(wealth > max)
+            max = wealth
     }
 
     return max
