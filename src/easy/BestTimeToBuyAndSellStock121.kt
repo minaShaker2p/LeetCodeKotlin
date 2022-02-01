@@ -26,5 +26,15 @@ Constraints:
 0 <= prices[i] <= 104
  */
 fun maxProfit(prices: IntArray): Int {
+    var sellingPrice =0
+    var maxProfit = 0
 
+    for(i in prices.size-1 downTo 0)
+    {
+        sellingPrice = Math.max(sellingPrice,prices[i])
+
+        maxProfit = Math.max(maxProfit,sellingPrice-prices[i])
+    }
+
+    return maxProfit
 }
