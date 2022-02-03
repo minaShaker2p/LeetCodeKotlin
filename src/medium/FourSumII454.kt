@@ -31,5 +31,21 @@ n == nums4.length
 -228 <= nums1[i], nums2[i], nums3[i], nums4[i] <= 228
  */
 fun fourSumCount(nums1: IntArray, nums2: IntArray, nums3: IntArray, nums4: IntArray): Int {
+val map = HashMap<Int,Int>()
 
+    nums1.forEach { num1->
+        nums2.forEach { num2->
+            val sum = num1+num2
+            map[-sum]= (map[-sum]?:0)+1
+        }
+    }
+
+    var count=0
+    nums3.forEach { num3->
+        nums4.forEach { num4->
+            val sum=num3+num4
+            count+=map[sum]?:0
+        }
+    }
+    return count
 }
