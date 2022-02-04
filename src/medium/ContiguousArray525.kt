@@ -23,5 +23,23 @@ Constraints:
 nums[i] is either 0 or 1.
  */
 fun findMaxLength(nums: IntArray): Int {
+    var maxLength = 0
 
+    val counts = HashMap<Int, Int>()
+    counts[0]=-1
+    var count = 0
+
+    for (i in nums.indices) {
+        count += if(nums[i]==0)
+            -1
+        else
+            1
+
+        if(counts.containsKey(count))
+            maxLength= Math.max(maxLength,i- (counts[count]?:0))
+        else
+            counts[count]=i
+    }
+
+    return maxLength
 }
