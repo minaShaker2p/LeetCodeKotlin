@@ -45,6 +45,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [1305. All Elements in Two Binary Search Trees](src/medium/AllElementsInTwoBinarySearchTrees1305.kt)-[Leetcode Link](https://leetcode.com/problems/all-elements-in-two-binary-search-trees/)
 - [189. Rotate Array](src/medium/RotateArray189.kt)-[Leetcode Link](https://leetcode.com/problems/rotate-array/)
 - [454. 4Sum II](src/medium/FourSumII454.kt)-[Leetcode Link](https://leetcode.com/problems/4sum-ii/)
+- [525. Contiguous Array](src/medium/ContiguousArray525.kt)-[Leetcode Link](https://leetcode.com/problems/contiguous-array/)
 <br />
 
 ## Hard Problems:
