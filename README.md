@@ -46,6 +46,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [189. Rotate Array](src/medium/RotateArray189.kt)-[Leetcode Link](https://leetcode.com/problems/rotate-array/)
 - [454. 4Sum II](src/medium/FourSumII454.kt)-[Leetcode Link](https://leetcode.com/problems/4sum-ii/)
 - [525. Contiguous Array](src/medium/ContiguousArray525.kt)-[Leetcode Link](https://leetcode.com/problems/contiguous-array/)
+- [80. Remove Duplicates from Sorted Array II](src/medium/RemoveDuplicatesFromSortedArrayII80.kt)-[Leetcode Link](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/)
 <br />
 
 ## Hard Problems:
