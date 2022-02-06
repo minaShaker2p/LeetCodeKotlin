@@ -47,5 +47,16 @@ Constraints:
 nums is sorted in non-decreasing order.
  */
 fun removeDuplicates(nums: IntArray): Int {
-    return 0
+    if(nums.size<3)
+        return nums.size
+    var limit = 2
+    for(i in 2 until nums.size)
+    {
+        if(nums[i]!=nums[limit-2])
+        {
+            nums[limit++]=nums[i]
+        }
+    }
+
+    return limit
 }
