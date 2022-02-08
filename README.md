@@ -26,6 +26,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [1672. Richest Customer Wealth](src/easy/RichestCustomerWealth1672.kt) -[Leetcode Link](https://leetcode.com/problems/richest-customer-wealth/)
 - [121. Best Time to Buy and Sell Stock](src/easy/BestTimeToBuyAndSellStock121.kt) -[Leetcode Link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
 - [389. Find the Difference](src/easy/FindTheDifference389.kt) -[Leetcode Link](https://leetcode.com/problems/find-the-difference/)
+- [258. Add Digits](src/easy/AddDigits258.kt) -[Leetcode Link](https://leetcode.com/problems/add-digits/)
 <br />
 
 ## Medium Problems :
