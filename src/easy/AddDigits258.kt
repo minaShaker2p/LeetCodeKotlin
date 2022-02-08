@@ -34,14 +34,10 @@ fun addDigits(num: Int): Int {
         n/=10
         var temp = sum
         sum =0
-        while (temp!=0)
+        while (temp!=0 || sum > 9)
         {
-
-
             sum+=temp%10
             temp/=10
-            var temp = sum
-
         }
     }
     return sum
