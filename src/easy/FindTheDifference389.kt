@@ -28,5 +28,28 @@ s and t consist of lowercase English letters.
  */
 
 fun findTheDifference(s: String, t: String): Char {
+    val mapS = HashMap<Char,Int>()
+    val mapT = HashMap<Char,Int>()
 
+    s.forEach { char->
+        mapS[char]= (mapS[char]?:0)+1
+    }
+
+    t.forEach { char->
+        mapT[char]= (mapT[char]?:0)+1
+    }
+
+    var diff=' '
+
+    for ( entry in mapT.entries)
+    {
+        val count = mapS[entry.key]?:0
+        if(count<entry.value )
+        {
+            diff=entry.key
+            break
+        }
+
+    }
+return  diff
 }
