@@ -25,5 +25,24 @@ Constraints:
  */
 
 fun addDigits(num: Int): Int {
-return 0
+    var sum = 0
+    var n = num
+
+    while (n!=0 || sum >9)
+    {
+        sum+=n%10
+        n/=10
+        var temp = sum
+        sum =0
+        while (temp!=0)
+        {
+
+
+            sum+=temp%10
+            temp/=10
+            var temp = sum
+
+        }
+    }
+    return sum
 }
