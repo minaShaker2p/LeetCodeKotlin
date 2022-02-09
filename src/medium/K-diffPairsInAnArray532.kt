@@ -30,5 +30,21 @@ Explanation: There is one 0-diff pair in the array, (1, 1).
  */
 
 fun findPairs(nums: IntArray, k: Int): Int {
-return 0
+    val map = HashMap<Int, Int>()
+    nums.forEach { num ->
+        map[num] = (map[num] ?: 0) + 1
+    }
+
+    var count = 0
+    map.forEach { (key, value) ->
+        if (k == 0) {
+            if (value >= 2)
+                count++
+
+        } else {
+            if (map.containsKey(key + k))
+                count++
+        }
+    }
+    return count
 }
