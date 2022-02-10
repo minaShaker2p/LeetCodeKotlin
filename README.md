@@ -50,6 +50,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [525. Contiguous Array](src/medium/ContiguousArray525.kt)-[Leetcode Link](https://leetcode.com/problems/contiguous-array/)
 - [80. Remove Duplicates from Sorted Array II](src/medium/RemoveDuplicatesFromSortedArrayII80.kt)-[Leetcode Link](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/)
 - [532. K-diff Pairs in an Array](src/medium/K-diffPairsInAnArray532.kt)-[Leetcode Link](https://leetcode.com/problems/k-diff-pairs-in-an-array/)
+- [560. Subarray Sum Equals K](src/medium/SubarraySumEqualsK560.kt)-[Leetcode Link](https://leetcode.com/problems/subarray-sum-equals-k/)
 <br />
 
 ## Hard Problems:
