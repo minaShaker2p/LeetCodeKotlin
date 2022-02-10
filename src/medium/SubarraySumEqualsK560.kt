@@ -17,5 +17,21 @@ Output: 2
 
  */
 fun subarraySum(nums: IntArray, k: Int): Int {
+    var count=0
+
+    val arrSum = HashMap<Int,Int>()
+    var sum =0
+    arrSum[sum]=1
+
+    for(i in nums.indices)
+    {
+        sum+=nums[i]
+
+        if(arrSum.containsKey(sum-k))
+            count+=arrSum[sum-k]?:0
+
+        arrSum[sum]= arrSum.getOrDefault(sum,0)+1
+    }
+    return count
 
 }
