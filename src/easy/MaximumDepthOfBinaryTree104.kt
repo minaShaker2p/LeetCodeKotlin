@@ -1,5 +1,7 @@
 package easy
 
+import java.util.*
+
 /**
  * Given the root of a binary tree, return its maximum depth.
 
@@ -25,5 +27,24 @@ The number of nodes in the tree is in the range [0, 104].
  */
 
 fun maxDepth(root: TreeNode?): Int {
-return 0
+    if (root == null) return 0
+
+    var max = 0
+    val queue: Queue<TreeNode> = LinkedList<TreeNode>()
+    queue.add(root)
+
+    while (queue.isNotEmpty()) {
+        var size = queue.size
+        max++
+        while (size-- > 0) {
+            val current = queue.remove()
+            if(current?.left !=null)
+                queue.add(current.left)
+            if(current?.right !=null)
+                queue.add(current.right)
+
+        }
+
+    }
+    return max
 }
