@@ -38,4 +38,13 @@ columnTitle is in the range ["A", "FXSHRXW"].
 
 fun titleToNumber(columnTitle: String): Int {
 
+    var result =0
+
+    columnTitle.forEachIndexed { index, char ->
+        if(index!=0)
+            result*=26
+        result+=(char-'A')+1
+    }
+    return result
+
 }
