@@ -28,5 +28,17 @@ Constraints:
 Each element in the array appears twice except for one element which appears only once.
  */
 fun singleNumber(nums: IntArray): Int {
+    val map = HashMap<Int,Int>()
+
+    nums.forEach { num->
+        map[num]= (map[num]?:0)+1
+    }
+
+    for (entry in map.entries)
+    {
+        if(entry.value==1)
+            return entry.key
+    }
+
 return -1
 }
