@@ -36,5 +36,23 @@ All elements of candidates are distinct.
  */
 
 fun combinationSum(candidates: IntArray, target: Int): List<List<Int>> {
+ val result = mutableListOf<List<Int>>()
+    backtrack(candidates,0,target, mutableListOf<Int>(),result)
+    return result
+}
 
+fun backtrack(candidates: IntArray, start: Int, target: Int, list: MutableList<Int>, result: MutableList<List<Int>>) {
+
+    //base case
+    if(target<0) return
+
+    if(target==0)
+        result.add(list.toList())
+
+    for (i in start until candidates.size)
+    {
+        list.add(candidates[i])
+        backtrack(candidates,i,target-candidates[i],list,result)
+        list.removeAt(list.size-1)
+    }
 }
