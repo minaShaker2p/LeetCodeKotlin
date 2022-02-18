@@ -1,5 +1,9 @@
 package medium
 
+import java.lang.StringBuilder
+import java.text.CharacterIterator
+import java.util.*
+
 /**
  * Given string num representing a non-negative integer num, and an integer k, return the smallest possible integer after removing k digits from num.
 
@@ -29,6 +33,39 @@ num consists of only digits.
 num does not have any leading zeros except for the zero itself.
  */
 fun removeKdigits(num: String, k: Int): String {
+    val size = num.length
+    // edge case
+    if (size == k) return "0"
 
-    return ""
+    val stack = Stack<Int>()
+
+    var counter = 0
+    var i = 0
+
+    while (counter < size) {
+        while (i < k && stack.isNotEmpty() && stack.peek() > Character.getNumericValue(num[counter])) {
+            stack.pop()
+            i++
+        }
+
+        stack.push(Character.getNumericValue(num[counter++]))
+    }
+    while (i++ < k) {
+        stack.pop()
+    }
+    val result = StringBuilder()
+
+    while (stack.isNotEmpty()) {
+        result.append(stack.pop())
+    }
+
+
+    result.reverse()
+
+    while (result.length > 1 && result[0] == '0')
+    {
+        result.deleteCharAt(0)
+    }
+
+    return result.toString()
 }
