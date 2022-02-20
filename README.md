@@ -56,6 +56,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [560. Subarray Sum Equals K](src/medium/SubarraySumEqualsK560.kt)-[Leetcode Link](https://leetcode.com/problems/subarray-sum-equals-k/)
 - [39. Combination Sum](src/medium/CombinationSum39.kt)-[Leetcode Link](https://leetcode.com/problems/combination-sum/)
 - [402. Remove K Digits](src/medium/RemoveKDigits402.kt)-[Leetcode Link](https://leetcode.com/problems/remove-k-digits/)
+- [1288. Remove Covered Intervals](src/medium/RemoveCoveredIntervals1288.kt)-[Leetcode Link](https://leetcode.com/problems/remove-covered-intervals/)
 <br />
 
 ## Hard Problems:
