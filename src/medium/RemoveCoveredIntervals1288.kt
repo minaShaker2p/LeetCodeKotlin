@@ -29,4 +29,18 @@ All the given intervals are unique.
  */
 fun removeCoveredIntervals(intervals: Array<IntArray>): Int {
 
+    var count = 0
+
+    intervals.forEachIndexed { index, arr ->
+        for(i in intervals.indices)
+        {
+            if(i == index) continue
+            if(arr[0]>= intervals[i][0]&&arr[1]<= intervals[i][1])
+            {
+                count++
+                break
+            }
+        }
+    }
+    return intervals.size-count
 }
