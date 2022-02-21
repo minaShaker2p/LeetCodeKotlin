@@ -28,6 +28,17 @@ Follow-up: Could you solve the problem in linear time and in O(1) space?
  */
 
 fun majorityElement(nums: IntArray): Int {
+    val map =HashMap<Int,Int>()
+    nums.forEach { num->
+        map[num]=(map[num]?:0)+1
+    }
+    val  limit =  nums.size/2
+    var element =0
+    map.forEach { entry ->
+        if(entry.value>limit && (element==0 || map[element]?:0 > entry.value))
+            element= entry.key
+    }
+    return element
 
-    return 0
+
 }
