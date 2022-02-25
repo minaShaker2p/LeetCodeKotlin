@@ -60,6 +60,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [402. Remove K Digits](src/medium/RemoveKDigits402.kt)-[Leetcode Link](https://leetcode.com/problems/remove-k-digits/)
 - [1288. Remove Covered Intervals](src/medium/RemoveCoveredIntervals1288.kt)-[Leetcode Link](https://leetcode.com/problems/remove-covered-intervals/)
 - [148. Sort List](src/medium/SortList148.kt)-[Leetcode Link](https://leetcode.com/problems/sort-list/)
+- [165. Compare Version Numbers](src/medium/CompareVersionNumbers165.kt)-[Leetcode Link](https://leetcode.com/problems/compare-version-numbers/)
 <br />
 
 ## Hard Problems:
