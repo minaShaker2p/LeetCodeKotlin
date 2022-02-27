@@ -1,5 +1,8 @@
 package medium
 
+import java.util.*
+import kotlin.collections.HashMap
+
 /**
  * Given the root of a binary tree, return the maximum width of the given tree.
 
@@ -37,5 +40,33 @@ The number of nodes in the tree is in the range [1, 3000].
 -100 <= Node.val <= 100
  */
 fun widthOfBinaryTree(root: TreeNode?): Int {
-return 0
+    if(root==null || (root.left==null && root.right==null))
+        return 1
+    val map = HashMap<TreeNode,Int>()
+    val queue:Queue<TreeNode> = LinkedList<TreeNode>()
+    var maxWidth=0
+    queue.offer(root)
+    map[root]=0
+
+    while (queue.isNotEmpty())
+    {
+        var size = queue.size
+        var left= map[queue.peek()]?:0
+        while (size-->0)
+        {
+            val head = queue.poll()
+            maxWidth=Math.max(maxWidth,map[head]!!-left+1)
+            if(head.left!=null)
+            {
+                queue.offer(head.left)
+                map[head.left!!]=map[head]!! * 2
+            }
+            if(head.right!=null)
+            {
+                queue.offer(head.right)
+                map[head.right!!]=map[head]!! * 2 +1
+            }
+        }
+    }
+return maxWidth
 }
