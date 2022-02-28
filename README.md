@@ -31,6 +31,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [136. Single Number](src/easy/SingleNumber136.kt) -[Leetcode Link](https://leetcode.com/problems/single-number/)
 - [171. Excel Sheet Column Number](src/easy/ExcelSheetColumnNumber171.kt) -[Leetcode Link](https://leetcode.com/problems/excel-sheet-column-number/)
 - [169. Majority Element](src/easy/MajorityElement169.kt) -[Leetcode Link](https://leetcode.com/problems/majority-element/)
+- [228. Summary Ranges](src/easy/SummaryRanges228.kt) -[Leetcode Link](https://leetcode.com/problems/summary-ranges/)
 
 <br />
 
