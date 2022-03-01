@@ -37,5 +37,23 @@ It is very easy to come up with a solution with a runtime of O(n log n). Can you
 Can you do it without using any built-in function (i.e., like __builtin_popcount in C++)?
  */
 fun countBits(n: Int): IntArray {
+    val result = mutableListOf<Int>()
+    for( i in 0..n)
+    {
+        result.add(i.countOneBits())
+    }
+    return result.toIntArray()
+}
 
+fun Int.countOneBits():Int
+{
+    var count=0
+    var  num=this
+    while (num!=0)
+    {
+        if(num%2==1)
+            count++
+        num/=2
+    }
+    return count
 }
