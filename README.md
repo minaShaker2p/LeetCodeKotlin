@@ -65,6 +65,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [148. Sort List](src/medium/SortList148.kt)-[Leetcode Link](https://leetcode.com/problems/sort-list/)
 - [165. Compare Version Numbers](src/medium/CompareVersionNumbers165.kt)-[Leetcode Link](https://leetcode.com/problems/compare-version-numbers/)
 - [662. Maximum Width of Binary Tree](src/medium/MaximumWidthOfBinaryTree662.kt)-[Leetcode Link](https://leetcode.com/problems/maximum-width-of-binary-tree/)
+- [413. Arithmetic Slices](src/medium/ArithmeticSlices413.kt)-[Leetcode Link](https://leetcode.com/problems/arithmetic-slices/)
 <br />
 
 ## Hard Problems:
