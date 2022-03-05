@@ -27,22 +27,20 @@ Constraints:
 -1000 <= nums[i] <= 1000
  */
 fun numberOfArithmeticSlices(nums: IntArray): Int {
-    if(nums.size<3) return 0
+    if (nums.size < 3) return 0
 
-    var total=0
+    var total = 0
     val dp = IntArray(nums.size)
-    dp[0]=0
-    dp[1]=0
-    for(i in 2 until nums.size)
-    {
-        val diff1=nums[i]-nums[i-1]
-        val diff2= nums[i-1]-nums[i-2]
-        if(diff1==diff2)
-        {
-            dp[i]=dp[i-1]+1
-            total+=dp[i]
-        }else
-            dp[i]=0
+    dp[0] = 0
+    dp[1] = 0
+    for (i in 2 until nums.size) {
+        val diff1 = nums[i] - nums[i - 1]
+        val diff2 = nums[i - 1] - nums[i - 2]
+        if (diff1 == diff2) {
+            dp[i] = dp[i - 1] + 1
+            total += dp[i]
+        } else
+            dp[i] = 0
     }
-return total
+    return total
 }
