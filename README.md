@@ -67,6 +67,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [662. Maximum Width of Binary Tree](src/medium/MaximumWidthOfBinaryTree662.kt)-[Leetcode Link](https://leetcode.com/problems/maximum-width-of-binary-tree/)
 - [413. Arithmetic Slices](src/medium/ArithmeticSlices413.kt)-[Leetcode Link](https://leetcode.com/problems/arithmetic-slices/)
 - [799. Champagne Tower](src/medium/ChampagneTower799.kt)-[Leetcode Link](https://leetcode.com/problems/champagne-tower/)
+- [740. Delete and Earn](src/medium/DeleteAndEarn740.kt)-[Leetcode Link](https://leetcode.com/problems/delete-and-earn/)
 <br />
 
 ## Hard Problems:
