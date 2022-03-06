@@ -33,5 +33,18 @@ Constraints:
 1 <= nums[i] <= 104
  */
 fun deleteAndEarn(nums: IntArray): Int {
-return 0
+    var size=0
+    val map=HashMap<Int,Int>()
+    nums.forEach { num->
+        size=Math.max(num,size)
+        map[num]=(map[num]?:0)+1
+    }
+    val dp =IntArray(10001)
+    dp[0]=0
+    dp[1]=map[1]?:0
+    for(i in 2 ..size)
+    {
+        dp[i]=Math.max(dp[i-1],dp[i-2]+i*(map[i]?:0))
+    }
+return dp[size]
 }
