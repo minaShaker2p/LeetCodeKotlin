@@ -34,6 +34,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [228. Summary Ranges](src/easy/SummaryRanges228.kt) -[Leetcode Link](https://leetcode.com/problems/summary-ranges/)
 - [338. Counting Bits](src/easy/CountingBits338.kt) -[Leetcode Link](https://leetcode.com/problems/counting-bits/)
 - [392. Is Subsequence](src/easy/IsSubsequence392.kt) -[Leetcode Link](https://leetcode.com/problems/is-subsequence/)
+- [21. Merge Two Sorted Lists](src/easy/MergeTwoSortedLists21.kt) -[Leetcode Link](https://leetcode.com/problems/merge-two-sorted-lists/)
 
 <br />
 
