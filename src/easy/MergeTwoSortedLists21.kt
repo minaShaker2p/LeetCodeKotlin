@@ -33,5 +33,31 @@ The number of nodes in both lists is in the range [0, 50].
 Both list1 and list2 are sorted in non-decreasing order.
  */
 fun mergeTwoLists(list1: ListNode?, list2: ListNode?): ListNode? {
-return null
+    var l1 = list1
+    var l2 = list2
+    var head = ListNode(0)
+    var curr: ListNode? = head
+    while (l1 != null && l2 != null) {
+        if (l1.`val` < l2.`val`) {
+            curr?.next = l1
+            l1 = l1.next
+        } else {
+            curr?.next = l2
+            l2 = l2.next
+        }
+        curr = curr?.next
+    }
+
+    while (l1 != null) {
+        curr?.next = l1
+        l1 = l1.next
+        curr = curr?.next
+    }
+    while (l2 != null) {
+        curr?.next = l2
+        l2 = l2.next
+        curr = curr?.next
+
+    }
+    return head.next
 }
