@@ -39,4 +39,22 @@ pos is -1 or a valid index in the linked-list.
  */
 fun hasCycle(head: ListNode?): Boolean {
 
+    if (head?.next == null) return false
+
+    val map = HashMap<ListNode, Boolean>()
+    var hasCycle = false
+    var h = head
+
+    while (h != null && !hasCycle) {
+        val curr = map[h]
+        if (curr == false) {
+            // mark this node is visited
+            map[h] = true
+        } else {
+            hasCycle = true
+        }
+        h = h.next
+    }
+    return hasCycle
+
 }
