@@ -22,6 +22,58 @@ Example 3:
 Input: l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]
 Output: [8,9,9,9,0,0,0,1]
  */
-fun addTwoNumbers(l1: ListNode?, l2: ListNode?): ListNode? {
+fun addTwoNumbers(list1: ListNode?, list2: ListNode?): ListNode? {
+    val head=ListNode(0)
+    var curr= head
+    var l1=list1
+    var l2=list2
+    var remain = 0
+    while (l1!=null && l2!=null)
+    {
+        var sum= l1.`val`+l2.`val`+remain
+        if (sum>9)
+        {
+            sum-=10
+            remain=1
+        }else
+            remain=0
+        curr.next=ListNode(sum)
+        curr=curr.next!!
+        l1=l1.next
+        l2=l2.next
+    }
+    // if list1 still has nodes
+    while (l1!=null )
+    {
+        var sum= l1.`val`+remain
+        if (sum>9)
+        {
+            sum-=10
+            remain=1
+        }else
+            remain=0
+
+        curr.next=ListNode(sum)
+        curr=curr.next!!
+        l1=l1.next
+    }
+
+    while ( l2!=null)
+    {
+        var sum= l2.`val`+remain
+        if (sum>9)
+        {
+            sum-=10
+            remain=1
+        }else
+            remain=0
+        curr.next=ListNode(sum)
+        curr=curr.next!!
+        l2=l2.next
+    }
+    if(remain==1)
+        curr.next=ListNode(1)
+
+    return head.next
 
 }
