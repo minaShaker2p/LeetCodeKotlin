@@ -25,6 +25,12 @@ Constraints:
 The number of nodes in the tree is in the range [0, 100].
 -100 <= Node.val <= 100
  */
+val list= mutableListOf<Int>()
 fun inorderTraversal(root: TreeNode?): List<Int> {
-return emptyList()
+    if(root==null)
+        return emptyList()
+    inorderTraversal(root?.left)
+    list.add(root?.`val`)
+    inorderTraversal(root?.right)
+return list
 }
