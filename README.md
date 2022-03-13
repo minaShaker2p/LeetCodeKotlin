@@ -37,6 +37,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [21. Merge Two Sorted Lists](src/easy/MergeTwoSortedLists21.kt) -[Leetcode Link](https://leetcode.com/problems/merge-two-sorted-lists/)
 - [141. Linked List Cycle](src/easy/LinkedListCycle141.kt) -[Leetcode Link](https://leetcode.com/problems/linked-list-cycle/)
 - [20. Valid Parentheses](src/easy/ValidParentheses20.kt) -[Leetcode Link](https://leetcode.com/problems/valid-parentheses/)
+- [94. Binary Tree Inorder Traversal](src/easy/BinaryTreeInorderTraversal94.kt) -[Leetcode Link](https://leetcode.com/problems/binary-tree-inorder-traversal/)
 
 <br />
 
