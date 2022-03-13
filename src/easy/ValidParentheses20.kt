@@ -1,5 +1,7 @@
 package easy
 
+import java.util.*
+
 /**
  * Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 
@@ -30,5 +32,26 @@ s consists of parentheses only '()[]{}'.
  */
 
 fun isValid(s: String): Boolean {
-return false
+    val stack=Stack<Char>()
+    s.forEach { char->
+        if(char=='('||char=='{'||char=='[')
+        {
+              stack.push(char)
+        }else
+        {
+            if(stack.isNotEmpty())
+            {
+                val peek=stack.peek()
+                if((peek=='('&& char==')')||(peek=='{'&& char=='}')||(peek=='['&& char==']'))
+                {
+                    stack.pop()
+                }else
+                    stack.push(char)
+            }else
+            {
+                stack.push(char)
+            }
+        }
+    }
+return stack.isEmpty()
 }
