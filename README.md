@@ -36,6 +36,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [392. Is Subsequence](src/easy/IsSubsequence392.kt) -[Leetcode Link](https://leetcode.com/problems/is-subsequence/)
 - [21. Merge Two Sorted Lists](src/easy/MergeTwoSortedLists21.kt) -[Leetcode Link](https://leetcode.com/problems/merge-two-sorted-lists/)
 - [141. Linked List Cycle](src/easy/LinkedListCycle141.kt) -[Leetcode Link](https://leetcode.com/problems/linked-list-cycle/)
+- [20. Valid Parentheses](src/easy/ValidParentheses20.kt) -[Leetcode Link](https://leetcode.com/problems/valid-parentheses/)
 
 <br />
 
