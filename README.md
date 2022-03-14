@@ -72,7 +72,8 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [413. Arithmetic Slices](src/medium/ArithmeticSlices413.kt)-[Leetcode Link](https://leetcode.com/problems/arithmetic-slices/)
 - [799. Champagne Tower](src/medium/ChampagneTower799.kt)-[Leetcode Link](https://leetcode.com/problems/champagne-tower/)
 - [740. Delete and Earn](src/medium/DeleteAndEarn740.kt)-[Leetcode Link](https://leetcode.com/problems/delete-and-earn/)
-- [2. Add Two Number](src/medium/AddTwoNumbers2.kt)-[Leetcode Link](https://leetcode.com/problems/add-two-numbers/)<br />
+- [2. Add Two Number](src/medium/AddTwoNumbers2.kt)-[Leetcode Link](https://leetcode.com/problems/add-two-numbers/)
+- [71. Simplify Path](src/medium/SimplifyPath71.kt)-[Leetcode Link](https://leetcode.com/problems/simplify-path/)<br />
 
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
