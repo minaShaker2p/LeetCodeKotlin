@@ -1,5 +1,8 @@
 package medium
 
+import java.lang.StringBuilder
+import java.util.*
+
 /**
  * Given a string path, which is an absolute path (starting with a slash '/') to a file or directory in a Unix-style file system, convert it to the simplified canonical path.
 
@@ -39,5 +42,21 @@ path consists of English letters, digits, period '.', slash '/' or '_'.
 path is a valid absolute Unix path.
  */
 fun simplifyPath(path: String): String {
+    val stack = Stack<String>()
+    val  dirs = path.split('/')
 
+    for (dir in dirs) {
+        if(dir==".."&& stack.isNotEmpty()) stack.pop()
+        if(dir!=""&& dir!="." && dir!="..") stack.push(dir)
+    }
+
+    if(stack.isEmpty()) return "/"
+
+    val builder = StringBuilder()
+
+    while (stack.isNotEmpty())
+    {
+        builder.insert(0,stack.pop()).insert(0,"/")
+    }
+return builder.toString()
 }
