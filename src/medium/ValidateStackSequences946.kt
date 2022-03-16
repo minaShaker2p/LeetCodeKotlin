@@ -1,5 +1,7 @@
 package medium
 
+import java.util.*
+
 /**
  * Given two integer arrays pushed and popped each with distinct values, return true if this could have been the result of a sequence of push and pop operations on an initially empty stack, or false otherwise.
 
@@ -30,5 +32,15 @@ popped.length == pushed.length
 popped is a permutation of pushed.
  */
 fun validateStackSequences(pushed: IntArray, popped: IntArray): Boolean {
+    val stack = Stack<Int>()
+    var i = 0
 
+    pushed.forEach { num ->
+        stack.push(num)
+        while (stack.isNotEmpty() && i < popped.size && popped[i] == stack.peek()) {
+            stack.pop()
+            i++
+        }
+    }
+    return stack.isEmpty()
 }
