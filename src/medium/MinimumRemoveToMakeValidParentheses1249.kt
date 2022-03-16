@@ -1,5 +1,7 @@
 package medium
 
+import java.lang.StringBuilder
+
 /**
  * Given a string s of '(' , ')' and lowercase English characters.
 
@@ -34,5 +36,33 @@ Constraints:
 s[i] is either'(' , ')', or lowercase English letter.
  */
 fun minRemoveToMakeValid(s: String): String {
+    val builder=StringBuilder()
+    var open=0
 
+    for (i in s.indices)
+    {
+        val char=s[i]
+        if(char=='(')
+            open++
+        if (char==')')
+        {
+            if(open==0)
+                continue
+
+            open--
+        }
+        builder.append(s[i])
+    }
+
+
+    for(i in builder.length-1 downTo 0)
+    {
+        if( builder[i]=='('&& open-->0)
+        {
+            builder.deleteCharAt(i)
+        }
+
+    }
+
+    return builder.toString()
 }
