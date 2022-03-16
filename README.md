@@ -75,6 +75,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [2. Add Two Number](src/medium/AddTwoNumbers2.kt)-[Leetcode Link](https://leetcode.com/problems/add-two-numbers/)
 - [71. Simplify Path](src/medium/SimplifyPath71.kt)-[Leetcode Link](https://leetcode.com/problems/simplify-path/)<br />
 - [946. Validate Stack Sequences](src/medium/ValidateStackSequences946.kt)-[Leetcode Link](https://leetcode.com/problems/validate-stack-sequences/)<br />
+- [1249. Minimum Remove to Make Valid Parentheses](src/medium/MinimumRemoveToMakeValidParentheses1249.kt)-[Leetcode Link](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)<br />
 
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
