@@ -74,6 +74,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [740. Delete and Earn](src/medium/DeleteAndEarn740.kt)-[Leetcode Link](https://leetcode.com/problems/delete-and-earn/)
 - [2. Add Two Number](src/medium/AddTwoNumbers2.kt)-[Leetcode Link](https://leetcode.com/problems/add-two-numbers/)
 - [71. Simplify Path](src/medium/SimplifyPath71.kt)-[Leetcode Link](https://leetcode.com/problems/simplify-path/)<br />
+- [946. Validate Stack Sequences](src/medium/ValidateStackSequences946.kt)-[Leetcode Link](https://leetcode.com/problems/validate-stack-sequences/)<br />
 
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
