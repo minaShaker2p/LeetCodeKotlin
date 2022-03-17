@@ -1,5 +1,7 @@
 package medium
 
+import java.util.*
+
 /**
  * Given a balanced parentheses string s, return the score of the string.
 
@@ -31,6 +33,29 @@ s consists of only '(' and ')'.
 s is a balanced parentheses string.
  */
 fun scoreOfParentheses(s: String): Int {
+    val stack = Stack<Int>()
 
-    return 0
+    for (char in s) {
+        if(char=='(')
+            stack.push(0)
+        else
+        {
+            var value=0
+            while (stack.peek()!=0)
+            {
+                value+=stack.pop()
+            }
+            value=Math.max(2*value,1)
+            stack.pop()
+            stack.push(value)
+        }
+    }
+
+    var count=0
+
+    while (stack.isNotEmpty())
+    {
+        count+=stack.pop()
+    }
+    return count
 }
