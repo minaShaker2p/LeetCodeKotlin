@@ -77,6 +77,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [946. Validate Stack Sequences](src/medium/ValidateStackSequences946.kt)-[Leetcode Link](https://leetcode.com/problems/validate-stack-sequences/)<br />
 - [1249. Minimum Remove to Make Valid Parentheses](src/medium/MinimumRemoveToMakeValidParentheses1249.kt)-[Leetcode Link](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)<br />
 - [856. Score of Parentheses](src/medium/ScoreOfParentheses856.kt)-[Leetcode Link](https://leetcode.com/problems/score-of-parentheses/)<br />
+- [316. Remove Duplicate Letters](src/medium/RemoveDuplicateLetters316.kt)-[Leetcode Link](https://leetcode.com/problems/remove-duplicate-letters/)<br />
 
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
