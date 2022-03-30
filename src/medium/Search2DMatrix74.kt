@@ -27,5 +27,22 @@ n == matrix[i].length
 -104 <= matrix[i][j], target <= 104
  */
 fun searchMatrix(matrix: Array<IntArray>, target: Int): Boolean {
-return false
+    val m = matrix.size
+    val n = matrix[0].size
+
+    // find the target row
+    var row=-1
+    for(i in 0 until m)
+    {
+        if(target>=matrix[i][0]&&target<=matrix[i][n-1])
+            row=i
+    }
+          if(row==-1) return false
+    // search in target row
+    for(i in 0 until n)
+    {
+        if(target==matrix[row][i])
+            return true
+    }
+    return false
 }
