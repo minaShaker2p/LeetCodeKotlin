@@ -38,6 +38,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [141. Linked List Cycle](src/easy/LinkedListCycle141.kt) -[Leetcode Link](https://leetcode.com/problems/linked-list-cycle/)
 - [20. Valid Parentheses](src/easy/ValidParentheses20.kt) -[Leetcode Link](https://leetcode.com/problems/valid-parentheses/)
 - [94. Binary Tree Inorder Traversal](src/easy/BinaryTreeInorderTraversal94.kt) -[Leetcode Link](https://leetcode.com/problems/binary-tree-inorder-traversal/)
+- [344. Reverse String](src/easy/ReverseString344.kt) -[Leetcode Link](https://leetcode.com/problems/reverse-string/)
 
 <br />
 
