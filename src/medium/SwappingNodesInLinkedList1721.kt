@@ -25,5 +25,37 @@ The number of nodes in the list is n.
 0 <= Node.val <= 100
  */
 fun swapNodes(head: ListNode?, k: Int): ListNode? {
-return null
+    var size=0
+    var h=head
+    while (h!=null)
+    {
+        size++
+        h=h.next
+    }
+
+    val array=IntArray(size)
+
+    var i=0
+     h=head
+    while (h!=null)
+    {
+        array[i++]=h.`val`
+        h=h.next
+    }
+
+    // Swap
+    val temp = array[k-1]
+    array[k-1]=array[size-k]
+    array[size-k]=temp
+
+    var tempNode :ListNode?= ListNode(0)
+    val newHead=tempNode
+
+    for(i in 0 until size)
+    {
+        tempNode?.next=ListNode(array[i])
+        tempNode=tempNode?.next
+    }
+
+    return newHead?.next
 }
