@@ -25,4 +25,27 @@ It is guaranteed that the answer is unique.
 Follow up: Your algorithm's time complexity must be better than O(n log n), where n is the array's size.
  */
 fun topKFrequent(nums: IntArray, k: Int): IntArray {
+    val map=HashMap<Int,Int>()
+    nums.forEach{num->
+        map[num]=(map[num]?:0)+1
+    }
+
+    var i=0
+    val result=IntArray(k)
+    while(i<k)
+    {
+        var maxValue=0
+        var maxKey=0
+        map.forEach{pair->
+            if(pair.value>maxValue)
+            {
+                maxValue=pair.value
+                maxKey=pair.key
+            }
+        }
+        result[i]=maxKey
+        map.remove(maxKey)
+        i++
+    }
+    return result
 }
