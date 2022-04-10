@@ -41,6 +41,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [344. Reverse String](src/easy/ReverseString344.kt) -[Leetcode Link](https://leetcode.com/problems/reverse-string/)
 - [1721. Swapping Nodes in a Linked List](src/easy/SwappingNodesInLinkedList1721.kt) -[Leetcode Link](https://leetcode.com/problems/swapping-nodes-in-a-linked-list/)
 - [703. Kth Largest Element in a Stream](src/easy/KthLargestElementInStream703.kt) -[Leetcode Link](https://leetcode.com/problems/kth-largest-element-in-a-stream/)
+- [682. Baseball Game](src/easy/BaseballGame682.kt) -[Leetcode Link](https://leetcode.com/problems/baseball-game/)
 
 <br />
 
