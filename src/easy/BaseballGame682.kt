@@ -52,5 +52,45 @@ For operation "+", there will always be at least two previous scores on the reco
 For operations "C" and "D", there will always be at least one previous score on the record.
  */
 fun calPoints(ops: Array<String>): Int {
-return 0
+    val list = mutableListOf<Int>()
+
+    for (i in ops.indices) {
+        val op = ops[i]
+        val size = list.size
+        when {
+            op.isInteger() -> list.add(op.toInt())
+            op == "D" -> {
+
+                val prev = list[size - 1]
+                list.add(prev * 2)
+            }
+            op == "C" -> {
+                // invalidate and remove the previous score
+                list.removeAt(size - 1)
+            }
+            else -> {
+                // +
+                val prevOne = list[size - 1]
+                val prevTwo = list[size - 2]
+                list.add(prevOne + prevTwo)
+            }
+        }
+
+    }
+
+
+    var sum = 0
+    list.forEach {
+        sum += it
+    }
+    return sum
+}
+
+fun String.isInteger(): Boolean {
+    return try {
+        this.toInt()
+        true
+    } catch (ex: NumberFormatException) {
+        false
+    }
 }
