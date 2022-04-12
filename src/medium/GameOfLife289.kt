@@ -38,6 +38,62 @@ Follow up:
 Could you solve it in-place? Remember that the board needs to be updated simultaneously: You cannot update some cells first and then use their updated values to update other cells.
 In this question, we represent the board using a 2D array. In principle, the board is infinite, which would cause problems when the active area encroaches upon the border of the array (i.e., live cells reach the border). How would you address these problems?
  */
-fun gameOfLife(board: Array<IntArray>): Unit {
+val directions = arrayOf(
+    arrayOf(0, 1),
+    arrayOf(0, -1),
+    arrayOf(1, 0),
+    arrayOf(-1, 0),
+    arrayOf(-1, -1),
+    arrayOf(-1, 1),
+    arrayOf(1, 1),
+    arrayOf(1, -1)
+)
 
+fun gameOfLife(board: Array<IntArray>): Unit {
+    // if cell is live and the active neighbours fewer than 2 or larger than 3 then dies
+    // if dead cell surrounded by exactly three active neighbours then become live cell
+
+    val m = board.size
+    val n =board[0].size
+    for(i in 0 until m)
+    {
+        for(j in 0 until n)
+        {
+            val activeNeighbours = getActiveNeigbours(board,i,j)
+            if(board[i][j]==1&& (activeNeighbours<2||activeNeighbours>3))
+                board[i][j]=-2
+            else if(board[i][j]==0&& activeNeighbours==3)
+                board[i][j]=3
+        }
+    }
+    updateBoard(board)
+
+}
+
+fun updateBoard(board: Array<IntArray>) {
+    val m = board.size
+    val n = board[0].size
+    for (i in 0 until m) {
+        for (j in 0 until n) {
+            if (board[i][j] == -2)
+                board[i][j] = 0
+            if (board[i][j] == 3)
+                board[i][j] = 1
+        }
+    }
+}
+
+fun getActiveNeigbours(board: Array<IntArray>, r: Int, c: Int) :Int{
+    var count=0
+    for (direction in directions) {
+        val row = r + direction[0]
+        val col = c + direction[1]
+
+        if(row>=0 && row<board.size && col>=0 && col<board[0].size)
+        {
+            if(board[row][col]==1 || board[row][col]==-2)
+                count++
+        }
+    }
+    return count
 }
