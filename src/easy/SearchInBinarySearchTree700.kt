@@ -28,5 +28,11 @@ root is a binary search tree.
  */
 
 fun searchBST(root: TreeNode?, `val`: Int): TreeNode? {
-return null
+    return when {
+        root==null -> null
+        root.`val`==`val` -> root
+        `val` < root.`val` -> searchBST(root.left,`val`)
+        else -> searchBST(root.right,`val`)
+    }
+
 }
