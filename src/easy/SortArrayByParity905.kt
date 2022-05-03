@@ -25,4 +25,21 @@ Constraints:
  */
 fun sortArrayByParity(nums: IntArray): IntArray {
 
+    var start = 0
+    var end = nums.size - 1
+    while (start < end) {
+        if (nums[start] % 2 == 0) {
+            start++
+        } else {
+            if (nums[end] % 2 != 0) {
+                end--
+            } else {
+                val temp = nums[end]
+                nums[end] = nums[start]
+                nums[start] = temp
+            }
+        }
+    }
+    return nums
+
 }
