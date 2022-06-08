@@ -36,6 +36,14 @@ Constraints:
 s[i] is either 'a' or 'b'.
  */
 fun removePalindromeSub(s: String): Int {
+    return when {
+        s.isEmpty() -> 0
+        s.isPalindrome() -> 1
+        else -> 2
+    }
 
-    return 0
+}
+
+fun String.isPalindrome(): Boolean {
+    return this == this.reversed()
 }
