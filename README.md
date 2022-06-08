@@ -46,6 +46,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [905. Sort Array By Parity](src/easy/SortArrayByParity905.kt) -[Leetcode Link](https://leetcode.com/problems/sort-array-by-parity/)
 - [867. Transpose Matrix](src/easy/TransposeMatrix867.kt) -[Leetcode Link](https://leetcode.com/problems/transpose-matrix/)
 - [88. Merge Sorted Array](src/easy/MergeSortedArray88.kt) -[Leetcode Link](https://leetcode.com/problems/merge-sorted-array/)
+- [1332. Remove Palindromic Subsequences](src/easy/RemovePalindromicSubsequences1332.kt) -[Leetcode Link](https://leetcode.com/problems/remove-palindromic-subsequences/)
 
 <br />
 
