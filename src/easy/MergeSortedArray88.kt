@@ -57,5 +57,27 @@ Note that because m = 0, there are no elements in nums1. The 0 is only there to 
  */
 
 fun merge(nums1: IntArray, m: Int, nums2: IntArray, n: Int): Unit {
+    val numsCopy = nums1.clone()
+    var i = 0
+    var j = 0
+    var c = 0
+
+    while (i < m && j < n) {
+        if (numsCopy[i] < nums2[j]) {
+            nums1[c++] = numsCopy[i++]
+        } else {
+            nums1[c++] = nums2[j++]
+        }
+    }
+
+    while (i < m) {
+
+        nums1[c++] = numsCopy[i++]
+    }
+
+    while (j < n) {
+
+        nums1[c++] = nums2[j++]
+    }
 
 }
