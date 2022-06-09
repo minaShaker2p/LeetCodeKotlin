@@ -37,4 +37,26 @@ numbers is sorted in non-decreasing order.
 The tests are generated such that there is exactly one solution.
  */
 fun twoSum(numbers: IntArray, target: Int): IntArray {
+    var start =0
+    var end= numbers.size-1
+    val result= IntArray(2)
+    while (start<end)
+    {
+        val sum=numbers[start]+numbers[end]
+        if(sum==target)
+        {
+            result[0]=start+1
+            result[1]=end+1
+            break
+        }else if(sum>target)
+        {
+            end--
+        }else
+        {
+            start++
+        }
+
+    }
+    return result
+
 }
