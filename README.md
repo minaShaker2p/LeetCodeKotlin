@@ -47,7 +47,6 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [867. Transpose Matrix](src/easy/TransposeMatrix867.kt) -[Leetcode Link](https://leetcode.com/problems/transpose-matrix/)
 - [88. Merge Sorted Array](src/easy/MergeSortedArray88.kt) -[Leetcode Link](https://leetcode.com/problems/merge-sorted-array/)
 - [1332. Remove Palindromic Subsequences](src/easy/RemovePalindromicSubsequences1332.kt) -[Leetcode Link](https://leetcode.com/problems/remove-palindromic-subsequences/)
-- [167. Two Sum II - Input Array Is Sorted](src/easy/TwoSumIIInputArrayIsSorted167.kt) -[Leetcode Link](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
 
 <br />
 
@@ -93,6 +92,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [347. Top K Frequent Elements](src/medium/TopKFrequentElements347.kt)-[Leetcode Link](https://leetcode.com/problems/top-k-frequent-elements/)<br />
 - [289. Game of Life](src/medium/GameOfLife289.kt)-[Leetcode Link](https://leetcode.com/problems/game-of-life/)<br />
 - [3. Longest Substring Without Repeating Characters](src/medium/LongestSubstringWithoutRepeatingCharacters3.kt)-[Leetcode Link](https://leetcode.com/problems/longest-substring-without-repeating-characters/)<br />
+- [167. Two Sum II - Input Array Is Sorted](src/medium/TwoSumIIInputArrayIsSorted167.kt) -[Leetcode Link](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
 
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
