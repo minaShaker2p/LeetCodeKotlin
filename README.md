@@ -92,6 +92,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [74. Search a 2D Matrix](src/medium/Search2DMatrix74.kt)-[Leetcode Link](https://leetcode.com/problems/search-a-2d-matrix/)<br />
 - [347. Top K Frequent Elements](src/medium/TopKFrequentElements347.kt)-[Leetcode Link](https://leetcode.com/problems/top-k-frequent-elements/)<br />
 - [289. Game of Life](src/medium/GameOfLife289.kt)-[Leetcode Link](https://leetcode.com/problems/game-of-life/)<br />
+- [3. Longest Substring Without Repeating Characters](src/medium/LongestSubstringWithoutRepeatingCharacters3.kt)-[Leetcode Link](https://leetcode.com/problems/longest-substring-without-repeating-characters/)<br />
 
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
