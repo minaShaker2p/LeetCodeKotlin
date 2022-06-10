@@ -29,5 +29,31 @@ Constraints:
 s consists of English letters, digits, symbols and spaces.
  */
 fun lengthOfLongestSubstring(s: String): Int {
+    var start=0
+    var end=0
 
+    var map =HashMap<Char,Int>()
+    var length=0
+    var maxLength=0
+    while(start<=end && end <= s.length-1)
+    {
+        val curr=  map[s[end]]?:0
+        if(curr==0)
+        {
+            map[s[end++]]=1
+            length++
+
+        }else
+        {
+            start++
+            end=start
+            length=0
+            map.clear()
+        }
+        maxLength = Math.max(length,maxLength)
+
+    }
+
+
+    return maxLength;
 }
