@@ -93,6 +93,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [289. Game of Life](src/medium/GameOfLife289.kt)-[Leetcode Link](https://leetcode.com/problems/game-of-life/)<br />
 - [3. Longest Substring Without Repeating Characters](src/medium/LongestSubstringWithoutRepeatingCharacters3.kt)-[Leetcode Link](https://leetcode.com/problems/longest-substring-without-repeating-characters/)<br />
 - [167. Two Sum II - Input Array Is Sorted](src/medium/TwoSumIIInputArrayIsSorted167.kt) -[Leetcode Link](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
+- [5. Longest Palindromic Substring](src/medium/LongestPalindromicSubstring5.kt) -[Leetcode Link](https://leetcode.com/problems/longest-palindromic-substring/)
 
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
