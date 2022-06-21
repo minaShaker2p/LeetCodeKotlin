@@ -1,5 +1,7 @@
 package medium
 
+import java.lang.StringBuilder
+
 /**
  * A valid encoding of an array of words is any reference string s and array of indices indices such that:
 
@@ -25,5 +27,15 @@ Output: 2
 Explanation: A valid encoding would be s = "t#" and indices = [0].
  */
 fun minimumLengthEncoding(words: Array<String>): Int {
-return 0
+    words.sortWith(Comparator { a, b -> b.length -a.length  })
+
+    val encoding = StringBuilder()
+    for ( i in words.indices)
+    {
+        if(encoding.indexOf("${words[i]}#")==-1)
+        {
+            encoding.append("${words[i]}#")
+        }
+    }
+return encoding.length
 }
