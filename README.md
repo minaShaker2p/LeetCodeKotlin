@@ -95,6 +95,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [167. Two Sum II - Input Array Is Sorted](src/medium/TwoSumIIInputArrayIsSorted167.kt) -[Leetcode Link](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
 - [5. Longest Palindromic Substring](src/medium/LongestPalindromicSubstring5.kt) -[Leetcode Link](https://leetcode.com/problems/longest-palindromic-substring/)
 - [820. Short Encoding of Words](src/medium/ShortEncodingOfWords820.kt) -[Leetcode Link](https://leetcode.com/problems/short-encoding-of-words/)
+- [215. Kth Largest Element in an Array](src/medium/KthLargestElementInAnArray215.kt) -[Leetcode Link](https://leetcode.com/problems/kth-largest-element-in-an-array/)
 
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
