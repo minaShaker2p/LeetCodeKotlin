@@ -23,5 +23,6 @@ Constraints:
 -104 <= nums[i] <= 104
  */
 fun findKthLargest(nums: IntArray, k: Int): Int {
-return 0
+    nums.sort()
+return nums[nums.size-k]
 }
