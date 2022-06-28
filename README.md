@@ -95,7 +95,8 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [167. Two Sum II - Input Array Is Sorted](src/medium/TwoSumIIInputArrayIsSorted167.kt) -[Leetcode Link](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
 - [5. Longest Palindromic Substring](src/medium/LongestPalindromicSubstring5.kt) -[Leetcode Link](https://leetcode.com/problems/longest-palindromic-substring/)
 - [820. Short Encoding of Words](src/medium/ShortEncodingOfWords820.kt) -[Leetcode Link](https://leetcode.com/problems/short-encoding-of-words/)
-- [215. Kth Largest Element in an Array](src/medium/KthLargestElementInAnArray215.kt) -[Leetcode Link](https://leetcode.com/problems/kth-largest-element-in-an-array/)
+- [215. Kth Largest Element inin an Array](src/medium/KthLargestElementInAnArray215.kt) -[Leetcode Link](https://leetcode.com/problems/kth-largest-element-in-an-array/)
+- [1689. Partitioning Into Minimum Number Of Deci-Binary Numbers](src/medium/1PartitioningIntoMinimumNumberOfDeci-BinaryNumbers689.kt) -[Leetcode Link](https://leetcode.com/problems/partitioning-into-minimum-number-of-deci-binary-numbers/)
 
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
