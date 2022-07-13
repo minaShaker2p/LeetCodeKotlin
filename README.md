@@ -99,6 +99,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [1689. Partitioning Into Minimum Number Of Deci-Binary Numbers](src/medium/1PartitioningIntoMinimumNumberOfDeci-BinaryNumbers689.kt) -[Leetcode Link](https://leetcode.com/problems/partitioning-into-minimum-number-of-deci-binary-numbers/)
 - [199. Binary Tree Right Side View](src/medium/BinaryTreeRightSideView199.kt) -[Leetcode Link](https://leetcode.com/problems/binary-tree-right-side-view/)
 - [473. Matchsticks to Square](src/medium/MatchsticksToSquare473.kt) -[Leetcode Link](https://leetcode.com/problems/matchsticks-to-square/)
+- [102. Binary Tree Level Order Traversal](src/medium/BinaryTreeLevelOrderTraversal102.kt) -[Leetcode Link](https://leetcode.com/problems/binary-tree-level-order-traversal/)
 
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
