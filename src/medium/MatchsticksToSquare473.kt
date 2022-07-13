@@ -20,5 +20,23 @@ Output: false
 Explanation: You cannot find a way to form a square with all the matchsticks.
  */
 fun makesquare(matchsticks: IntArray): Boolean {
-return false
+    var sum = 0
+    matchsticks.forEach { sum += it }
+    if (sum % 4 != 0 || matchsticks.size < 4) return false
+    val target = sum / 4
+    matchsticks.sort()
+    return helper(matchsticks,matchsticks.size-1,0,0,0,0,target)
+}
+
+fun helper(matchsticks: IntArray, i: Int, sum1: Int, sum2: Int, sum3: Int, sum4: Int, target: Int): Boolean {
+    if (sum1 > target || sum2 > target || sum3 > target || sum4 > target) return false
+
+    if (i == -1) {
+        return target == sum1 && sum2 == target && sum3 == target && sum4 == target
+    }
+
+    return helper(matchsticks,i-1,sum1+matchsticks[i],sum2,sum3,sum4,target) ||
+            helper(matchsticks,i-1,sum1,sum2+matchsticks[i],sum3,sum4,target) ||
+            helper(matchsticks,i-1,sum1,sum2,sum3+matchsticks[i],sum4,target) ||
+            helper(matchsticks,i-1,sum1,sum2,sum3,sum4+matchsticks[i],target)
 }
