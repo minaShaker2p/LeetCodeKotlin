@@ -100,6 +100,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [199. Binary Tree Right Side View](src/medium/BinaryTreeRightSideView199.kt) -[Leetcode Link](https://leetcode.com/problems/binary-tree-right-side-view/)
 - [473. Matchsticks to Square](src/medium/MatchsticksToSquare473.kt) -[Leetcode Link](https://leetcode.com/problems/matchsticks-to-square/)
 - [102. Binary Tree Level Order Traversal](src/medium/BinaryTreeLevelOrderTraversal102.kt) -[Leetcode Link](https://leetcode.com/problems/binary-tree-level-order-traversal/)
+- [114. Flatten Binary Tree to Linked List](src/medium/FlattenBinaryTreeToLinkedList114.kt) -[Leetcode Link](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)
 
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
