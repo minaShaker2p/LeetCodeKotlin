@@ -23,5 +23,19 @@ Constraints:
 -231 <= nums[i] <= 231 - 1
  */
 fun moveZeroes(nums: IntArray): Unit {
+    var start =0
+    var end = nums.size-1
+    while (start < end)
+    {
+        if(nums[start]!=0)
+            start++
+        else
+        {
+            for(i in start+1 .. end)
+                nums[i-1]=nums[i]
+
+            nums[end--]=0
+        }
+    }
 
 }
