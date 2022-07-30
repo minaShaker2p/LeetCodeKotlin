@@ -49,3 +49,35 @@ fun findAndReplacePattern(words: Array<String>, pattern: String): List<String> {
 
 return result
 }
+fun findAndReplacePatternSol2(words: Array<String>, pattern: String): List<String> {
+    val result = mutableListOf<String>()
+    words.forEach {word->
+        if(word.isMatch(pattern) && word.length == pattern.length)
+            result.add(word)
+    }
+    return result
+}
+
+private fun String.isMatch(pattern: String): Boolean {
+
+    val patternToWord = CharArray(26)
+    val wordToPattern = CharArray(26)
+    patternToWord.fill('0')
+    wordToPattern.fill('0')
+
+    for(i in this.indices)
+    {
+        val patternChar = pattern[i]
+        val wordChar = this[i]
+
+        if(patternToWord[patternChar-'a']=='0')
+            patternToWord[patternChar-'a']=wordChar
+        if(wordToPattern[wordChar-'a'] =='0')
+            wordToPattern[wordChar-'a'] = patternChar
+
+        if(patternToWord[patternChar-'a'] != wordChar || wordToPattern[wordChar-'a'] != patternChar  )
+            return false
+    }
+
+    return true
+}
