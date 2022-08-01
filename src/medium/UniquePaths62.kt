@@ -47,3 +47,18 @@ fun uniquePaths(m: Int, n: Int): Int {
 
     return dp[m-1][n-1]
 }
+
+var count=0
+fun uniquePathsSol2(m: Int, n: Int): Int {
+    countUniquePaths(m, n,0, 0)
+return count
+}
+
+fun countUniquePaths(m: Int, n: Int, i: Int, j:Int) {
+if(i>=m || j >= n) return
+
+    if (i==m-1 && j == n-1) count++
+
+    countUniquePaths(m,n,i+1,j)
+    countUniquePaths(m,n,i,j+1)
+}
