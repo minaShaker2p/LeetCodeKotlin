@@ -60,10 +60,19 @@ class MyCalendar() {
 }
 
 class MyCalendarSol2() {
-
+      private val bookings = mutableListOf<IntArray>()
 
     fun book(start: Int, end: Int): Boolean {
 
+        for( booking in bookings)
+        {
+            if((start < booking[0] && end <= booking[0]) || (start >= booking[1] && end >= booking[1]))
+                continue
+            else
+                return false
+        }
+
+        bookings.add(intArrayOf(start,end))
         return true
     }
 
