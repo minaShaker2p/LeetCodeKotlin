@@ -58,3 +58,13 @@ class MyCalendar() {
     }
 
 }
+
+class MyCalendarSol2() {
+
+
+    fun book(start: Int, end: Int): Boolean {
+
+        return true
+    }
+
+}
