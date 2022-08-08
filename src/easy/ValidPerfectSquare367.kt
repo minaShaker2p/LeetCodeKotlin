@@ -18,4 +18,18 @@ Output: false
  */
 fun isPerfectSquare(num: Int): Boolean {
 
+    var start =1
+    var end =num
+    while (start<=end)
+    {
+        val mid = ((start+end)/2).toLong()
+        val square = mid * mid
+        if(square.toInt() == num) return true
+
+        if(square<num)
+            start = mid.toInt() +1
+        else
+            end = mid.toInt() -1
+    }
+    return false
 }
