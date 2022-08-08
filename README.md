@@ -48,6 +48,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [88. Merge Sorted Array](src/easy/MergeSortedArray88.kt) -[Leetcode Link](https://leetcode.com/problems/merge-sorted-array/)
 - [1332. Remove Palindromic Subsequences](src/easy/RemovePalindromicSubsequences1332.kt) -[Leetcode Link](https://leetcode.com/problems/remove-palindromic-subsequences/)
 - [283. Move Zeroes](src/easy/MoveZeroes283.kt) -[Leetcode Link](https://leetcode.com/problems/move-zeroes/)
+- [367. Valid Perfect Square](src/easy/ValidPerfectSquare367.kt) -[Leetcode Link](https://leetcode.com/problems/valid-perfect-square/)
 
 <br />
 
