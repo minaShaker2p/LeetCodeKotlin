@@ -28,5 +28,16 @@ The number of nodes in the tree is in the range [1, 104].
 -231 <= Node.val <= 231 - 1
  */
 fun isValidBST(root: TreeNode?): Boolean {
+    return valid(root, Long.MIN_VALUE, Long.MAX_VALUE)
+}
+fun valid(root: TreeNode?,start:Long,end:Long):Boolean
+{
+    if(root==null) return true
 
+    if(root.`val` in (start + 1) until end)
+    {
+        return  valid(root.left,start,root.`val`.toLong()) &&
+                valid(root.right,root.`val`.toLong(),end)
+    }
+    return false
 }
