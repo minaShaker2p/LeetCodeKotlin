@@ -57,3 +57,25 @@ fun Int.countOneBits():Int
     }
     return count
 }
+
+// Solution with T = O(N)
+fun countBitsSol2(n: Int): IntArray {
+    val result = IntArray(n+1)
+    for( i in 1..n)
+    {
+        result[i]=i.countBits()
+    }
+    return result
+}
+// using And Algorithm
+fun Int.countBits():Int
+{
+    var count=0
+    var  num=this
+    while (num!=0)
+    {
+        num=num.and(num-1)
+        count++
+    }
+    return count
+}
