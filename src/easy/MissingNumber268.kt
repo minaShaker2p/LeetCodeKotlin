@@ -42,3 +42,14 @@ fun missingNumber(nums: IntArray): Int {
     return if (missing == -1) max + 1 else missing
 }
 
+fun missingNumberSol2(nums: IntArray): Int {
+  var result = 0
+    for(i in 0 .. nums.size)
+        result=result.xor(i)
+
+    for(i in 0 until nums.size)
+        result = result.xor(nums[i])
+    return result
+}
+
+
