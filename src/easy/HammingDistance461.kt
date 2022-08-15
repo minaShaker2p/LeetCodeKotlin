@@ -27,5 +27,13 @@ Constraints:
 0 <= x, y <= 231 - 1
  */
 fun hammingDistance(x: Int, y: Int): Int {
-return 0
+    var xor = x.xor(y)
+    // count number of bits using brain kerneghen Algorithm
+    var count =0
+    while (xor!=0)
+    {
+        xor=xor.and(xor-1)
+        count++
+    }
+return count
 }
