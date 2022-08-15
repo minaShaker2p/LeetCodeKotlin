@@ -30,5 +30,24 @@ Constraints:
 1 <= c <= 10^9
  */
 fun minFlips(a: Int, b: Int, c: Int): Int {
-return 0
+    var count = 0
+    for(i in 0 until 32)
+    {
+        val bitA = a.shr(i).and(1)
+        val bitB = b.shr(i).and(1)
+        val bitC = c.shr(i).and(1)
+        if(bitA.or(bitB) != bitC)
+        {
+            if(bitC == 0)
+            {
+                if(bitA == 1 && bitB ==1)
+                    count+=2
+                else
+                    count++
+
+            }else
+                count++
+        }
+    }
+return count
 }
