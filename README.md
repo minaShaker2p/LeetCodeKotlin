@@ -50,6 +50,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [283. Move Zeroes](src/easy/MoveZeroes283.kt) -[Leetcode Link](https://leetcode.com/problems/move-zeroes/)
 - [367. Valid Perfect Square](src/easy/ValidPerfectSquare367.kt) -[Leetcode Link](https://leetcode.com/problems/valid-perfect-square/)
 - [191. Number of 1 Bits](src/easy/NumberOf1Bits191.kt) -[Leetcode Link](https://leetcode.com/problems/number-of-1-bits/)
+- [231. Power of Two](src/easy/PowerOfTwo231.kt) -[Leetcode Link](https://leetcode.com/problems/power-of-two/)
 
 <br />
 
