@@ -110,6 +110,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [890. Find and Replace Pattern](src/medium/FindAndReplacePattern890.kt) -[Leetcode Link](https://leetcode.com/problems/find-and-replace-pattern/)
 - [729. My Calendar I](src/medium/MyCalendarI729.kt) -[Leetcode Link](https://leetcode.com/problems/my-calendar-i/)
 - [98. Validate Binary Search Tree](src/medium/ValidateBinarySearchTree98.kt) -[Leetcode Link](https://leetcode.com/problems/validate-binary-search-tree/)
+- [1318. Minimum Flips to Make a OR b Equal to c](src/medium/MinimumFlipsToMakeORbEqualToc1318.kt) -[Leetcode Link](https://leetcode.com/problems/minimum-flips-to-make-a-or-b-equal-to-c/)
 
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
