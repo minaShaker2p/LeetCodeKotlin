@@ -52,6 +52,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [191. Number of 1 Bits](src/easy/NumberOf1Bits191.kt) -[Leetcode Link](https://leetcode.com/problems/number-of-1-bits/)
 - [231. Power of Two](src/easy/PowerOfTwo231.kt) -[Leetcode Link](https://leetcode.com/problems/power-of-two/)
 - [268. Missing Number](src/easy/MissingNumber268.kt) -[Leetcode Link](https://leetcode.com/problems/missing-number/)
+- [2220. Minimum Bit Flips to Convert Number](src/easy/MinimumBitFlipsToConvertNumber2220.kt) -[Leetcode Link](https://leetcode.com/problems/minimum-bit-flips-to-convert-number/)
 
 <br />
 

@@ -34,5 +34,5 @@ Constraints:
  */
 fun minBitFlips(start: Int, goal: Int): Int {
 
-
+return 0
 }
