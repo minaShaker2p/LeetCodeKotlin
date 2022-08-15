@@ -51,6 +51,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [367. Valid Perfect Square](src/easy/ValidPerfectSquare367.kt) -[Leetcode Link](https://leetcode.com/problems/valid-perfect-square/)
 - [191. Number of 1 Bits](src/easy/NumberOf1Bits191.kt) -[Leetcode Link](https://leetcode.com/problems/number-of-1-bits/)
 - [231. Power of Two](src/easy/PowerOfTwo231.kt) -[Leetcode Link](https://leetcode.com/problems/power-of-two/)
+- [268. Missing Number](src/easy/MissingNumber268.kt) -[Leetcode Link](https://leetcode.com/problems/missing-number/)
 
 <br />
 
