@@ -47,5 +47,41 @@ It is guaranteed that s is a valid roman numeral in the range [1, 3999].
  */
 
 fun romanToInt(s: String): Int {
-return 0
+    // create map of symbol to value
+    val map = HashMap<Char, Int>()
+    map['I'] = 1
+    map['V'] = 5
+    map['X'] = 10
+    map['L'] = 50
+    map['C'] = 100
+    map['D'] = 500
+    map['M'] = 1000
+
+    var sum = 0
+    var i = 0
+    while (i < s.length) {
+        val curr = s[i]
+
+        var next = ' '
+        if (i + 1 < s.length)
+            next = s[i + 1]
+
+
+        if (curr == 'I' && next != ' ' && (next == 'V' || next == 'X')) {
+            i += 2
+            sum += (map[next] ?: 0) - 1
+        } else if (curr == 'X' && next != ' ' && (next == 'L' || next == 'C')) {
+            i += 2
+            sum += (map[next] ?: 0) - 10
+        } else if (curr == 'C' && next != ' ' && (next == 'D' || next == 'M')) {
+            i += 2
+            sum += (map[next] ?: 0) - 100
+        } else {
+            sum += (map[curr] ?: 0)
+            i++
+        }
+
+
+    }
+    return sum
 }
