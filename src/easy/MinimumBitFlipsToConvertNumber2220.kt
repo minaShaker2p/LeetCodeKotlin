@@ -33,6 +33,11 @@ Constraints:
 0 <= start, goal <= 109
  */
 fun minBitFlips(start: Int, goal: Int): Int {
-
-return 0
+    var xor = start.xor(goal)
+    var count = 0
+    while (xor != 0) {
+        xor = xor.and(xor - 1)
+        count++
+    }
+    return count
 }
