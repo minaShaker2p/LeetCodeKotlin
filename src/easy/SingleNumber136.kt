@@ -42,3 +42,12 @@ fun singleNumber(nums: IntArray): Int {
 
 return -1
 }
+// TC is O(N) and SC O(1)
+fun singleNumberSol2(nums: IntArray): Int {
+     var result = 0
+    for(i in 0 until  nums.size)
+        result=result.xor(nums[i])
+
+
+    return result
+}
