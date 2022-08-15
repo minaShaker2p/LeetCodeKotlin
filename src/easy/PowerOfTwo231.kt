@@ -38,3 +38,9 @@ fun isPowerOfTwo(n: Int): Boolean {
     return false
 
 }
+
+fun isPowerOfTwoSol2(n: Int): Boolean {
+   if(n<=0) return false
+    return n.and(n-1)==0
+
+}
