@@ -34,3 +34,18 @@ fun duplicateZeros(arr: IntArray): Unit {
         arr[i]=list[i]
     }
 }
+fun duplicateZerosSol2(arr: IntArray): Unit {
+   var i=0
+    while(i<arr.size)
+    {
+        if(arr[i]==0)
+        {
+            for(j in arr.size-1 downTo i+1)
+                arr[j]=arr[j-1]
+            if(i<arr.size-1)
+                arr[i+1]=0
+            i+=2
+        }else
+            i++
+    }
+}
