@@ -45,11 +45,11 @@ fun deleteNode(node: ListNode?) {
     var currNode = node
     var prevNode = currNode
 
-    while (currNode?.next!=null)
+    while (currNode?.next != null)
     {
         val temp = currNode.next
-        currNode.`val` = currNode.next?.`val`?:0
-        currNode.next = currNode.next?.next
+        currNode.`val` = temp?.`val`?:0
+        currNode.next = temp
         prevNode = currNode
         currNode=temp
     }
