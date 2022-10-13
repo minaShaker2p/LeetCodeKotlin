@@ -42,4 +42,16 @@ The value of each node in the list is unique.
 The node to be deleted is in the list and is not a tail node.
  */
 fun deleteNode(node: ListNode?) {
+    var currNode = node
+    var prevNode = currNode
+
+    while (currNode?.next!=null)
+    {
+        val temp = currNode.next
+        currNode.`val` = currNode.next?.`val`?:0
+        currNode.next = currNode.next?.next
+        prevNode = currNode
+        currNode=temp
+    }
+    prevNode?.next= null
 }
