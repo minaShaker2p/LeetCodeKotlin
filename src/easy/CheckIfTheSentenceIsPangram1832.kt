@@ -30,3 +30,15 @@ fun checkIfPangram(sentence: String): Boolean {
     }
     return seen.size ==26
 }
+
+fun checkIfPangramSol2(sentence: String): Boolean {
+
+    for(i in 0 until 26)
+    {
+        val char :Char= 'a'+i
+        if(sentence.indexOf(char)==-1)
+            return false
+
+    }
+    return true
+}
