@@ -24,4 +24,9 @@ Constraints:
 sentence consists of lowercase English letters.
  */
 fun checkIfPangram(sentence: String): Boolean {
+    val seen = mutableSetOf<Char>()
+    sentence.forEach { char->
+        seen.add(char)
+    }
+    return seen.size ==26
 }
