@@ -115,6 +115,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [98. Validate Binary Search Tree](src/medium/ValidateBinarySearchTree98.kt) -[Leetcode Link](https://leetcode.com/problems/validate-binary-search-tree/)
 - [1318. Minimum Flips to Make a OR b Equal to c](src/medium/MinimumFlipsToMakeORbEqualToc1318.kt) -[Leetcode Link](https://leetcode.com/problems/minimum-flips-to-make-a-or-b-equal-to-c/)
 - [237. Delete Node in a Linked List](src/medium/DeleteNodeInLinkedList237.kt) -[Leetcode Link](https://leetcode.com/problems/delete-node-in-a-linked-list/description/)
+- [38. Count and Say](src/medium/CountAndSay38.kt) -[Leetcode Link](https://leetcode.com/problems/count-and-say/description/)
 
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
