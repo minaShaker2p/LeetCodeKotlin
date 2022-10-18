@@ -1,5 +1,7 @@
 package medium
 
+import java.lang.StringBuilder
+
 /**
  * The count-and-say sequence is a sequence of digit strings defined by the recursive formula:
 
@@ -35,4 +37,30 @@ Constraints:
 1 <= n <= 30
  */
 fun countAndSay(n: Int): String {
+    var result ="1"
+    for(i in 1 until n)
+    {
+        result =result.countAndSay()
+    }
+    return result
+}
+private fun String.countAndSay():String
+{
+    val builder =StringBuilder()
+    var previous = this[0]
+    var  count =1
+    for(i in 1 until this.length)
+    {
+        if(this[i]==previous)
+            count++
+        else{
+            builder.append(count)
+            builder.append(previous)
+            previous=this[i]
+            count=1
+        }
+    }
+    builder.append(count)
+    builder.append(previous)
+    return builder.toString()
 }
