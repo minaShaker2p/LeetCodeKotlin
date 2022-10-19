@@ -1,5 +1,9 @@
 package medium
 
+import java.util.*
+import kotlin.Comparator
+import kotlin.collections.HashMap
+
 /**
  * Given an array of strings words and an integer k, return the k most frequent strings.
 
@@ -28,4 +32,31 @@ words[i] consists of lowercase English letters.
 k is in the range [1, The number of unique words[i]]
  */
 fun topKFrequent(words: Array<String>, k: Int): List<String> {
+
+    // calculate the frequency of the words array :O(N)
+    val freq = HashMap<String, Int>()
+    words.forEach { word ->
+        freq[word] = freq.getOrDefault(word, 0) + 1
+    }
+
+    val wordComparator = Comparator<WordFrequency> { a, b ->
+        if (a.freq != b.freq)
+            b.freq - a.freq
+        else
+            a.word.compareTo(b.word)
+
+    }
+
+    val priorityQueue = PriorityQueue<WordFrequency>(wordComparator)
+
+    for ((key, value) in freq) {
+        priorityQueue.add(WordFrequency(key, value))
+    }
+    val result = mutableListOf<String>()
+    for (i in 0 until k) {
+        result.add(priorityQueue.remove().word)
+    }
+    return result
 }
+
+data class WordFrequency(val word: String, val freq: Int)
