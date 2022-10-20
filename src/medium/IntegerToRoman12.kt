@@ -44,5 +44,55 @@ Constraints:
 1 <= num <= 3999
  */
 fun intToRoman(num: Int): String {
+    val map = hashMapOf<Int, String>(
+        1 to "I",
+        5 to "V",
+        10 to "X",
+        50 to "L",
+        100 to "C",
+        500 to "D",
+        1000 to "M",
+        4 to "IV",
+        9 to "IX",
+        40 to "XL",
+        90 to "XC",
+        400 to "CD",
+        900 to "CM"
+    )
+    val builder = StringBuilder()
+    var n = num
+    while (n != 0) {
+        var number = 1
+        when {
+            n >= 1000 -> number = 1000
 
+            n >= 900 -> number = 900
+
+            n >= 500 -> number = 500
+
+            n >= 400 -> number = 400
+
+            n >= 100 -> number = 100
+
+            n >= 90 -> number = 90
+
+            n >= 50 -> number = 50
+
+            n >= 40 -> number = 40
+
+            n >= 10 -> number = 10
+
+            n >= 9 -> number = 9
+
+            n >= 5 -> number = 5
+
+            n >= 4 -> number = 4
+
+        }
+        n -= number
+        val ch = map.getOrDefault(number, "I")
+        builder.append(ch)
+
+    }
+    return builder.toString()
 }
