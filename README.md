@@ -117,6 +117,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [237. Delete Node in a Linked List](src/medium/DeleteNodeInLinkedList237.kt) -[Leetcode Link](https://leetcode.com/problems/delete-node-in-a-linked-list/description/)
 - [38. Count and Say](src/medium/CountAndSay38.kt) -[Leetcode Link](https://leetcode.com/problems/count-and-say/description/)
 - [692. Top K Frequent Words](src/medium/TopKFrequentWords692.kt) -[Leetcode Link](https://leetcode.com/problems/top-k-frequent-words/description/)
+- [12. Integer to Roman](src/medium/IntegerToRoman12.kt) -[Leetcode Link](https://leetcode.com/problems/integer-to-roman/description/)
 
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
