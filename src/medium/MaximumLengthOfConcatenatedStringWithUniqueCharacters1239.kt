@@ -39,6 +39,31 @@ package medium
  1 <= arr[i].length <= 26
  arr[i] contains only lowercase English letters.
   */
+ var maxLength=0
  fun maxLength(arr: List<String>): Int {
-     return 0
+     maxUnique(arr,0,"")
+     return maxLength
  }
+fun maxUnique(arr: List<String>,index:Int,current:String)
+{
+    if(index==arr.size &&current.countUniqueChars() > maxLength )
+    {
+        maxLength= current.length
+        return
+    }
+
+    if(index==arr.size) return
+
+    maxUnique(arr,index+1,current)
+    maxUnique(arr,index+1,current+arr[index])
+
+}
+fun String.countUniqueChars():Int{
+    val counts = IntArray(26)
+    for(char in this)
+    {
+        if(counts[char-'a']++>0)
+            return -1
+    }
+    return this.length
+}
