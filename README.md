@@ -56,6 +56,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [13. Roman to Integer](src/easy/RomanToInteger13.kt) -[Leetcode Link](https://leetcode.com/problems/roman-to-integer/)
 - [1089. Duplicate Zeros](src/easy/DuplicateZeros1089.kt) -[Leetcode Link](https://leetcode.com/problems/duplicate-zeros/)
 - [1832. Check if the Sentence Is Pangram](src/easy/CheckIfTheSentenceIsPangram1832.kt) -[Leetcode Link](https://leetcode.com/problems/check-if-the-sentence-is-pangram/description/)
+- [1662. Check If Two String Arrays are Equivalent](src/easy/CheckIfTwoStringArraysAreEquivalent1662.kt) -[Leetcode Link](https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/)
 
 <br />
 
