@@ -33,5 +33,5 @@ Constraints:
 word1[i] and word2[i] consist of lowercase letters.
  */
 fun arrayStringsAreEqual(word1: Array<String>, word2: Array<String>): Boolean {
-return false
+return word1.joinToString(separator = "")==word2.joinToString(separator = "")
 }
