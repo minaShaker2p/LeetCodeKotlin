@@ -32,5 +32,16 @@ Constraints:
 1 <= k <= 231 - 1
  */
 fun checkSubarraySum(nums: IntArray, k: Int): Boolean {
+    val map =HashMap<Int,Int>()
+    map[0]=0
+    var sum=0
+    for(i in nums.indices)
+    {
+        sum+=nums[i]
+        if(!map.containsKey(sum%k))
+            map[sum%k]=i+1
+        else if(map.getOrDefault(sum%k,nums.size+1)<i)
+            return true
+    }
     return false
 }
