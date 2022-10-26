@@ -120,6 +120,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [692. Top K Frequent Words](src/medium/TopKFrequentWords692.kt) -[Leetcode Link](https://leetcode.com/problems/top-k-frequent-words/description/)
 - [12. Integer to Roman](src/medium/IntegerToRoman12.kt) -[Leetcode Link](https://leetcode.com/problems/integer-to-roman/description/)
 - [1239. Maximum Length of a Concatenated String with Unique Characters](src/medium/MaximumLengthOfConcatenatedStringWithUniqueCharacters1239.kt) -[Leetcode Link](https://leetcode.com/problems/maximum-length-of-a-concatenated-string-with-unique-characters/)
+- [523. Continuous Subarray Sum](src/medium/ContinuousSubarraySum523.kt) -[Leetcode Link](https://leetcode.com/problems/continuous-subarray-sum/description/)
 
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)

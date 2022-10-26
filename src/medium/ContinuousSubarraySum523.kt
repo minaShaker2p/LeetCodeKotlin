@@ -32,4 +32,5 @@ Constraints:
 1 <= k <= 231 - 1
  */
 fun checkSubarraySum(nums: IntArray, k: Int): Boolean {
+    return false
 }
