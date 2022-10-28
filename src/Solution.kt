@@ -14,6 +14,7 @@ fun main(args: Array<String>) {
 
    val  array = arrayOf(charArrayOf('X','X','X','X'),charArrayOf('X','O','O','X'),charArrayOf('X','X','O','X'),charArrayOf('X','O','X','X') )
    solve(array)
+    println("Hello")
 }
 
 fun makeSingleLinkedList(): ListNode<Int> {
