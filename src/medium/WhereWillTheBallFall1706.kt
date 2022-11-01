@@ -44,4 +44,20 @@ n == grid[i].length
 grid[i][j] is 1 or -1.
  */
 fun findBall(grid: Array<IntArray>): IntArray {
+    val result = IntArray(grid[0].size)
+    for(i in grid[0].indices)
+    {
+        result[i]= findBallDFS(grid,0,i)
+    }
+    return result
+}
+
+fun findBallDFS(grid: Array<IntArray>, row: Int, col: Int): Int {
+    // base case when ball arrive to last row
+    if (row == grid.size) return col
+
+    val nextColumn = col + grid[row][col]
+    if (nextColumn < 0 || nextColumn > grid[0].size - 1 || grid[row][col] != grid[row][nextColumn])
+        return -1
+    return findBallDFS(grid, row + 1, nextColumn)
 }
