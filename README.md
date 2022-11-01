@@ -122,6 +122,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [1239. Maximum Length of a Concatenated String with Unique Characters](src/medium/MaximumLengthOfConcatenatedStringWithUniqueCharacters1239.kt) -[Leetcode Link](https://leetcode.com/problems/maximum-length-of-a-concatenated-string-with-unique-characters/)
 - [523. Continuous Subarray Sum](src/medium/ContinuousSubarraySum523.kt) -[Leetcode Link](https://leetcode.com/problems/continuous-subarray-sum/description/)
 - [49. Group Anagrams](src/medium/GroupAnagrams49.kt) -[Leetcode Link](https://leetcode.com/problems/group-anagrams/description/)
+- [1706. Where Will the Ball Fall](src/medium/WhereWillTheBallFall1706.kt) -[Leetcode Link](https://leetcode.com/problems/where-will-the-ball-fall/description/)
 
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
