@@ -124,6 +124,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [49. Group Anagrams](src/medium/GroupAnagrams49.kt) -[Leetcode Link](https://leetcode.com/problems/group-anagrams/description/)
 - [1706. Where Will the Ball Fall](src/medium/WhereWillTheBallFall1706.kt) -[Leetcode Link](https://leetcode.com/problems/where-will-the-ball-fall/description/)
 - [433. Minimum Genetic Mutation](src/medium/MinimumGeneticMutation433.kt) -[Leetcode Link](https://leetcode.com/problems/minimum-genetic-mutation/)
+- [2131. Longest Palindrome by Concatenating Two Letter Words](src/medium/LongestPalindromeByConcatenatingTwoLetterWords2131.kt) -[Leetcode Link](https://leetcode.com/problems/longest-palindrome-by-concatenating-two-letter-words/)
 
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
