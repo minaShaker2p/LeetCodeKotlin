@@ -38,4 +38,33 @@ words[i].length == 2
 words[i] consists of lowercase English letters.
  */
 fun longestPalindrome(words: Array<String>): Int {
+    val map = HashMap<String, Int>()
+    for (word in words) {
+        val count = map.getOrDefault(word, 0)
+        map[word] = count + 1
+    }
+
+    var answer = 0
+    var centeral = false
+    for ((key, value) in map) {
+        val word = key
+        val countOfWords = value
+
+        if (word[0] == word[1]) {
+            if (countOfWords % 2 == 0)
+                answer += countOfWords
+            else {
+                centeral = true
+                answer += countOfWords - 1
+            }
+        } else {
+            val reversed = word.reversed()
+            if (map.contains(reversed)) {
+                answer += Math.min(countOfWords, map.getOrDefault(reversed, 0))
+            }
+        }
+    }
+    if (centeral)
+        answer++
+    return answer * 2
 }
