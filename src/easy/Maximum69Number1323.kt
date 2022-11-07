@@ -1,5 +1,6 @@
 package easy
 
+import java.lang.StringBuilder
 import javax.print.attribute.IntegerSyntax
 
 /**
@@ -38,4 +39,17 @@ num consists of only 6 and 9 digits.
  */
 fun maximum69Number(num: Int): Int {
     return Integer.parseInt("$num".replaceFirst('6', '9'))
+}
+fun maximum69NumberSolution2(num: Int): Int {
+    val builder =StringBuilder()
+    builder.append(num)
+    for(i in builder.indices)
+    {
+        if(builder[i]=='6')
+        {
+            builder.setCharAt(i,'9')
+         break
+        }
+    }
+    return Integer.parseInt(builder.toString())
 }
