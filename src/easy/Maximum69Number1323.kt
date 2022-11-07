@@ -1,5 +1,7 @@
 package easy
 
+import javax.print.attribute.IntegerSyntax
+
 /**
  * You are given a positive integer num consisting only of digits 6 and 9.
 
@@ -34,5 +36,6 @@ Constraints:
 1 <= num <= 104
 num consists of only 6 and 9 digits.
  */
-fun maximum69Number (num: Int): Int {
+fun maximum69Number(num: Int): Int {
+    return Integer.parseInt("$num".replaceFirst('6', '9'))
 }
