@@ -58,6 +58,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [1832. Check if the Sentence Is Pangram](src/easy/CheckIfTheSentenceIsPangram1832.kt) -[Leetcode Link](https://leetcode.com/problems/check-if-the-sentence-is-pangram/description/)
 - [1662. Check If Two String Arrays are Equivalent](src/easy/CheckIfTwoStringArraysAreEquivalent1662.kt) -[Leetcode Link](https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/)
 - [345. Reverse Vowels of a String](src/easy/ReverseVowelsOfString345.kt) -[Leetcode Link](https://leetcode.com/problems/reverse-vowels-of-a-string/description/)
+- [345. Reverse Vowels of a String](src/easy/Maximum69Number1323.kt) -[Leetcode Link](https://leetcode.com/problems/maximum-69-number/)
 
 <br />
 
