@@ -1,5 +1,8 @@
 package easy
 
+import java.lang.StringBuilder
+import java.util.*
+
 /**
  * Given a string s of lower and upper case English letters.
 
@@ -39,4 +42,16 @@ Constraints:
 s contains only lower and upper case English letters.
  */
 fun makeGood(s: String): String {
+    val  stack = Stack<Char>()
+
+    s.forEach { char->
+        if(stack.isNotEmpty()&& Math.abs(char-stack.peek())==32)
+            stack.pop()
+        else
+            stack.push(char)
+    }
+    val result =StringBuilder()
+    while (stack.isNotEmpty())
+        result.insert(0,stack.pop())
+    return result.toString()
 }
