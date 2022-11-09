@@ -1,5 +1,7 @@
 package medium
 
+import java.util.Stack
+
 /**
  * Design an algorithm that collects daily price quotes for some stock and returns the span of that stock's price for the current day.
 
@@ -37,9 +39,13 @@ Constraints:
 At most 104 calls will be made to next.
  */
 class StockSpanner() {
-
+    val stack = Stack<IntArray>()
     fun next(price: Int): Int {
-
+   var answer =1
+        while (stack.isNotEmpty()&& stack.peek()[0]<=price)
+            answer+=stack.pop()[1]
+        stack.push(intArrayOf(price,answer))
+        return answer
     }
 
 }
