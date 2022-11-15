@@ -30,6 +30,8 @@ The number of nodes in the tree is in the range [0, 5 * 104].
 0 <= Node.val <= 5 * 104
 The tree is guaranteed to be complete.
  */
-fun countNodes(root: TreeNode?): Int {
+fun countNodesDFS(root: TreeNode?): Int {
+    if(root==null) return  0
+    return  1+ countNodesDFS(root.left)+ countNodesDFS(root.right)
 
 }
