@@ -129,6 +129,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [433. Minimum Genetic Mutation](src/medium/MinimumGeneticMutation433.kt) -[Leetcode Link](https://leetcode.com/problems/minimum-genetic-mutation/)
 - [2131. Longest Palindrome by Concatenating Two Letter Words](src/medium/LongestPalindromeByConcatenatingTwoLetterWords2131.kt) -[Leetcode Link](https://leetcode.com/problems/longest-palindrome-by-concatenating-two-letter-words/)
 - [901. Online Stock Span](src/medium/OnlineStockSpan901.kt) -[Leetcode Link](https://leetcode.com/problems/online-stock-span/)
+- [222. Count Complete Tree Nodes](src/medium/CountCompleteTreeNodes222.kt) -[Leetcode Link](https://leetcode.com/problems/count-complete-tree-nodes/)
 
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
