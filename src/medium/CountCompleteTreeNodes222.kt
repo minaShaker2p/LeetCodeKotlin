@@ -33,5 +33,22 @@ The tree is guaranteed to be complete.
 fun countNodesDFS(root: TreeNode?): Int {
     if(root==null) return  0
     return  1+ countNodesDFS(root.left)+ countNodesDFS(root.right)
+}
+fun countNodes(root: TreeNode?): Int {
+    if(root == null) return  0
 
+    var height =1
+    var left = root.left
+    var right = root.right
+    while (left!=null && right!=null)
+    {
+        height++
+        left =left.left
+        right=right.right
+    }
+
+    return if(left==null && right==null)
+        Math.pow(2.0,height.toDouble()).toInt() -1
+    else
+        1+ countNodes(root?.left)+ countNodes(root?.right)
 }
