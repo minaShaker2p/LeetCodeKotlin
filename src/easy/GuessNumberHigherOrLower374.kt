@@ -45,15 +45,28 @@ Constraints:
  *               otherwise return 0
  * fun guess(num:Int):Int {}
  */
-class GuessNumber(n: Int){
-    val pick = Random.nextInt(1,n+1)
-    fun guess(num:Int):Int {
-        return if(num >pick) -1
-        else if(num < pick) 1
+class GuessNumber(n: Int) {
+    val pick = Random.nextInt(1, n + 1)
+    fun guess(num: Int): Int {
+        return if (num > pick) -1
+        else if (num < pick) 1
         else 0
     }
+
     fun guessNumber(n: Int): Int {
-return -1
+        var low = 1
+        var high = n
+
+        while (low <= high) {
+            val mid = low + ((high - low) / 2)
+            when {
+                guess(mid) == -1 -> high = mid - 1
+                guess(mid) == 1 -> low = mid + 1
+                else -> return mid
+            }
+        }
+
+        return -1
     }
 
 }
