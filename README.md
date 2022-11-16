@@ -60,6 +60,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [345. Reverse Vowels of a String](src/easy/ReverseVowelsOfString345.kt) -[Leetcode Link](https://leetcode.com/problems/reverse-vowels-of-a-string/description/)
 - [1323. Maximum 69 Number](src/easy/Maximum69Number1323.kt) -[Leetcode Link](https://leetcode.com/problems/maximum-69-number/)
 - [1544. Make The String Great](src/easy/MakeTheStringGreat1544.kt) -[Leetcode Link](https://leetcode.com/problems/make-the-string-great/)
+- [374. Guess Number Higher or Lower](src/easy/GuessNumberHigherOrLower374.kt) -[Leetcode Link](https://leetcode.com/problems/guess-number-higher-or-lower/description/)
 
 <br />
 
