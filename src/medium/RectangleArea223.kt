@@ -28,5 +28,20 @@ Constraints:
 -104 <= by1 <= by2 <= 104
  */
 fun computeArea(ax1: Int, ay1: Int, ax2: Int, ay2: Int, bx1: Int, by1: Int, bx2: Int, by2: Int): Int {
+    // Calculate Area of A
+    val areaA = (ay2 - ay1) * (ax2 - ax1)
 
+    // Calculate Area of B
+    val areaB = (by2 - by1) * (bx2 - bx1)
+
+    // Calculate Overlap X
+    val overlapX = Math.min(ax2, bx2) - Math.max(ax1, bx1)
+
+    // Calculate Overlap Y
+    val overlapY = Math.min(ay2, by2) - Math.max(ay1, by1)
+    var overlap = 0
+    if (overlapX > 0 && overlapY > 0) {
+        overlap = overlapX * overlapY
+    }
+    return areaA + areaB - overlap
 }
