@@ -29,4 +29,16 @@ Constraints:
 -231 <= n <= 231 - 1
  */
 fun isUgly(n: Int): Boolean {
+    if (n <= 0) return false
+
+    var num = n
+    val dividers = intArrayOf(2, 3, 5)
+
+    dividers.forEach { divider ->
+
+        while (num % divider == 0)
+            num /= divider
+    }
+
+    return num == 1
 }
