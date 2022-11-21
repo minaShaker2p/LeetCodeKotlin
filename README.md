@@ -134,6 +134,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [901. Online Stock Span](src/medium/OnlineStockSpan901.kt) -[Leetcode Link](https://leetcode.com/problems/online-stock-span/)
 - [222. Count Complete Tree Nodes](src/medium/CountCompleteTreeNodes222.kt) -[Leetcode Link](https://leetcode.com/problems/count-complete-tree-nodes/)
 - [223. Rectangle Area](src/medium/RectangleArea223.kt) -[Leetcode Link](https://leetcode.com/problems/rectangle-area/description/)
+- [1926. Nearest Exit from Entrance in Maze](src/medium/NearestExitFromEntranceInMaze1926.kt) -[Leetcode Link](https://leetcode.com/problems/nearest-exit-from-entrance-in-maze/)
 
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
