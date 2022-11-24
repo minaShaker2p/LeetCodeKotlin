@@ -29,6 +29,15 @@ The number of the nodes in the tree is in the range [0, 100].
 Follow up: Recursive solution is trivial, could you do it iteratively?
  */
 
+val Result = mutableListOf<Int>()
+
 fun postorderTraversal(root: TreeNode?): List<Int> {
+    if(root == null)
+        return Result
+
+    postorderTraversal(root.left)
+    postorderTraversal(root.right)
+    Result.add(root.`val`)
+    return list
 
 }
