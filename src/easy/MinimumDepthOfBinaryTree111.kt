@@ -30,11 +30,9 @@ The number of nodes in the tree is in the range [0, 105].
 fun minDepth(root: TreeNode?): Int {
     if (root == null) return 0
     var level = 0
-    var minLevel = 0
 
     val queue: Queue<TreeNode> = LinkedList<TreeNode>()
     queue.add(root)
-    minLevel = 1
     while (queue.isNotEmpty()) {
         level++
 
