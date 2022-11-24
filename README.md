@@ -64,6 +64,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [26. Remove Duplicates from Sorted Array](src/easy/RemoveDuplicatesFromSortedArray26.kt) -[Leetcode Link](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/)
 - [263. Ugly Number](src/easy/UglyNumber263.kt) -[Leetcode Link](https://leetcode.com/problems/ugly-number/)
 - [111. Minimum Depth of Binary Tree](src/easy/MinimumDepthOfBinaryTree111.kt) -[Leetcode Link](https://leetcode.com/problems/minimum-depth-of-binary-tree/description/)
+- [144. Binary Tree Preorder Traversal](src/easy/BinaryTreePreorderTraversal144.kt) -[Leetcode Link](https://leetcode.com/problems/binary-tree-preorder-traversal/description/)
 
 <br />
 
