@@ -27,5 +27,11 @@ The number of nodes in the tree is in the range [0, 100].
  */
 val result = mutableListOf<Int>()
 fun preorderTraversal(root: TreeNode?): List<Int> {
+    if(root == null)
+        return result
+    result.add(root.`val`)
+
+    preorderTraversal(root.left)
+    preorderTraversal(root.right)
     return result
 }
