@@ -1,5 +1,7 @@
 package easy
 
+import java.util.*
+
 /**
  * Given a binary tree, find its minimum depth.
 
@@ -26,4 +28,27 @@ The number of nodes in the tree is in the range [0, 105].
 -1000 <= Node.val <= 1000
  */
 fun minDepth(root: TreeNode?): Int {
+    if (root == null) return 0
+    var level = 0
+    var minLevel = 0
+
+    val queue: Queue<TreeNode> = LinkedList<TreeNode>()
+    queue.add(root)
+    minLevel = 1
+    while (queue.isNotEmpty()) {
+        level++
+
+        val size = queue.size
+        for (i in 0 until size) {
+            val current = queue.poll()
+            if (current?.left == null && current?.right == null)
+                return level
+
+            if (current.left != null)
+                queue.add(current.left!!)
+            if (current.right != null)
+                queue.add(current.right!!)
+        }
+    }
+    return level
 }
