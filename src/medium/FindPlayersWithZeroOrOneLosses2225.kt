@@ -43,4 +43,28 @@ winneri != loseri
 All matches[i] are unique.
  */
 fun findWinners(matches: Array<IntArray>): List<List<Int>> {
+    val zeroLose = mutableSetOf<Int>()
+    val onesLose = mutableSetOf<Int>()
+    val manyLose = mutableSetOf<Int>()
+    for (match in matches) {
+        val winner = match[0]
+        val loser = match[1]
+        // Add winner first
+        if (!onesLose.contains(winner) && !manyLose.contains(winner))
+            zeroLose.add(winner)
+        if (zeroLose.contains(loser)) {
+            zeroLose.remove(loser)
+            onesLose.add(loser)
+        } else if (onesLose.contains(loser)) {
+            onesLose.remove(loser)
+            manyLose.add(loser)
+        } else if (manyLose.contains(loser))
+            continue
+        else
+            onesLose.add(loser)
+    }
+    val result = mutableListOf<List<Int>>()
+    result.add(zeroLose.sorted())
+    result.add(onesLose.sorted())
+    return result
 }
