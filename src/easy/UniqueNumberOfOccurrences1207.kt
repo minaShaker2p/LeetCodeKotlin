@@ -26,4 +26,14 @@ Constraints:
 -1000 <= arr[i] <= 1000
  */
 fun uniqueOccurrences(arr: IntArray): Boolean {
+    val freq = HashMap<Int,Int>()
+    arr.forEach{
+        freq[it]=freq.getOrDefault(it,0)+1
+    }
+
+    val occurSet = mutableSetOf<Int>()
+
+    for((k,v) in freq)
+        occurSet.add(v)
+    return occurSet.size == freq.size
 }
