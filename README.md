@@ -66,6 +66,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [111. Minimum Depth of Binary Tree](src/easy/MinimumDepthOfBinaryTree111.kt) -[Leetcode Link](https://leetcode.com/problems/minimum-depth-of-binary-tree/description/)
 - [144. Binary Tree Preorder Traversal](src/easy/BinaryTreePreorderTraversal144.kt) -[Leetcode Link](https://leetcode.com/problems/binary-tree-preorder-traversal/description/)
 - [145. Binary Tree Postorder Traversal](src/easy/BinaryTreePostorderTraversal145.kt) -[Leetcode Link](https://leetcode.com/problems/binary-tree-postorder-traversal/description/)
+- [1207. Unique Number of Occurrences](src/easy/UniqueNumberOfOccurrences1207.kt) -[Leetcode Link](https://leetcode.com/problems/unique-number-of-occurrences/)
 
 <br />
 
