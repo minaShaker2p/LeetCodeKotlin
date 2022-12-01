@@ -29,4 +29,17 @@ s.length is even.
 s consists of uppercase and lowercase letters.
  */
 fun halvesAreAlike(s: String): Boolean {
+    var countA = 0
+    var countB=0
+
+    for(i in 0 until s.length/2)
+        if(s[i].isVowelUpperLowerCase())
+            countA++
+
+    for(i in  s.length/2 until s.length)
+        if(s[i].isVowelUpperLowerCase())
+            countB++
+
+    return countA == countB
 }
+fun Char.isVowelUpperLowerCase() = charArrayOf('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U').any{ it==this }
