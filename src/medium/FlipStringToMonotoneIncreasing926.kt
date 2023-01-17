@@ -35,13 +35,12 @@ fun minFlipsMonoIncr(s: String): Int {
     var res = 0
     var ones = 0
 
-    for(i in s.indices)
-    {
-        if(s[i]=='0')
+    for (i in s.indices) {
+        if (s[i] == '0')
             res++
         else
             ones++
-        res = Math.min(res,ones)
+        res = Math.min(res, ones)
     }
 
     return res
@@ -49,7 +48,21 @@ fun minFlipsMonoIncr(s: String): Int {
 
 fun minFlipsMonoIncrSol2(s: String): Int {
     var zeroToOnes = 0
-    var onesCount=0
-    var i=0
-return 0
+    var onesCount = 0
+    var i = 0
+    while (i < s.length && s[i] == '0') {
+        i++
+    }
+
+    while (i < s.length) {
+        if (s[i] == '0') {
+            zeroToOnes++
+        } else {
+            onesCount++
+        }
+        if (zeroToOnes > onesCount)
+            zeroToOnes = onesCount
+        i++
+    }
+    return zeroToOnes
 }
