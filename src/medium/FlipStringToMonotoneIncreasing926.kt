@@ -48,5 +48,8 @@ fun minFlipsMonoIncr(s: String): Int {
 }
 
 fun minFlipsMonoIncrSol2(s: String): Int {
+    var zeroToOnes = 0
+    var onesCount=0
+    var i=0
 return 0
 }

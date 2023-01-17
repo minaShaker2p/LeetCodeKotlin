@@ -142,6 +142,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [1926. Nearest Exit from Entrance in Maze](src/medium/NearestExitFromEntranceInMaze1926.kt) -[Leetcode Link](https://leetcode.com/problems/nearest-exit-from-entrance-in-maze/)
 - [79. Word Search](src/medium/WordSearch79.kt) -[Leetcode Link](https://leetcode.com/problems/word-search/)
 - [2225. Find Players With Zero or One Losses](src/medium/FindPlayersWithZeroOrOneLosses2225.kt) -[Leetcode Link](https://leetcode.com/problems/find-players-with-zero-or-one-losses/description/)
+- [926. Flip String to Monotone Increasing](src/medium/FlipStringToMonotoneIncreasing926.kt) -[Leetcode Link](https://leetcode.com/problems/flip-string-to-monotone-increasing/)
 
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
