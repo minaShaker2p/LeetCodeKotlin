@@ -46,3 +46,7 @@ fun minFlipsMonoIncr(s: String): Int {
 
     return res
 }
+
+fun minFlipsMonoIncrSol2(s: String): Int {
+return 0
+}
