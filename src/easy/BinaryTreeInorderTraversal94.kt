@@ -30,7 +30,7 @@ fun inorderTraversal(root: TreeNode?): List<Int> {
     if(root==null)
         return emptyList()
     inorderTraversal(root?.left)
-    list.add(root?.`val`)
+    list.add(root.`val` ?:0)
     inorderTraversal(root?.right)
 return list
 }
