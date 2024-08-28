@@ -143,6 +143,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [79. Word Search](src/medium/WordSearch79.kt) -[Leetcode Link](https://leetcode.com/problems/word-search/)
 - [2225. Find Players With Zero or One Losses](src/medium/FindPlayersWithZeroOrOneLosses2225.kt) -[Leetcode Link](https://leetcode.com/problems/find-players-with-zero-or-one-losses/description/)
 - [926. Flip String to Monotone Increasing](src/medium/FlipStringToMonotoneIncreasing926.kt) -[Leetcode Link](https://leetcode.com/problems/flip-string-to-monotone-increasing/)
+- [Count Sub Islands](src/medium/CountSubIslands1905.kt)- [Leetcode Link](https://leetcode.com/problems/count-sub-islands/)
 
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
