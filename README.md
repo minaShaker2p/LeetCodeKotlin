@@ -143,7 +143,8 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [79. Word Search](src/medium/WordSearch79.kt) -[Leetcode Link](https://leetcode.com/problems/word-search/)
 - [2225. Find Players With Zero or One Losses](src/medium/FindPlayersWithZeroOrOneLosses2225.kt) -[Leetcode Link](https://leetcode.com/problems/find-players-with-zero-or-one-losses/description/)
 - [926. Flip String to Monotone Increasing](src/medium/FlipStringToMonotoneIncreasing926.kt) -[Leetcode Link](https://leetcode.com/problems/flip-string-to-monotone-increasing/)
-- [1905. Count Sub Islands](src/medium/CountSubIslands1905.kt)- [Leetcode Link](https://leetcode.com/problems/count-sub-islands/)
+- [1905. Count Sub Islands](src/medium/CountSubIslands1905.kt)- [Leetcode Link](https://leetcode.com/problems/count-sub-islands/)`BFS`
+- [947. Most Stones Removed with Same Row or Column](src/medium/MostStonesRemovedWithSameRowOrColumn947.kt)- [Leetcode Link](https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/) `Graph` `DFS` `BFS` 
 
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
