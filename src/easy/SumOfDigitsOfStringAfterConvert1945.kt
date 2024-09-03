@@ -1,4 +1,4 @@
-package medium
+package easy
 
 fun getLucky(s: String, k: Int): Int {
     val builder = StringBuilder()

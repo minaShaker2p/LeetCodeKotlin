@@ -68,7 +68,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [145. Binary Tree Postorder Traversal](src/easy/BinaryTreePostorderTraversal145.kt) -[Leetcode Link](https://leetcode.com/problems/binary-tree-postorder-traversal/description/)
 - [1207. Unique Number of Occurrences](src/easy/UniqueNumberOfOccurrences1207.kt) -[Leetcode Link](https://leetcode.com/problems/unique-number-of-occurrences/)
 - [1704. Determine if String Halves Are Alike](src/easy/DetermineIfStringHalvesAreAlike1704.kt) -[Leetcode Link](https://leetcode.com/problems/determine-if-string-halves-are-alike/)
-
+- [1945. Sum of Digits of String After Convert](src/easy/SumOfDigitsOfStringAfterConvert1945.kt) - [leetcode link](https://leetcode.com/problems/sum-of-digits-of-string-after-convert/) `String` `Simulation`
 <br />
 
 ## Medium Problems :
@@ -146,6 +146,5 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [1905. Count Sub Islands](src/medium/CountSubIslands1905.kt)- [Leetcode Link](https://leetcode.com/problems/count-sub-islands/)`BFS`
 - [947. Most Stones Removed with Same Row or Column](src/medium/MostStonesRemovedWithSameRowOrColumn947.kt)- [Leetcode Link](https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/) `Graph` `DFS` `BFS` 
 - [1894. Find the Student that Will Replace the Chalk](src/medium/FindTheStudentThatWillReplaceTheChalk1894.kt) - [Leetcode link](https://leetcode.com/problems/find-the-student-that-will-replace-the-chalk/) `Prefix Sum`
-- [1945. Sum of Digits of String After Convert](src/medium/SumOfDigitsOfStringAfterConvert1945.kt) - [leetcode link](https://leetcode.com/problems/sum-of-digits-of-string-after-convert/) `String` `Simulation`
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
