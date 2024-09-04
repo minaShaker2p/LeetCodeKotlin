@@ -54,6 +54,7 @@ import kotlin.math.sqrt
  */
 object WalkingRobotSimulation874 {
     fun robotSim(commands: IntArray, obstacles: Array<IntArray>): Int {
+        var maximumDistance = Int.MIN_VALUE
 
         var currentLocation = intArrayOf(0, 0)
         var currentDir = Dirs.NORTH
@@ -106,15 +107,27 @@ object WalkingRobotSimulation874 {
                             // check if it is obstacle
                         }
                     }
-                    if (!obstacles.contains(currentLocation)) {
+                    if (obstacles.containObstacle(nextStepLocation).not()) {
                         currentLocation = nextStepLocation.clone()
                     } else {
                         break
                     }
                 }
+                maximumDistance = Math.max(maximumDistance,calculateEuclideanDistance(currentLocation))
             }
         }
-        return (Math.pow(currentLocation[0].toDouble(),2.0) + Math.pow(currentLocation[1].toDouble(),2.0)).toInt()
+        return maximumDistance
+    }
+
+    private fun Array<IntArray>.containObstacle(location: IntArray): Boolean {
+        for (obstacle in this) {
+            if (obstacle[0] == location[0] && obstacle[1] == location[1])
+                return true
+        }
+        return false
+    }
+    private fun calculateEuclideanDistance(location:IntArray):Int{
+        return (Math.pow(location[0].toDouble(), 2.0) + Math.pow(location[1].toDouble(), 2.0)).toInt()
     }
 
     enum class Dirs {
