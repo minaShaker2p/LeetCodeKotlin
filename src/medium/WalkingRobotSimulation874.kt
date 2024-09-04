@@ -1,5 +1,6 @@
 package medium
 
+import kotlin.math.pow
 import kotlin.math.sqrt
 
 /**
@@ -113,7 +114,7 @@ object WalkingRobotSimulation874 {
                         break
                     }
                 }
-                maximumDistance = Math.max(maximumDistance,calculateEuclideanDistance(currentLocation))
+                maximumDistance = maximumDistance.coerceAtLeast(calculateEuclideanDistance(currentLocation))
             }
         }
         return maximumDistance
@@ -127,7 +128,7 @@ object WalkingRobotSimulation874 {
         return false
     }
     private fun calculateEuclideanDistance(location:IntArray):Int{
-        return (Math.pow(location[0].toDouble(), 2.0) + Math.pow(location[1].toDouble(), 2.0)).toInt()
+        return (location[0].toDouble().pow(2.0) + location[1].toDouble().pow(2.0)).toInt()
     }
 
     enum class Dirs {
