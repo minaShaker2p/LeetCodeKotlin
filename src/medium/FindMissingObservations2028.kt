@@ -10,28 +10,22 @@ object FindMissingObservations2028 {
             sum+=roll
         }
 
-        // Calculate x , the sum of the n observations
-        val x = (mean * (n+m)) - sum
+        // Calculate the remaining sum
+        val remainingSum = (mean * (n+m)) - sum
 
+        // Check if the sum is valid or not
 
-        // Calculate the array of n (missing) observation
-
-        if(x/n == 0 || x/n >6)
+        if(remainingSum > 6*n || remainingSum < n)
             return intArrayOf()
 
-        val result = Array<Int>(n){0}
-            if(x%n !=0)
-            {
-                for(i in 0 until n-1)
-                    result[i]=x/n
+        val distributeMean = remainingSum / n
+        val mod = remainingSum % n;
 
-                result[n-1]=(x/n)+1
-            }else
-            {
-                for(i in 0 until n)
-                    result[i]=x/n
-            }
+        // Distribute the remaining mod element in nElements array
 
+        val result = Array<Int>(n){distributeMean}
+        for(i in 0 until mod)
+            result[i]=result[i]+1
 
         return result.toIntArray()
     }
