@@ -1,42 +1,34 @@
 package medium
 
 object DeleteNodesFromLinkedListPresentInArray3217 {
-    fun modifiedList(nums: IntArray, head: ListNode?): ListNode? {
-        var tempHead = head
-        var prev : ListNode?= null
-        var curr = tempHead
 
-        while(curr!=null)
+    fun modifiedList(nums: IntArray, head: ListNode?): ListNode? {
+        var currentHead = head
+
+        // Handle the case where the head node needs to be removed
+        while(currentHead !=null && nums.contains(currentHead.`val`))
         {
-            //check if the current value exists in the nums array
-            val currentValue= curr?.`val`?:0
-            if(nums.contains(currentValue).not())
+            currentHead = currentHead.next
+        }
+
+        // If the list is empty after removing head node, return null
+        if(head == null) return null
+
+        // Iterate through the list, removing nodes with values in the set
+        var curr = currentHead
+
+        while(curr?.next != null)
+        {
+            if(nums.contains(curr.next?.`val`?:0))
             {
-                // skip to delete this node and move to the next node
-                prev = curr
-                curr = curr.next
+                // Skip the next node by updating the pointer
+                curr.next = curr.next?.next
             }else
             {
-                // delete this node
-                if(prev == null)
-                {
-                    // this node is a head, so delete the head
-                    var temp = tempHead
-                    tempHead = tempHead?.next
-                    temp = null
-                    curr = tempHead
-                    prev = curr
-                    curr = curr?.next
-                }else
-                {
-                    var temp = curr
-                    curr = curr?.next
-                    prev?.next = curr
-                    temp = null
-                }
+                curr= curr.next
             }
         }
-        return tempHead
 
+        return currentHead
     }
 }
