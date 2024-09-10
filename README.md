@@ -148,5 +148,6 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [1894. Find the Student that Will Replace the Chalk](src/medium/FindTheStudentThatWillReplaceTheChalk1894.kt) - [Leetcode link](https://leetcode.com/problems/find-the-student-that-will-replace-the-chalk/) `Prefix Sum`
 - [874. Walking Robot Simulation](src/medium/WalkingRobotSimulation874.kt) - [Leetcode link](https://leetcode.com/problems/walking-robot-simulation/) `Array` `Hash Table` `Simulation`
 - [3217. Delete Nodes From Linked List Present in Array](src/medium/DeleteNodesFromLinkedListPresentInArray3217.kt) - [Leetcode link](https://leetcode.com/problems/delete-nodes-from-linked-list-present-in-array/) `Array` `Hash Table` `Linked List`
+- [2326. Spiral Matrix IV](src/medium/SpiralMatrixIV2326.kt) - [Leetcode link](https://leetcode.com/problems/spiral-matrix-iv/) `Array` `Hash Table` `Linked List`
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
