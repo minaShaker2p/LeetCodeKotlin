@@ -41,3 +41,37 @@ fun minBitFlips(start: Int, goal: Int): Int {
     }
     return count
 }
+
+/**
+ * Brute force solution
+ *
+ * Algorithm
+ * Initialize a counter count to keep track of the number of bit flips needed.
+ *
+ * Loop while either start or goal has bits left to check:
+ *
+ * Compare the least significant bits (rightmost bits) of start and goal:
+ * Use the bitwise AND operation (& 1) to isolate the least significant bit of each number.
+ * If the bits differ ((start & 1) != (goal & 1)), increment the count by 1.
+ * Right shift both start and goal by one position (>>= 1) to move to the next bit.
+ * Return the total count after all bits have been checked.
+ */
+fun minBitFlipsSol2(start: Int, goal: Int): Int {
+// Initialize a counter count to kee[ track of the number of bit flips needed
+    var counter = 0
+    var s =start
+    var g= goal
+
+    // Loop while either start or goal has bits left to check
+    while (s > 0 || g > 0) {
+        // Increment count if the current bits differ
+        if ((s.and(1)) != (g.and(1))) {
+            counter++
+        }
+
+        // Shift both numbers to the right to check the next bits
+        s = s.shr(1)
+        g = g.shr(1)
+    }
+    return counter
+}
