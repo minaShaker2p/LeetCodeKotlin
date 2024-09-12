@@ -69,7 +69,8 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [1207. Unique Number of Occurrences](src/easy/UniqueNumberOfOccurrences1207.kt) -[Leetcode Link](https://leetcode.com/problems/unique-number-of-occurrences/)
 - [1704. Determine if String Halves Are Alike](src/easy/DetermineIfStringHalvesAreAlike1704.kt) -[Leetcode Link](https://leetcode.com/problems/determine-if-string-halves-are-alike/)
 - [1945. Sum of Digits of String After Convert](src/easy/SumOfDigitsOfStringAfterConvert1945.kt) - [leetcode link](https://leetcode.com/problems/sum-of-digits-of-string-after-convert/) `String` `Simulation`
-<br />
+- [1684. Count the Number of Consistent Strings](src/easy/CountTheNumberOfConsistentStrings1684.kt) - [leetcode link](https://leetcode.com/problems/count-the-number-of-consistent-strings/) `String` `Simulation` `Array` `Counting` 
+  <br />
 
 ## Medium Problems :
 - [1448. Count Good Nodes in Binary Tree](src/medium/CountGoodNodesInBinaryTree1448.kt)
