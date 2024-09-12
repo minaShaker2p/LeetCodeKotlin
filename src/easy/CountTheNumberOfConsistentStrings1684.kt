@@ -6,12 +6,12 @@ object CountTheNumberOfConsistentStrings1684 {
         var countOfConsistentStrings = 0
 
         for (word in words) {
-            var valid = true
+            var isCharacterAllowed = true
             for (char in word) {
                 if (!allowedSet.contains(char))
-                    valid = false
+                    isCharacterAllowed = false
             }
-            if (valid) countOfConsistentStrings++
+            if (isCharacterAllowed) countOfConsistentStrings++
         }
         return countOfConsistentStrings
     }
