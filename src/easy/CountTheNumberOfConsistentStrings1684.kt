@@ -3,7 +3,7 @@ package easy
 object CountTheNumberOfConsistentStrings1684 {
     fun countConsistentStrings(allowed: String, words: Array<String>): Int {
         val allowedSet = allowed.toHashSet()
-        var countOfConsistentStrings = 0
+        var consistentCount = 0
 
         for (word in words) {
             var isCharacterAllowed = true
@@ -11,8 +11,8 @@ object CountTheNumberOfConsistentStrings1684 {
                 if (!allowedSet.contains(char))
                     isCharacterAllowed = false
             }
-            if (isCharacterAllowed) countOfConsistentStrings++
+            if (isCharacterAllowed) consistentCount++
         }
-        return countOfConsistentStrings
+        return consistentCount
     }
 }
