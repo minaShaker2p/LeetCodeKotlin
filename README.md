@@ -150,5 +150,6 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [874. Walking Robot Simulation](src/medium/WalkingRobotSimulation874.kt) - [Leetcode link](https://leetcode.com/problems/walking-robot-simulation/) `Array` `Hash Table` `Simulation`
 - [3217. Delete Nodes From Linked List Present in Array](src/medium/DeleteNodesFromLinkedListPresentInArray3217.kt) - [Leetcode link](https://leetcode.com/problems/delete-nodes-from-linked-list-present-in-array/) `Array` `Hash Table` `Linked List`
 - [2326. Spiral Matrix IV](src/medium/SpiralMatrixIV2326.kt) - [Leetcode link](https://leetcode.com/problems/spiral-matrix-iv/) `Array` `Hash Table` `Linked List`
+- [2707. Extra Characters in a String](src/medium/ExtraCharactersInString2707.kt) - [Leetcode link](https://leetcode.com/problems/extra-characters-in-a-string/) `Array` `Hash Table` `Dynamic Programming` `Recurrsion`
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
