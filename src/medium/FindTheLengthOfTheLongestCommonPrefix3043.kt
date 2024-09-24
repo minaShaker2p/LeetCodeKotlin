@@ -2,25 +2,36 @@ package medium
 
 object FindTheLengthOfTheLongestCommonPrefix3043 {
     fun longestCommonPrefix(arr1: IntArray, arr2: IntArray): Int {
-        var result = Int.MIN_VALUE
-        for (num1 in arr1) {
-            for (num2 in arr2) {
-                val prefixCount = num1.toString().prefix(num2.toString())
-                result = result.coerceAtLeast(prefixCount)
+        // Store all prefixes from arr1
+        val arr1Prefixes = arr1.buildPrefixes()
+
+        // initialize longestPrefix to 0 keep track of the length of the longest common prefix
+        var longestPrefix = 0
+
+        // Iterate over each val in arr2
+        arr2.forEach { num ->
+            var currNum = num
+            while (arr1Prefixes.contains(currNum).not() && currNum > 0) {
+                currNum /= 10
             }
+
+            if (arr1Prefixes.contains(currNum))
+                longestPrefix = longestPrefix.coerceAtLeast(currNum.toString().length)
         }
-        return result
+
+        return longestPrefix
     }
 
-    private fun String.prefix(string: String): Int {
-        var count = 0
-        for (i in indices) {
-            if (i < this.length && i < string.length && this[i] == string[i])
-                count++
-            else
-                break
+    private fun IntArray.buildPrefixes(): Set<Int> {
+        val prefixes = mutableSetOf<Int>()
+        this.forEach { num ->
+            var currNum = num
+            while (currNum != 0) {
+                prefixes.add(currNum)
+                currNum /= 10
+            }
         }
-        return count
+        return prefixes
     }
 
 }
