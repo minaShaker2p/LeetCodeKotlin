@@ -77,3 +77,21 @@ class MyCalendarSol2() {
     }
 
 }
+
+class MyCalendarSol3() {
+    private val bookings = mutableListOf<IntArray>()
+
+    fun book(start: Int, end: Int): Boolean {
+
+        for( booking in bookings)
+        {
+            // Conflict happens when s1 < e2 && s2 < e1
+            if((start < booking[1] && end > booking[0]))
+                return false
+        }
+
+        bookings.add(intArrayOf(start,end))
+        return true
+    }
+
+}
