@@ -70,6 +70,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [1704. Determine if String Halves Are Alike](src/easy/DetermineIfStringHalvesAreAlike1704.kt) -[Leetcode Link](https://leetcode.com/problems/determine-if-string-halves-are-alike/)
 - [1945. Sum of Digits of String After Convert](src/easy/SumOfDigitsOfStringAfterConvert1945.kt) - [leetcode link](https://leetcode.com/problems/sum-of-digits-of-string-after-convert/) `String` `Simulation`
 - [1684. Count the Number of Consistent Strings](src/easy/CountTheNumberOfConsistentStrings1684.kt) - [leetcode link](https://leetcode.com/problems/count-the-number-of-consistent-strings/) `String` `Simulation` `Array` `Counting` 
+- [1331. Rank Transform of an Array](src/easy/RankTransformOfAnArray1331.kt) - [leetcode link](https://leetcode.com/problems/rank-transform-of-an-array/) `Array` `Hash Table` `Sorting`
   <br />
 
 ## Medium Problems :
