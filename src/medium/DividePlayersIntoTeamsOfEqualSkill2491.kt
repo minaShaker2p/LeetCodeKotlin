@@ -2,23 +2,29 @@ package medium
 
 object DividePlayersIntoTeamsOfEqualSkill2491 {
     fun dividePlayers(skill: IntArray): Long {
-        val min = skill.min()
-        val max = skill.max()
+        // Soring the array
+        skill.sort()
 
-        val map = HashMap<Int, Int>()
+        val n = skill.size
+        var totalChemistry = 0L
 
-        skill.forEach { num ->
-            val rem = (max + min) - num
-            if(map.contains(rem).not())
-            map[num] =  rem
-        }
+        // Calculate the target sum
+        val targetTeamSkill = skill[0] + skill[n-1]
 
-        var chemistry = 0L
-        for((k,v) in map)
+        // Iterate through half of the array, pairing players from both ends
+        for(i in 0 until n/2)
         {
-            chemistry+=(k * v)
+            val currentTeamSkill =  skill[i]+ skill[n-i-1]
+
+            if(currentTeamSkill != targetTeamSkill)
+                return -1
+
+            totalChemistry+=skill[i]* skill[n-i-1]
         }
-        return chemistry/2
+
+        return totalChemistry
+
+
 
     }
 }
