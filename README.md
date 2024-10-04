@@ -155,5 +155,6 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [3043. Find the Length of the Longest Common Prefix](src/medium/FindTheLengthOfTheLongestCommonPrefix3043.kt) - [Leetcode link](https://leetcode.com/problems/find-the-length-of-the-longest-common-prefix/) `Array` `Hash Table` `String` `Trie`
 - [731. My Calendar II](src/medium/MyCalendarTwo.kt) - [Leetcode link](https://leetcode.com/problems/my-calendar-ii/) `Array` `Binary search` `Design` `Segment Tree` `Prefix Sum` `Ordered Set`
 - [1497. Check If Array Pairs Are Divisible by k](src/medium/CheckIfArrayPairsAreDivisibleByk1497.kt) - [Leetcode link](https://leetcode.com/problems/check-if-array-pairs-are-divisible-by-k/) `Array` `Hash Table`  `Counting`
+- [2491. Divide Players Into Teams of Equal Skill](src/medium/DividePlayersIntoTeamsOfEqualSkill2491.kt) - [Leetcode link](https://leetcode.com/problems/divide-players-into-teams-of-equal-skill/) `Array` `Hash Table`  `Sorting` `Two Pointers`
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
