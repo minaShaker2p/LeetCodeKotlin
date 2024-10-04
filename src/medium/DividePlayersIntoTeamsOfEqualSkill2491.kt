@@ -1,6 +1,9 @@
 package medium
 
 object DividePlayersIntoTeamsOfEqualSkill2491 {
+    /**
+     * TIME COMPLEXITY O(N.LOG(N))
+     */
     fun dividePlayers(skill: IntArray): Long {
         // Soring the array
         skill.sort()
@@ -26,5 +29,41 @@ object DividePlayersIntoTeamsOfEqualSkill2491 {
 
 
 
+    }
+
+    /**
+     * TIME COMPLEXITY O(N)
+     */
+    fun dividePlayersSolution2(skill: IntArray): Long {
+        val n = skill.size
+        var totalSkill = 0
+        val skillFrequency =  IntArray(1001)
+
+        // Calculate total skill and skill frequency
+        for( playerSkill in skill)
+        {
+            totalSkill += playerSkill
+            skillFrequency[playerSkill]++
+        }
+
+        // Check if total skill can be evenly distributed among teams
+        if(totalSkill % (n/2) !=0) return -1
+
+        val targetTeamSkill = totalSkill/ (n/2)
+        var totalChemistry = 0L
+
+        // Calculate total chemistry while verifying valid team formations
+        for(playerSkill in skill)
+        {
+            val partnerSkill = targetTeamSkill - playerSkill
+
+            // Check if a valid partner exists
+            if(skillFrequency[partnerSkill]==0) return -1
+
+            totalChemistry += playerSkill * partnerSkill
+            skillFrequency[partnerSkill]--
+        }
+
+        return totalChemistry/2
     }
 }
