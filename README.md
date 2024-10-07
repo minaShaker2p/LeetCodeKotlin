@@ -71,6 +71,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [1945. Sum of Digits of String After Convert](src/easy/SumOfDigitsOfStringAfterConvert1945.kt) - [leetcode link](https://leetcode.com/problems/sum-of-digits-of-string-after-convert/) `String` `Simulation`
 - [1684. Count the Number of Consistent Strings](src/easy/CountTheNumberOfConsistentStrings1684.kt) - [leetcode link](https://leetcode.com/problems/count-the-number-of-consistent-strings/) `String` `Simulation` `Array` `Counting` 
 - [1331. Rank Transform of an Array](src/easy/RankTransformOfAnArray1331.kt) - [leetcode link](https://leetcode.com/problems/rank-transform-of-an-array/) `Array` `Hash Table` `Sorting`
+- [2696. Minimum String Length After Removing Substrings](src/easy/MinimumStringLengthAfterRemovingSubstrings2696.kt) - [leetcode link](https://leetcode.com/problems/minimum-string-length-after-removing-substrings/) `String` `Stack` `Simulation`
   <br />
 
 ## Medium Problems :
