@@ -157,5 +157,6 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [731. My Calendar II](src/medium/MyCalendarTwo.kt) - [Leetcode link](https://leetcode.com/problems/my-calendar-ii/) `Array` `Binary search` `Design` `Segment Tree` `Prefix Sum` `Ordered Set`
 - [1497. Check If Array Pairs Are Divisible by k](src/medium/CheckIfArrayPairsAreDivisibleByk1497.kt) - [Leetcode link](https://leetcode.com/problems/check-if-array-pairs-are-divisible-by-k/) `Array` `Hash Table`  `Counting`
 - [2491. Divide Players Into Teams of Equal Skill](src/medium/DividePlayersIntoTeamsOfEqualSkill2491.kt) - [Leetcode link](https://leetcode.com/problems/divide-players-into-teams-of-equal-skill/) `Array` `Hash Table`  `Sorting` `Two Pointers`
+- [1963. Minimum Number of Swaps to Make the String Balanced](src/medium/MinimumNumberOfSwapsToMakeTheStringBalanced1963.kt) - [Leetcode link](https://leetcode.com/problems/minimum-number-of-swaps-to-make-the-string-balanced/)  `Stack`  `String` `Two Pointers`
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
