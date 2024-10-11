@@ -2,23 +2,25 @@ package medium
 
 object TheNumberOfTheSmallestUnoccupiedChair1942 {
     fun smallestChair(times: Array<IntArray>, targetFriend: Int): Int {
-        val timesAndFriends = HashMap<IntArray, Int>()
-
-        times.forEachIndexed { index, time ->
-            timesAndFriends[time] = index
-        }
+        val targetTime = times[targetFriend]
 
         // Sort the times array based on the arrival time
         val sortedTimes = times.sortedBy { arr: IntArray -> arr[0] }
 
-        val occupiedChairs = IntArray(times.size) { -1 }
+        val n = times.size
+        val chairTime = IntArray(n) { 0 }
 
-
-        for(i in sortedTimes.indices)
-        {
-            val friend = timesAndFriends.getOrDefault(sortedTimes[i],0)
-            occupiedChairs[friend]=i
+        for (time in sortedTimes) {
+            for (i in 0 until n) {
+                if(chairTime[i]<=time[0])
+                {
+                    chairTime[i]=time[1]
+                    if(time.contentEquals(targetTime))
+                        return i
+                    break
+                }
+            }
         }
-        return occupiedChairs[targetFriend]
+        return 0
     }
 }
