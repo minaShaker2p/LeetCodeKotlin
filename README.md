@@ -159,5 +159,6 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [2491. Divide Players Into Teams of Equal Skill](src/medium/DividePlayersIntoTeamsOfEqualSkill2491.kt) - [Leetcode link](https://leetcode.com/problems/divide-players-into-teams-of-equal-skill/) `Array` `Hash Table`  `Sorting` `Two Pointers`
 - [1963. Minimum Number of Swaps to Make the String Balanced](src/medium/MinimumNumberOfSwapsToMakeTheStringBalanced1963.kt) - [Leetcode link](https://leetcode.com/problems/minimum-number-of-swaps-to-make-the-string-balanced/)  `Stack`  `String` `Two Pointers`
 - [921. Minimum Add to Make Parentheses Valid](src/medium/MinimumAddToMakeParenthesesValid921.kt) - [Leetcode link](https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/)  `Stack`  `String` `Two Pointers`
+- [1942. The Number of the Smallest Unoccupied Chair](src/medium/TheNumberOfTheSmallestUnoccupiedChair1942.kt) - [Leetcode link](https://leetcode.com/problems/the-number-of-the-smallest-unoccupied-chair/)  `Array`  `Hash Table` `Heap(Priority Queue)`
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
