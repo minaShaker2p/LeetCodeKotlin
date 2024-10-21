@@ -2,29 +2,31 @@ package medium
 
 object SplitStringIntoTheMaxNumberOfUniqueSubstrings {
     fun maxUniqueSplit(s: String): Int {
-        val uniqueSubstrings = mutableSetOf<String>()
-        var curr = 0
-        while (curr < s.length) {
+        val seen = mutableSetOf<String>()
+        return backtrack(s, 0, seen)
 
-            val subString = StringBuilder()
-            subString.append(s[curr])
-            if (uniqueSubstrings.contains(subString.toString()).not()) {
-              uniqueSubstrings.add(uniqueSubstrings.toString())
-                curr++
-                continue
-            }else
-            {
-                for (j in curr + 1 until s.length) {
-                    subString.append(s[j])
-                    if (uniqueSubstrings.contains(subString.toString()).not()) {
-                        uniqueSubstrings.add(uniqueSubstrings.toString())
-                        curr++
-                        break
-                    }
-                }
+    }
+
+    private fun backtrack(s: String, start: Int, seen: MutableSet<String>): Int {
+        // Base case: If we reach the end of the string, return 0 (no more substrings to add)
+        if (start == s.length)
+            return 0
+
+        var maxCount = 0
+
+        // Try every possible substring starting from 'start'
+        for (end in start + 1 until s.length) {
+            val subString = s.substring(start, end)
+            // If the substring is unique
+            if (seen.contains(subString).not()) {
+                // Add the substring to the seen set
+                seen.add(subString)
+                // Recursively count the unique substrings from the next position
+                maxCount = Math.max(maxCount, 1 + backtrack(s, end, seen))
+                // Backtrack: remove the substring from the seen set
+                seen.remove(subString)
             }
         }
-
-        return uniqueSubstrings.size
+        return maxCount
     }
 }
