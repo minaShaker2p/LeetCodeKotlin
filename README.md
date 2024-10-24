@@ -162,5 +162,6 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [1942. The Number of the Smallest Unoccupied Chair](src/medium/TheNumberOfTheSmallestUnoccupiedChair1942.kt) - [Leetcode link](https://leetcode.com/problems/the-number-of-the-smallest-unoccupied-chair/)  `Array`  `Hash Table` `Heap(Priority Queue)`
 - [1593. Split a String Into the Max Number of Unique Substrings](src/medium/SplitStringIntoTheMaxNumberOfUniqueSubstrings.kt) - [Leetcode link](https://leetcode.com/problems/split-a-string-into-the-max-number-of-unique-substrings/)  `Array`  `Hash Table` `Heap(Priority Queue)`
 - [2583. Kth Largest Sum in a Binary Tree](src/medium/KthLargestSumInBinaryTree2583.kt) - [Leetcode link](https://leetcode.com/problems/kth-largest-sum-in-a-binary-tree/)  `Tree`  `BFS` `Sorting` `Binary Tree`
+- [951.Flip Equivalent Binary Trees](src/medium/FlipEquivalentBinaryTrees.kt) - [Leetcode link](https://leetcode.com/problems/flip-equivalent-binary-trees/)  `Tree`  `DFS`  `Binary Tree`
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
