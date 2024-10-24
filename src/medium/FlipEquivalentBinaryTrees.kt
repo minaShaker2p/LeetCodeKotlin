@@ -19,7 +19,6 @@ object FlipEquivalentBinaryTrees {
             if (node1.`val` != node2.`val`) return false
 
             // Check both configurations: no swap and swap
-
             if (checkNodeValues(node1.left, node2.left) && checkNodeValues(node1.right, node2.right)) {
                 nodePairStack.push(arrayOf(node1.left, node2.left))
                 nodePairStack.push(arrayOf(node1.right, node2.right))
