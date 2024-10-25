@@ -3,16 +3,26 @@ package medium
 object RemoveSubFoldersFromTheFilesystem {
 
     fun removeSubfolders(folder: Array<String>): List<String> {
-        val subfolders = mutableSetOf<String>()
-        for (i in folder.indices) {
-            for (j in folder.indices) {
-               if(i !=j && folder[i]!=folder[j] && folder[i].startsWith(folder[j])&& folder[i].length<folder[j].length)
-               {
-                   subfolders.add(folder[i])
-               }
+        // SORT FOLDER PATHS
+        folder.sort()
 
-            }
+        val folders = mutableListOf<String>()
+        folders.add(folder[0])
+
+        for (i in 1 until folder.size) {
+            if (folder[i].isSubFolder(folders[folders.size - 1]))
+                continue
+            else
+                folders.add(folder[i])
         }
-        return subfolders.toList()
+        return folders
+    }
+
+    private fun String.isSubFolder(folder: String): Boolean {
+        if (this.length < folder.length) return false
+
+        if (this.startsWith(folder).not()) return false
+
+        return this.substring(folder.length, folder.length + 1).startsWith("/")
     }
 }
