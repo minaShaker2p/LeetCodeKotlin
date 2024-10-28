@@ -164,5 +164,6 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [2583. Kth Largest Sum in a Binary Tree](src/medium/KthLargestSumInBinaryTree2583.kt) - [Leetcode link](https://leetcode.com/problems/kth-largest-sum-in-a-binary-tree/)  `Tree`  `BFS` `Sorting` `Binary Tree`
 - [951.Flip Equivalent Binary Trees](src/medium/FlipEquivalentBinaryTrees.kt) - [Leetcode link](https://leetcode.com/problems/flip-equivalent-binary-trees/)  `Tree`  `DFS`  `Binary Tree`
 - [1233. Remove Sub-Folders from the Filesystem](src/medium/RemoveSubFoldersFromTheFilesystem1233.kt) - [Leetcode link](https://leetcode.com/problems/remove-sub-folders-from-the-filesystem/)  `String`  `Array`  `Sorting`
+- [2501. Longest Square Streak in an Array](src/medium/LongestSquareStreakInArray2501.kt) - [Leetcode link](https://leetcode.com/problems/longest-square-streak-in-an-array/)  `Hash Table`  `Array`  `Sorting` `Binary Search`
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
