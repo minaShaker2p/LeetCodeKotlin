@@ -7,41 +7,41 @@ object MaximumNumberOfMovesInGrid2684 {
     fun maxMoves(grid: Array<IntArray>): Int {
         val m = grid.size
         val n = grid[0].size
-        val queue: Queue<IntArray> = LinkedList<IntArray>()
+        val queue: Queue<IntArray> = LinkedList()
+        val visited = Array(m) { BooleanArray(n) { false } }
+        val dirs = intArrayOf(-1, 0, 1)
 
         for (row in grid.indices) {
-            queue.add(intArrayOf(row, 0))
+            queue.add(intArrayOf(row, 0, 0))
+            visited[row][0] = true
         }
 
-        var level = 0
+        var maxMove = Int.MIN_VALUE
+
         while (queue.isNotEmpty()) {
             val size = queue.size
             for (i in 0 until size) {
-                val curr = queue.remove()
-                val currentRow = curr[0]
-                val currentCol = curr[1]
+                val current = queue.remove()
+                val currentRow = current[0]
+                val currentCol = current[1]
+                val count = current[2]
 
-                // check row,col+1
-                if (currentCol < n - 1 && grid[currentRow][currentCol + 1] > grid[currentRow][currentCol]) {
-                    queue.add(intArrayOf(currentRow, currentCol + 1))
-                }
+                maxMove = maxMove.coerceAtLeast(count)
 
-                // check row-1,col+1
-                if (currentRow > 0 && currentCol < n - 1 && grid[currentRow - 1][currentCol + 1] > grid[currentRow][currentCol]) {
-                    queue.add(intArrayOf(currentRow - 1, currentCol + 1))
-                }
+                for (dir in dirs) {
+                    val nextRow = currentRow + dir
+                    val nextCol = currentCol + 1
 
-                // check row,col+1
-                if (currentRow < m - 1 && currentCol < n - 1 && grid[currentRow + 1][currentCol + 1] > grid[currentRow][currentCol]) {
-                    queue.add(intArrayOf(currentRow + 1, currentCol + 1))
+                    if (nextRow >= 0 && nextCol >= 0 && nextCol < n && nextRow < m &&
+                        visited[nextRow][nextCol].not() &&
+                        grid[nextRow][nextCol] > grid[currentRow][currentCol]
+                    ) {
+                        visited[nextRow][nextCol] = true
+                        queue.add(intArrayOf(nextRow, nextCol, count + 1))
+                    }
                 }
             }
-
-            if (queue.isNotEmpty())
-                level++
         }
-
-        return level
-
+        return maxMove
     }
 }
