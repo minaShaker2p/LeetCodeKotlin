@@ -169,3 +169,4 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [2275. Largest Combination With Bitwise AND Greater Than Zero](src/medium/LargestCombinationWithBitwiseANDGreaterThanZero2275.kt) - [Leetcode link](https://leetcode.com/problems/largest-combination-with-bitwise-and-greater-than-zero/)  `Hash Table`  `Array`  `Bit Manipulation` `Counting`
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
+- [2290. Minimum Obstacle Removal to Reach Corner](src/hard/MinimumObstacleRemovalToReachCorner2290.kt)[Leetcode link](https://leetcode.com/problems/minimum-obstacle-removal-to-reach-corner/) `Array` `Breadth-First-Search` `Graph` `Heap(Priority Queue)` `Matrix` `Shortest Path`
