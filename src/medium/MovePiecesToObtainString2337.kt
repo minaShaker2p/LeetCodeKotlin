@@ -4,27 +4,41 @@ import java.util.*
 
 object MovePiecesToObtainString2337 {
     fun canChange(start: String, target: String): Boolean {
-        val startQueue: Queue<Char> = LinkedList()
-        val targetQueue: Queue<Char> = LinkedList()
+        // Queue to store characters and indices from both strings
+        val startQueue: Queue<Pair<Char, Int>> = LinkedList()
+        val targetQueue: Queue<Pair<Char, Int>> = LinkedList()
 
-        for (char in start) {
-            if (char != '_')
-                startQueue.add(char)
+        // Record non-underscore characters and their indices
+        for (i in start.indices) {
+            if (start[i] != '_')
+                startQueue.add(Pair(start[i], i))
         }
 
-        for (char in target) {
-            if (char != '_')
-                targetQueue.add(char)
+        for (i in target.indices) {
+            if (target[i] != '_')
+                targetQueue.add(Pair(target[i], i))
         }
 
-        if(startQueue.size != targetQueue.size) return false
+        // If the number of pieces don't match, return false
+        if (startQueue.size != targetQueue.size) return false
 
-        while (startQueue.isNotEmpty() && targetQueue.isNotEmpty())
-        {
-            val currStart = startQueue.remove()
-            val currentTarget = targetQueue.remove()
-            if(currentTarget!=currStart)
+        // Compare each piece's type and position
+        while (startQueue.isNotEmpty()) {
+            val startPair = startQueue.remove()
+            val targetPair = targetQueue.remove()
+            val startChar: Char = startPair.first
+            val startIndex: Int = startPair.second
+            val targetChar: Char = targetPair.first
+            val targetIndex: Int = targetPair.second
+
+
+            // Check character match and movement rules
+            if (startChar != targetChar ||
+                (startChar == 'L' && startIndex < targetIndex) ||
+                (startChar == 'R' && startIndex > targetIndex)
+            ) {
                 return false
+            }
         }
 
         return true
