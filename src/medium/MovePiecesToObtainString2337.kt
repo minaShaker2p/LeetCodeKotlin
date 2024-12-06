@@ -31,7 +31,6 @@ object MovePiecesToObtainString2337 {
             val targetChar: Char = targetPair.first
             val targetIndex: Int = targetPair.second
 
-
             // Check character match and movement rules
             if (startChar != targetChar ||
                 (startChar == 'L' && startIndex < targetIndex) ||
