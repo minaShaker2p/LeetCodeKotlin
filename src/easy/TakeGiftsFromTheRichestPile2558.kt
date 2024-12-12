@@ -16,6 +16,8 @@ object TakeGiftsFromTheRichestPile2558 {
             val maxPileSquareRoot = Math.sqrt(gifts[maxPileIndex].toDouble()).toInt()
             gifts[maxPileIndex] = maxPileSquareRoot
         }
-        return gifts.sum().toLong()
+        var sum = 0L
+        gifts.forEach { sum+=it }
+        return sum
     }
 }
