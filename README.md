@@ -73,6 +73,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [1331. Rank Transform of an Array](src/easy/RankTransformOfAnArray1331.kt) - [leetcode link](https://leetcode.com/problems/rank-transform-of-an-array/) `Array` `Hash Table` `Sorting`
 - [2696. Minimum String Length After Removing Substrings](src/easy/MinimumStringLengthAfterRemovingSubstrings2696.kt) - [leetcode link](https://leetcode.com/problems/minimum-string-length-after-removing-substrings/) `String` `Stack` `Simulation`
 - [1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence](src/easy/CheckIfWordOccursAsPrefixOfAnyWordInSentence1455.kt) - [leetcode link](https://leetcode.com/problems/check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence/) `String` `Two Pointer` `String Matching`
+- [2558. Take Gifts From the Richest Pile](src/easy/TakeGiftsFromTheRichestPile2558.kt) - [leetcode link](https://leetcode.com/problems/take-gifts-from-the-richest-pile/) `Array` `Simulation` 
   <br />
 
 ## Medium Problems :
