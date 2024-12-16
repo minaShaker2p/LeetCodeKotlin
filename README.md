@@ -74,6 +74,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [2696. Minimum String Length After Removing Substrings](src/easy/MinimumStringLengthAfterRemovingSubstrings2696.kt) - [leetcode link](https://leetcode.com/problems/minimum-string-length-after-removing-substrings/) `String` `Stack` `Simulation`
 - [1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence](src/easy/CheckIfWordOccursAsPrefixOfAnyWordInSentence1455.kt) - [leetcode link](https://leetcode.com/problems/check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence/) `String` `Two Pointer` `String Matching`
 - [2558. Take Gifts From the Richest Pile](src/easy/TakeGiftsFromTheRichestPile2558.kt) - [leetcode link](https://leetcode.com/problems/take-gifts-from-the-richest-pile/) `Array` `Simulation` 
+- [3264. Final Array State After K Multiplication Operations I](src/easy/FinalArrayStateAfterKMultiplicationOperationsI3264.kt) - [leetcode link](https://leetcode.com/problems/final-array-state-after-k-multiplication-operations-i/) `Array` `Simulation` 
   <br />
 
 ## Medium Problems :
@@ -171,6 +172,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [2275. Largest Combination With Bitwise AND Greater Than Zero](src/medium/LargestCombinationWithBitwiseANDGreaterThanZero2275.kt) - [Leetcode link](https://leetcode.com/problems/largest-combination-with-bitwise-and-greater-than-zero/)  `Hash Table`  `Array`  `Bit Manipulation` `Counting`
 - [2337. Move Pieces to Obtain a String](src/medium/MovePiecesToObtainString2337.kt) - [Leetcode link](https://leetcode.com/problems/move-pieces-to-obtain-a-string/)  `Hash Table`  `Array`  `Bit Manipulation` `Counting`
 - [2554. Maximum Number of Integers to Choose From a Range I](src/medium/MaximumNumberOfIntegersToChooseFromRangeI2554.kt) - [Leetcode link](https://leetcode.com/problems/maximum-number-of-integers-to-choose-from-a-range-i/)  `Hash Table`  `Array`  `Binary Search` `Greedy`
+- [2593. Find Score of an Array After Marking All Elements](src/medium/FindScoreOfAnArrayAfterMarkingAllElements2593.kt) - [Leetcode link](https://leetcode.com/problems/find-score-of-an-array-after-marking-all-elements/)  `Hash Table`  `Array`  `Sorting` `Heap(Priority Queue`
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
 - [2290. Minimum Obstacle Removal to Reach Corner](src/hard/MinimumObstacleRemovalToReachCorner2290.kt)[Leetcode link](https://leetcode.com/problems/minimum-obstacle-removal-to-reach-corner/) `Array` `Breadth-First-Search` `Graph` `Heap(Priority Queue)` `Matrix` `Shortest Path`
