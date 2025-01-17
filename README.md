@@ -174,6 +174,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [2554. Maximum Number of Integers to Choose From a Range I](src/medium/MaximumNumberOfIntegersToChooseFromRangeI2554.kt) - [Leetcode link](https://leetcode.com/problems/maximum-number-of-integers-to-choose-from-a-range-i/)  `Hash Table`  `Array`  `Binary Search` `Greedy`
 - [2593. Find Score of an Array After Marking All Elements](src/medium/FindScoreOfAnArrayAfterMarkingAllElements2593.kt) - [Leetcode link](https://leetcode.com/problems/find-score-of-an-array-after-marking-all-elements/)  `Hash Table`  `Array`  `Sorting` `Heap(Priority Queue`
 - [2425. Bitwise XOR of All Pairings](src/medium/BitwiseXOROfAllPairings2425.kt) - [Leetcode link](https://leetcode.com/problems/bitwise-xor-of-all-pairings/)  `Hash Table`  `Bit Manipulation` 
+- [2683. Neighboring Bitwise XOR](src/medium/NeighboringBitwiseXOR2683.kt) - [Leetcode link](https://leetcode.com/problems/neighboring-bitwise-xor/)  `Array`  `Bit Manipulation` 
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
 - [2290. Minimum Obstacle Removal to Reach Corner](src/hard/MinimumObstacleRemovalToReachCorner2290.kt)[Leetcode link](https://leetcode.com/problems/minimum-obstacle-removal-to-reach-corner/) `Array` `Breadth-First-Search` `Graph` `Heap(Priority Queue)` `Matrix` `Shortest Path`
