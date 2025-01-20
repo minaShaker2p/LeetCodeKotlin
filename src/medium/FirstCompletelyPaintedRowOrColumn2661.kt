@@ -3,20 +3,27 @@ package medium
 object FirstCompletelyPaintedRowOrColumn2661 {
 
     fun firstCompleteIndex(arr: IntArray, mat: Array<IntArray>): Int {
-        val m = mat.size
-        val n = mat[0].size
-        arr.forEachIndexed { index, value ->
-            for (i in mat.indices) {
-                for (j in mat[0].indices) {
-                    if (mat[i][j] == value) {
-                        // paint this cell
-                        mat[i][j] = -mat[i][j]
-                    }
-                    // check for the completely painted row or column
-                    if (checkRow(i, mat) || checkCol(j, mat))
-                        return index
-                }
+        val numRows = mat.size
+        val numCols = mat[0].size
+        val numToPos = HashMap<Int, Pair<Int, Int>>()
+
+        // Populate the numToPos map by iterating over the matrix
+        for (row in 0 until numRows) {
+            for (col in 0 until numCols) {
+                val value = mat[row][col]
+                numToPos[value] = Pair(row, col)
             }
+        }
+        arr.forEachIndexed { index, value ->
+            val pos: Pair<Int, Int> = numToPos.getOrDefault(value, Pair(0,0))
+            val row = pos.first
+            val col = pos.second
+            mat[row][col]=-mat[row][col]
+
+
+            // check for the completely painted row or column
+            if (checkRow(row, mat) || checkCol(col, mat))
+                return index
         }
         return 0
     }
