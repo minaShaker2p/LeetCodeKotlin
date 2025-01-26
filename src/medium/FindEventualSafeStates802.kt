@@ -1,7 +1,7 @@
 package medium
 
-import java.util.LinkedList
-import java.util.Queue
+import java.util.*
+import kotlin.collections.HashMap
 
 object FindEventualSafeStates802 {
     fun eventualSafeNodes(graph: Array<IntArray>): List<Int> {
@@ -51,4 +51,44 @@ object FindEventualSafeStates802 {
 
         return safeNodes
     }
+
+    fun eventualSafeNodesSolution2(graph: Array<IntArray>): List<Int> {
+        val n = graph.size
+        val visit = BooleanArray(n)
+        val inStack = BooleanArray(n)
+
+
+        for (i in 0 until n) {
+            dfs(node = i, adj = graph, visit = visit, inStack = inStack)
+        }
+
+        val safeNodesResult = mutableListOf<Int>()
+        for (i in 0 until n) {
+            if (inStack[i].not())
+                safeNodesResult.add(i)
+        }
+        return safeNodesResult
+    }
+}
+
+fun dfs(node: Int, adj: Array<IntArray>, visit: BooleanArray, inStack: BooleanArray): Boolean {
+    // If the node is already in the stack, then we have a cycle
+    if (inStack[node])
+        return true
+
+    if (visit[node])
+        return false
+
+    // Mark this current node as visited and part of the current stack of recursion
+    visit[node] = true
+    inStack[node] = true
+
+    for (neighbor in adj[node]) {
+        if (dfs(neighbor, adj, visit, inStack))
+            return true
+    }
+
+    // Remove the node from the stack
+    inStack[node] = false
+    return false
 }
