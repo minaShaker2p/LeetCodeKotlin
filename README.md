@@ -178,6 +178,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [2661. First Completely Painted Row or Column](src/medium/FirstCompletelyPaintedRowOrColumn2661.kt) - [Leetcode link](https://leetcode.com/problems/first-completely-painted-row-or-column/description/)  `Array`  `Bit Manipulation` 
 - [2017. Grid Game](src/medium/GridGame2017.kt) - [Leetcode link](https://leetcode.com/problems/grid-game/description/)  `Array`  `Prefix Sum` 
 - [802. Find Eventual Safe States](src/medium/FindEventualSafeStates802.kt) - [Leetcode link](https://leetcode.com/problems/find-eventual-safe-states/description/)  `Array`  `Prefix Sum` 
+- [1462. Course Schedule IV](src/medium/CourseScheduleIV1462.kt) - [Leetcode link](https://leetcode.com/problems/course-schedule-iv/description/)  `Array`  `Prefix Sum` 
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
 - [2290. Minimum Obstacle Removal to Reach Corner](src/hard/MinimumObstacleRemovalToReachCorner2290.kt)[Leetcode link](https://leetcode.com/problems/minimum-obstacle-removal-to-reach-corner/) `Array` `Breadth-First-Search` `Graph` `Heap(Priority Queue)` `Matrix` `Shortest Path`
