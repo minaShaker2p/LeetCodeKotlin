@@ -185,3 +185,4 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
 - [2290. Minimum Obstacle Removal to Reach Corner](src/hard/MinimumObstacleRemovalToReachCorner2290.kt)[Leetcode link](https://leetcode.com/problems/minimum-obstacle-removal-to-reach-corner/) `Array` `Breadth-First-Search` `Graph` `Heap(Priority Queue)` `Matrix` `Shortest Path`
+- [2493. Divide Nodes Into the Maximum Number of Groups](src/hard/DivideNodesIntoTheMaximumNumberOfGroups2493.kt)[Leetcode link](https://leetcode.com/problems/divide-nodes-into-the-maximum-number-of-groups/description/) `Array` `Breadth-First-Search` `Graph` `Heap(Priority Queue)` `Matrix` `Shortest Path`
