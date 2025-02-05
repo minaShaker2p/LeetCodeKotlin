@@ -76,6 +76,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [2558. Take Gifts From the Richest Pile](src/easy/TakeGiftsFromTheRichestPile2558.kt) - [leetcode link](https://leetcode.com/problems/take-gifts-from-the-richest-pile/) `Array` `Simulation` 
 - [3264. Final Array State After K Multiplication Operations I](src/easy/FinalArrayStateAfterKMultiplicationOperationsI3264.kt) - [leetcode link](https://leetcode.com/problems/final-array-state-after-k-multiplication-operations-i/) `Array` `Simulation` 
 - [1971. Find if Path Exists in Graph](src/easy/FindIfPathExistsInGraph1971.kt) - [leetcode link](https://leetcode.com/problems/find-if-path-exists-in-graph/description/) `Graph` `DFS` 
+- [1790. Check if One String Swap Can Make Strings Equal](src/easy/CheckIfOneStringSwapCanMakeStringsEqual1790.kt) - [leetcode link](https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal/description/) `Hash map` `Array` `Counting` 
   <br />
 
 ## Medium Problems :
