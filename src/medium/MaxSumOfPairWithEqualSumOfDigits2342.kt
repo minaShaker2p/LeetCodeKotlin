@@ -4,16 +4,11 @@ object MaxSumOfPairWithEqualSumOfDigits2342 {
     fun maximumSum(nums: IntArray): Int {
         val sumToIndices = HashMap<Int, MutableList<Int>>()
 
-        nums.forEachIndexed { index, _ ->
-            var num = nums[index]
-            var sumOfDigits = 0
-            while (num != 0) {
-                sumOfDigits += num % 10
-                num /= 10
-            }
-            val indicesList = sumToIndices.getOrDefault(sumOfDigits, mutableListOf())
+        nums.forEachIndexed { index, num ->
+            val digitSum = calculateDigitSum(num)
+            val indicesList = sumToIndices.getOrDefault(digitSum, mutableListOf())
             indicesList.add(index)
-            sumToIndices[sumOfDigits] = indicesList
+            sumToIndices[digitSum] = indicesList
         }
 
         var result = -1
@@ -30,5 +25,15 @@ object MaxSumOfPairWithEqualSumOfDigits2342 {
         }
 
         return result
+    }
+
+    private fun calculateDigitSum(num: Int): Int {
+        var digitSum = 0
+        var tempNum = num
+        while (tempNum != 0) {
+            digitSum += tempNum % 10
+            tempNum /= 10
+        }
+        return digitSum
     }
 }
