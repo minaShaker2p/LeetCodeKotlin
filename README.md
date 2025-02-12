@@ -183,6 +183,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [1462. Course Schedule IV](src/medium/CourseScheduleIV1462.kt) - [Leetcode link](https://leetcode.com/problems/course-schedule-iv/description/)  `Graph`  `DFS` `BFS` 
 - [2658. Maximum Number of Fish in a Grid](src/medium/MaximumNumberOfFishInGrid2658.kt) - [Leetcode link](https://leetcode.com/problems/maximum-number-of-fish-in-a-grid/description/)  `Graph`  `DFS` `BFS` 
 - [684. Redundant Connection](src/medium/RedundantConnection684.kt) - [Leetcode link](https://leetcode.com/problems/redundant-connection/description/)  `Graph`  `DFS` `BFS` 
+- [2342. Max Sum of a Pair With Equal Sum of Digits](src/medium/MaxSumOfPairWithEqualSumOfDigits2342.kt) - [Leetcode link](https://leetcode.com/problems/max-sum-of-a-pair-with-equal-sum-of-digits/description/)  `Hash Table`  `Array` 
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
 - [2290. Minimum Obstacle Removal to Reach Corner](src/hard/MinimumObstacleRemovalToReachCorner2290.kt)[Leetcode link](https://leetcode.com/problems/minimum-obstacle-removal-to-reach-corner/) `Array` `Breadth-First-Search` `Graph` `Heap(Priority Queue)` `Matrix` `Shortest Path`
