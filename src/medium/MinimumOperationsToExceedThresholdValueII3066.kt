@@ -6,27 +6,23 @@ import java.util.Queue
 
 object MinimumOperationsToExceedThresholdValueII3066 {
     fun minOperations(nums: IntArray, k: Int): Int {
-        val minHeap: PriorityQueue<Int> = PriorityQueue<Int>()
+        val minHeap: PriorityQueue<Long> = PriorityQueue<Long>()
 
         nums.forEach { num ->
-            minHeap.add(num)
+            minHeap.add(num.toLong())
         }
 
         var numOfOperations = 0
 
-        while (minHeap.size >= 2) {
-            val peek = minHeap.remove()
-            if (peek >= k)
-                break
+        while (minHeap.peek() < k) {
+            val x = minHeap.remove()
+            val y =  minHeap.remove()
 
-            val secondSmallestValue = minHeap.remove()
-
-            val current = (peek *2)+secondSmallestValue
+            val current: Long = ((x * 2) + y)
             minHeap.add(current)
             numOfOperations++
         }
 
         return numOfOperations
-
     }
 }
