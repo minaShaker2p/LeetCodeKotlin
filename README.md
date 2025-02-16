@@ -186,6 +186,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [2342. Max Sum of a Pair With Equal Sum of Digits](src/medium/MaxSumOfPairWithEqualSumOfDigits2342.kt) - [Leetcode link](https://leetcode.com/problems/max-sum-of-a-pair-with-equal-sum-of-digits/description/)  `Hash Table`  `Array` 
 - [3066. Minimum Operations to Exceed Threshold Value II](src/medium/MinimumOperationsToExceedThresholdValueII3066.kt) - [Leetcode link](https://leetcode.com/problems/minimum-operations-to-exceed-threshold-value-ii/description/)  `Priority Queue`  `Array` `Simulation` 
 - [2698. Find the Punishment Number of an Integer](src/medium/FindThePunishmentNumberOfAnInteger2698.kt) - [Leetcode link](https://leetcode.com/problems/minimum-operations-to-exceed-threshold-value-ii/description/)  `Priority Queue`  `Array` `Simulation` 
+- [1718. Construct the Lexicographically Largest Valid Sequence](src/medium/ConstructTheLexicographicallyLargestValidSequence1718.kt) - [Leetcode link](https://leetcode.com/problems/construct-the-lexicographically-largest-valid-sequence/description/)  `Backtracking`  `Array`  
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
 - [2290. Minimum Obstacle Removal to Reach Corner](src/hard/MinimumObstacleRemovalToReachCorner2290.kt)[Leetcode link](https://leetcode.com/problems/minimum-obstacle-removal-to-reach-corner/) `Array` `Breadth-First-Search` `Graph` `Heap(Priority Queue)` `Matrix` `Shortest Path`
