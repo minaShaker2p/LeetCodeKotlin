@@ -189,6 +189,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [1718. Construct the Lexicographically Largest Valid Sequence](src/medium/ConstructTheLexicographicallyLargestValidSequence1718.kt) - [Leetcode link](https://leetcode.com/problems/construct-the-lexicographically-largest-valid-sequence/description/)  `Backtracking`  `Array`  
 - [1524. Number of Sub-arrays With Odd Sum](src/medium/NumberOfSubArraysWithOddSum1524.kt) - [Leetcode link](https://leetcode.com/problems/number-of-sub-arrays-with-odd-sum/description/)  `Prefix Sum`  `Array`  
 - [1749. Maximum Absolute Sum of Any Subarray](src/medium/MaximumAbsoluteSumOfAnySubarray1749.kt) - [Leetcode link](https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray/description/)  `Prefix Sum`  `Array`  
+- [3191. Minimum Operations to Make Binary Array Elements Equal to One I](src/medium/MinimumOperationsToMakeBinaryArrayElementsEqualToOneI3191.kt) - [Leetcode link](https://leetcode.com/problems/minimum-operations-to-make-binary-array-elements-equal-to-one-i/description)  `Bit Manipulation`  `Prefix Sum` `Array`  
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
 - [2290. Minimum Obstacle Removal to Reach Corner](src/hard/MinimumObstacleRemovalToReachCorner2290.kt)[Leetcode link](https://leetcode.com/problems/minimum-obstacle-removal-to-reach-corner/) `Array` `Breadth-First-Search` `Graph` `Heap(Priority Queue)` `Matrix` `Shortest Path`
