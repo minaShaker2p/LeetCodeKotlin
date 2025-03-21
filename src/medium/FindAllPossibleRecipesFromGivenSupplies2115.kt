@@ -1,25 +1,45 @@
 package medium
 
+import java.util.LinkedList
+import java.util.Queue
+
 object FindAllPossibleRecipesFromGivenSupplies2115 {
     fun findAllRecipes(
         recipes: Array<String>,
         ingredients: List<List<String>>,
         supplies: Array<String>
     ): List<String> {
-        val ingredientsSet = mutableSetOf<String>()
-        ingredientsSet.addAll(supplies)
+        // Track available ingredients and recipes
+        val available = mutableSetOf<String>()
+        available.addAll(supplies)
 
-        val result =  mutableListOf<String>()
+        // Queue to process recipe indices
+        val recipesQueue: Queue<Int> = LinkedList<Int>()
         for (i in recipes.indices)
-        {
-            val recipeIngredients = ingredients[i]
-            val hasAllIngredients =  recipeIngredients.all { ingredientsSet.contains(it) }
-            if(hasAllIngredients)
-            {
-                result.add(recipes[i])
-                ingredientsSet.add(recipes[i])
+            recipesQueue.add(i)
+
+        val createdRecipes = mutableListOf<String>()
+        var lastSize = -1
+        // Continue while we keep finding new recipes
+        while (available.size > lastSize) {
+            lastSize = available.size
+            var queueSize = recipesQueue.size
+
+            // Process all recipes in current queue
+            while (queueSize-- > 0) {
+                val recipeIndex = recipesQueue.poll()
+
+                // Check if all ingredients are available
+                val hasAllIngredients = ingredients[recipeIndex].all { available.contains(it) }
+                if (hasAllIngredients) {
+                    available.add(recipes[recipeIndex])
+                    createdRecipes.add(recipes[recipeIndex])
+                } else {
+                    recipesQueue.add(recipeIndex)
+                }
             }
         }
-        return result
+
+        return createdRecipes
     }
 }
