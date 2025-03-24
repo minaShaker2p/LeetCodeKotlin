@@ -2,16 +2,28 @@ package medium
 
 object CountDaysWithoutMeetings3169 {
     fun countDays(days: Int, meetings: Array<IntArray>): Int {
-        val workingDays = IntArray(days)
+        var freeDays = 0
+        var latestEnd = 0
+
+        // Sort meetings based on starting times
+        meetings.sortBy { it[0] }
+
         for (meeting in meetings) {
-            (meeting[0]..meeting[1]).forEach { workingDays[it-1] = 1 }
-        }
-        var count =0
-        workingDays.forEach {
-            if(it==0)
-                count++
+            val start = meeting[0]
+            val end = meeting[1]
+
+            // Add current range of days without meeting
+            if (start > latestEnd + 1) {
+                freeDays += start - latestEnd - 1
+            }
+
+            // Update latest meeting end
+            latestEnd = Math.max(latestEnd, end)
         }
 
-        return count
+        // Add all days after the last day of meetings
+        freeDays += days - latestEnd
+
+        return freeDays
     }
 }
