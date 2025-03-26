@@ -192,6 +192,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [3191. Minimum Operations to Make Binary Array Elements Equal to One I](src/medium/MinimumOperationsToMakeBinaryArrayElementsEqualToOneI3191.kt) - [Leetcode link](https://leetcode.com/problems/minimum-operations-to-make-binary-array-elements-equal-to-one-i/description)  `Bit Manipulation`  `Prefix Sum` `Array`  
 - [2115. Find All Possible Recipes from Given Supplies](src/medium/FindAllPossibleRecipesFromGivenSupplies2115.kt) - [Leetcode link](https://leetcode.com/problems/find-all-possible-recipes-from-given-supplies/description)  `Array` `BFS` `DFS` `Hash Set`  
 - [3169. Count Days Without Meetings](src/medium/CountDaysWithoutMeetings3169.kt) - [Leetcode link](https://leetcode.com/problems/count-days-without-meetings/description)  `Array` `BFS` `DFS` `Hash Set`  
+- [2033. Minimum Operations to Make a Uni-Value Grid](src/medium/MinimumOperationsToMakeUniValueGrid2033.kt) - [Leetcode link](https://leetcode.com/problems/minimum-operations-to-make-a-uni-value-grid/description)  `Array` `Math` `Sorting` `Matrix`  
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
 - [2290. Minimum Obstacle Removal to Reach Corner](src/hard/MinimumObstacleRemovalToReachCorner2290.kt)[Leetcode link](https://leetcode.com/problems/minimum-obstacle-removal-to-reach-corner/) `Array` `Breadth-First-Search` `Graph` `Heap(Priority Queue)` `Matrix` `Shortest Path`
