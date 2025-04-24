@@ -3,24 +3,31 @@ package medium
 object CountCompleteSubArraysInAnArray2799 {
     fun countCompleteSubarrays(nums: IntArray): Int {
         val n = nums.size
-        val k = nums.distinct().size
+        val distinct = nums.distinct().size
         var result = 0
-        var start = 0
-        var end = 0
+        var left = 0
+        var right = 0
+        val distinctMap = HashMap<Int, Int>()
 
-        while (start < n) {
-            while (end < n) {
-                val subArray = nums.copyOfRange(start, end + 1)
-                val subArrDistinct = subArray.distinct().size
-                if (subArrDistinct == k)
-                    result++
-                end++
+        while (left < n) {
+            if (left > 0) {
+                val key = nums[left - 1]
+                distinctMap[key] = distinctMap.getOrDefault(key, 0) - 1
+                if (distinctMap.getOrDefault(key, 0) == 0) {
+                    distinctMap.remove(key)
+                }
             }
-            start++
-            end = start
+            while (right < n && distinctMap.size < distinct) {
+                val currentKey = nums[right]
+                distinctMap[currentKey] = distinctMap.getOrDefault(currentKey, 0) + 1
+                right++
+            }
+            if (distinctMap.size == distinct) {
+                result += n - right + 1
+            }
+            left++
         }
 
         return result
-
     }
 }
