@@ -193,7 +193,8 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [2115. Find All Possible Recipes from Given Supplies](src/medium/FindAllPossibleRecipesFromGivenSupplies2115.kt) - [Leetcode link](https://leetcode.com/problems/find-all-possible-recipes-from-given-supplies/description)  `Array` `BFS` `DFS` `Hash Set`  
 - [3169. Count Days Without Meetings](src/medium/CountDaysWithoutMeetings3169.kt) - [Leetcode link](https://leetcode.com/problems/count-days-without-meetings/description)  `Array` `BFS` `DFS` `Hash Set`  
 - [2033. Minimum Operations to Make a Uni-Value Grid](src/medium/MinimumOperationsToMakeUniValueGrid2033.kt) - [Leetcode link](https://leetcode.com/problems/minimum-operations-to-make-a-uni-value-grid/description)  `Array` `Math` `Sorting` `Matrix`  
-- [1123. Lowest Common Ancestor of Deepest Leaves](src/medium/LowestCommonAncestorOfDeepestLeaves1123.kt) - [Leetcode link](https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/description/)  `Array` `Math` `Sorting` `Matrix`  
+- [1123. Lowest Common Ancestor of Deepest Leaves](src/medium/LowestCommonAncestorOfDeepestLeaves1123.kt) - [Leetcode link](https://leetcode.com/problems/count-complete-subarrays-in-an-array/description/)  `Array` `Sliding Window` 
+- [2799. Count Complete Subarrays in an Array](src/medium/CountCompleteSubArraysInAnArray2799.kt) - [Leetcode link]()  `Array` `Math` `Sorting` `Matrix`  
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
 - [2290. Minimum Obstacle Removal to Reach Corner](src/hard/MinimumObstacleRemovalToReachCorner2290.kt)[Leetcode link](https://leetcode.com/problems/minimum-obstacle-removal-to-reach-corner/) `Array` `Breadth-First-Search` `Graph` `Heap(Priority Queue)` `Matrix` `Shortest Path`
