@@ -7,8 +7,8 @@ object CountSubarraysWhereMaxElementAppearsAtLeastKTimes2962 {
         var start = 0
         var result = 0L
 
-        for (end in 0 until nums.size) {
-            if (nums[end] == maxElement) {
+        for (element in nums) {
+            if (element == maxElement) {
                 maxElementsInWindow++
             }
 
@@ -21,9 +21,5 @@ object CountSubarraysWhereMaxElementAppearsAtLeastKTimes2962 {
         }
 
         return result
-    }
-
-    fun IntArray.IsArrayMaxElementAppearAtLeastKTimes(max: Int, k: Int): Boolean {
-        return this.count { it == max } >= k
     }
 }
