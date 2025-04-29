@@ -2,30 +2,25 @@ package medium
 
 object CountSubarraysWhereMaxElementAppearsAtLeastKTimes2962 {
     fun countSubarrays(nums: IntArray, k: Int): Long {
-        val maximumNum = nums.max()
-        val n = nums.size
-        var left = 0
-        var right = 0
-        var subArrayCount = 0L
+        val maxElement = nums.max()
+        var maxElementsInWindow = 0
+        var start = 0
+        var result = 0L
 
-        while (left < n) {
-            while (right < n) {
-                val subArraySize = (right - left) + 1
-                if (subArraySize < k) {
-                    right++
-                    continue
-                }
-
-                val subArray = nums.copyOfRange(left, right + 1)
-
-                if (subArray.IsArrayMaxElementAppearAtLeastKTimes(maximumNum, k))
-                    subArrayCount++
-                right++
+        for (end in 0 until nums.size) {
+            if (nums[end] == maxElement) {
+                maxElementsInWindow++
             }
-            left++
-            right = left
+
+            while (maxElementsInWindow == k) {
+                if (nums[start] == maxElement)
+                    maxElementsInWindow--
+                start++
+            }
+            result += start
         }
-        return subArrayCount
+
+        return result
     }
 
     fun IntArray.IsArrayMaxElementAppearAtLeastKTimes(max: Int, k: Int): Boolean {
