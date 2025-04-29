@@ -195,6 +195,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [2033. Minimum Operations to Make a Uni-Value Grid](src/medium/MinimumOperationsToMakeUniValueGrid2033.kt) - [Leetcode link](https://leetcode.com/problems/minimum-operations-to-make-a-uni-value-grid/description)  `Array` `Math` `Sorting` `Matrix`  
 - [1123. Lowest Common Ancestor of Deepest Leaves](src/medium/LowestCommonAncestorOfDeepestLeaves1123.kt) - [Leetcode link](https://leetcode.com/problems/count-complete-subarrays-in-an-array/description/)  `Array` `Sliding Window` 
 - [2799. Count Complete Subarrays in an Array](src/medium/CountCompleteSubArraysInAnArray2799.kt) - [Leetcode link]()  `Array` `Math` `Sorting` `Matrix`  
+- [2962. Count Subarrays Where Max Element Appears at Least K Times](src/medium/CountSubarraysWhereMaxElementAppearsAtLeastKTimes2962.kt) - [Leetcode link](eetcode.com/problems/count-subarrays-where-max-element-appears-at-least-k-times/description/)  `Array` `Math` `Sorting` `Matrix`  
 ## Hard Problems:
 - [76. Minimum Window Substring](src/hard/MinimumWindowSubstring76.kt)
 - [2290. Minimum Obstacle Removal to Reach Corner](src/hard/MinimumObstacleRemovalToReachCorner2290.kt)[Leetcode link](https://leetcode.com/problems/minimum-obstacle-removal-to-reach-corner/) `Array` `Breadth-First-Search` `Graph` `Heap(Priority Queue)` `Matrix` `Shortest Path`
