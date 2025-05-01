@@ -79,6 +79,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [1790. Check if One String Swap Can Make Strings Equal](src/easy/CheckIfOneStringSwapCanMakeStringsEqual1790.kt) - [leetcode link](https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal/description/) `Hash map` `Array` `Counting` 
 - [1941. Check if All Characters Have Equal Number of Occurrences](src/easy/CheckIfAllCharactersHaveEqualNumberOfOccurrences1941.kt) - [leetcode link](https://leetcode.com/problems/check-if-all-characters-have-equal-number-of-occurrences/description/) `Hash map` `Array` `Counting` 
 - [1995. Count Special Quadruplets](src/easy/CountSpecialQuadruplets1995.kt) - [leetcode link](https://leetcode.com/problems/count-special-quadruplets/description/) `Hash map` `Array` `Counting` 
+- [2032. Two Out of Three](src/easy/TwoOutOfThree2032.kt) - [leetcode link](https://leetcode.com/problems/two-out-of-three/description/) `Hash map` `Array` `Counting` 
   <br />
 
 ## Medium Problems :
