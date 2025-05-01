@@ -77,6 +77,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [3264. Final Array State After K Multiplication Operations I](src/easy/FinalArrayStateAfterKMultiplicationOperationsI3264.kt) - [leetcode link](https://leetcode.com/problems/final-array-state-after-k-multiplication-operations-i/) `Array` `Simulation` 
 - [1971. Find if Path Exists in Graph](src/easy/FindIfPathExistsInGraph1971.kt) - [leetcode link](https://leetcode.com/problems/find-if-path-exists-in-graph/description/) `Graph` `DFS` 
 - [1790. Check if One String Swap Can Make Strings Equal](src/easy/CheckIfOneStringSwapCanMakeStringsEqual1790.kt) - [leetcode link](https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal/description/) `Hash map` `Array` `Counting` 
+- [1941. Check if All Characters Have Equal Number of Occurrences](src/easy/CheckIfAllCharactersHaveEqualNumberOfOccurrences1941.kt) - [leetcode link](https://leetcode.com/problems/check-if-all-characters-have-equal-number-of-occurrences/description/) `Hash map` `Array` `Counting` 
   <br />
 
 ## Medium Problems :
