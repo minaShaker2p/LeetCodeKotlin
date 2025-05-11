@@ -80,6 +80,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [1941. Check if All Characters Have Equal Number of Occurrences](src/easy/CheckIfAllCharactersHaveEqualNumberOfOccurrences1941.kt) - [leetcode link](https://leetcode.com/problems/check-if-all-characters-have-equal-number-of-occurrences/description/) `Hash map` `Array` `Counting` 
 - [1995. Count Special Quadruplets](src/easy/CountSpecialQuadruplets1995.kt) - [leetcode link](https://leetcode.com/problems/count-special-quadruplets/description/) `Hash map` `Array` `Counting` 
 - [2032. Two Out of Three](src/easy/TwoOutOfThree2032.kt) - [leetcode link](https://leetcode.com/problems/two-out-of-three/description/) `Hash map` `Array` `Counting` 
+- [1550. Three Consecutive Odds](src/easy/ThreeConsecutiveOdds1550.kt) - [leetcode link](https://leetcode.com/problems/three-consecutive-odds/description/) `Array` 
   <br />
 
 ## Medium Problems :
