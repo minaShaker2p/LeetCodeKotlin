@@ -82,6 +82,7 @@ kotlin . this repository contains three major folders [easy - medium - hard] bas
 - [2032. Two Out of Three](src/easy/TwoOutOfThree2032.kt) - [leetcode link](https://leetcode.com/problems/two-out-of-three/description/) `Hash map` `Array` `Counting` 
 - [1550. Three Consecutive Odds](src/easy/ThreeConsecutiveOdds1550.kt) - [leetcode link](https://leetcode.com/problems/three-consecutive-odds/description/) `Array` 
 - [1475. Final Prices With a Special Discount in a Shop](src/easy/FinalPricesWithSpecialDiscountInShop1475.kt) - [leetcode link](https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/description/) `Array` `Stack`
+- [1974. Minimum Time to Type Word Using Special Typewriter](src/easy/MinimumTimeToTypeWordUsingSpecialTypewriter1974.kt) - [leetcode link](https://leetcode.com/problems/minimum-time-to-type-word-using-special-typewriter/description/) `Array` `Stack`
   <br />
 
 ## Medium Problems :
